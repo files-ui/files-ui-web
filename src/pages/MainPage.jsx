@@ -10,6 +10,7 @@ import MainFooter from "../components/MainPage/MainFooter";
 import FileMosaicImageVideoPreviews from "../components/MainPage/MainRight/FileMosaicImageVideoPreviews";
 //import FileCard from "../files-ui/components/file-item/components/FileCard/FileCard";
 import { Divider } from "@mui/material";
+import ExtraComponentsMainPage from "../components/MainPage/SecondaryRight/ExtraComponentsMainPage";
 
 const MainPage = ({ darkMode }) => {
   const [darkModeOn, setDarkModeOn] = React.useState(false);
@@ -30,9 +31,17 @@ const MainPage = ({ darkMode }) => {
         <div className="fui-main-left">
           <div className={"filesui-main-logo-container"}>
             {!darkMode ? (
-              <img className="fui-logo-img" src={logo_blue} alt={"files-ui-logo-blue"}/>
+              <img
+                className="fui-logo-img"
+                src={logo_blue}
+                alt={"files-ui-logo-blue"}
+              />
             ) : (
-              <img className="fui-logo-img" src={logo_blue_dark} alt={"files-ui-logo-dark"}/>
+              <img
+                className="fui-logo-img"
+                src={logo_blue_dark}
+                alt={"files-ui-logo-dark"}
+              />
             )}
           </div>
 
@@ -47,7 +56,7 @@ const MainPage = ({ darkMode }) => {
           </h1>
 
           <p className="fui-description">
-            Make the file upload task easy for developers and end-users.
+            Make the file upload experience easy for developers and end-users.
           </p>
 
           <GettingStarted darkModeOn={darkModeOn} />
@@ -58,7 +67,30 @@ const MainPage = ({ darkMode }) => {
           <FileMosaicImageVideoPreviews darkMode={darkModeOn} />
         </div>
       </main>
-
+      <section
+        id="more-components"
+        className={
+          darkModeOn
+            ? "files-ui-secondary-container darkmode"
+            : "files-ui-secondary-container"
+        }
+      >
+        <div className="secondary-content">
+          <div className="secondary-left">
+                <ExtraComponentsMainPage darkMode={darkModeOn}/>
+          </div>
+          <div className="secondary-right">
+            <h2
+              className={
+                !darkModeOn ? "fui-logo-text" : "fui-logo-text darkmode"
+              }
+            >
+              Yes! There are even more
+              components
+            </h2>
+          </div>
+        </div>
+      </section>
       <MainFooter />
     </div>
   );

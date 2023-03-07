@@ -10,6 +10,9 @@ export * from "./components";
 export { default as FileMosaic } from "./components/file-mosaic/components/file-mosaic/FileMosaic";
 export * from "./components/file-mosaic/components/file-mosaic/FileMosaic";
 
+export { default as FileCard } from "./components/file-item/components/FileCard/FileCard";
+export * from "./components/file-item/components/FileCard/FileCard";
+
 export { default as FullScreen } from "./components/previews/FullScreen/FullScreen";
 export * from "./components/previews/FullScreen/FullScreen";
 
