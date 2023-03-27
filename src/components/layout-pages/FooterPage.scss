@@ -1,8 +1,13 @@
 .fui-page-footer-container {
-  display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  margin-top: 96px;
+  box-sizing: border-box;
+  .inner-container-complete {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
   .redirect-container {
     display: flex;
     align-items: center;
@@ -12,14 +17,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
   }
-
+  .redirect-small-container {
+    display: none;
+  }
   @media (max-width: "960px") {
     .redirect-container {
       display: none;
     }
     .redirect-small-container {
       display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 50px;
     }
     .like-icon-container {
       width: 100%;

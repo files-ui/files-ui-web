@@ -5,7 +5,7 @@ import {
   FileMosaic,
   FullScreen,
   VideoPreview,
-} from "../../../files-ui";
+} from "superdefpythoniztioningtrycrypto2";
 import { ThorArrivesWakandaEN } from "../../../data/videoLinks";
 
 const DemoFullScreenVid = () => {

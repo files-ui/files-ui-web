@@ -4,7 +4,7 @@ import {
   FileMosaicProps,
   ExtFile,
   UPLOADSTATUS,
-} from "../files-ui";
+} from "superdefpythoniztioningtrycrypto2";
 
 const baseFiles: ExtFile[] = [
   {

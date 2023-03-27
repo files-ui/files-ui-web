@@ -9,8 +9,8 @@ const Overview: React.FC<OverviewProps> = (props: OverviewProps) => {
     <React.Fragment>
       <SubTitle content="Overview" />
       <MainParagraph>
-        Files UI is a library of UI components and utilities for making File
-        Uploads with React.
+        Files UI is a library of UI components and utilities to easily perform
+        file uploads with React.
       </MainParagraph>
       <MainParagraph>
         It includes a comprehensive collection of prebuilt components that are
@@ -34,9 +34,8 @@ const Overview: React.FC<OverviewProps> = (props: OverviewProps) => {
               "👀 status visualization: validation and upload status is shown on a Tooltip or on Info Layer"
             }
           </li>
-          <li>
-            {"✈️ File upload: Upload valid files to a server using Axios lib."}
-          </li>
+          <li>{"👀 loader and progress: keep track of the upload progress"}</li>
+          <li>{"✈️ File upload: Upload valid files to a server."}</li>
           <li>{"🎭 Out of the box design and style."}</li>
           <li>
             {

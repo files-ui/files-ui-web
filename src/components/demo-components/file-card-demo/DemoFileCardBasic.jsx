@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FileCard, FileInputButton, FileMosaic } from "../../../files-ui";
+import { FileCard, FileInputButton, } from "superdefpythoniztioningtrycrypto2";
 
 const sampleFileProps = {
   id: "fileId",

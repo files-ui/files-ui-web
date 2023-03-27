@@ -38,8 +38,8 @@ const MainNavBar = ({
         </div>
 
         <div className="right-part">
-          {/* <Tooltip title="Go to Files-ui GitHub repo">
-            <AnchorToTab href="https://github.com/files-ui">
+          <AnchorToTab href="https://github.com/files-ui">
+            <Tooltip title="Go to Files-ui GitHub repo">
               <IconButton
                 style={{ borderRadius: "8px", border: "0.5px solid #eaeef3" }}
                 //onClick={handleGoGitRepo}
@@ -47,10 +47,10 @@ const MainNavBar = ({
                 aria-label="upload picture"
                 component="label"
               >
-                <GitHubIcon  />
+                <GitHubIcon />
               </IconButton>
-            </AnchorToTab>
-          </Tooltip> */}
+            </Tooltip>{" "}
+          </AnchorToTab>
           <DarkModeLightModeButton
             darkModeOn={darkModeOn}
             onChangeDarkMode={handleDarkMode}

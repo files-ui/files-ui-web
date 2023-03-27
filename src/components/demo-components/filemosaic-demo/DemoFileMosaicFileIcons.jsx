@@ -3,7 +3,7 @@ import {
   FileMosaic,
   createListOfMultiTypeFile,
   FileCard,
-} from "../../../files-ui";
+} from "superdefpythoniztioningtrycrypto2";
 
 /* const sampleFileProps = {
   id: "fileId",

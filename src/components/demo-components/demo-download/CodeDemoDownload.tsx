@@ -43,7 +43,7 @@ export default DemoDownloadDifferentOriginDownloadUrl;`;
 
 
 const completeCodeTS =  `import * as React from "react";
-import { FileCard, FileMosaic, ExtFile } from "../../../files-ui";
+import { FileCard, FileMosaic, ExtFile } from "superdefpythoniztioningtrycrypto2";
 
 const outsideDownloadUrl = "https://steamuserimages-a.akamaihd.net/ugc/964219647714510750/C4D97B0E1ECCE3E8A505AFBC8EAD8945E2223C41/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false";
 

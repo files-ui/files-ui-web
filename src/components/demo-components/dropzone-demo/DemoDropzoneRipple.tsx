@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dropzone, FileInputButton } from "../../../files-ui";
+import { Dropzone, FileInputButton } from "superdefpythoniztioningtrycrypto2";
 
 const DemoDropzoneRipple = ({ button = false }) => {
   if (button)

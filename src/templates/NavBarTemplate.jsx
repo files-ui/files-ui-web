@@ -46,11 +46,11 @@ function NavBarTemplate(props) {
     else dispatch({ type: "TURNONLIGHT" });
   };
 
-  const handleGoGitRepo = () => {
+ /*  const handleGoGitRepo = () => {
     alert("HAAA");
     window.open("https://github.com/files-ui", "_blank");
   };
-
+ */
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dropzone, FileCard, FileInputButton, FileMosaic } from "../../../files-ui";
+import { Dropzone, FileCard, FileInputButton, FileMosaic } from "superdefpythoniztioningtrycrypto2";
 
 const DemoActionButtons = ({ button }) => {
   const [files, setFiles] = React.useState([]);

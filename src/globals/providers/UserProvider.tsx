@@ -5,8 +5,8 @@ import { userInitializer, userReducer } from "../reducers/userReducer";
 import { ThemeProvider } from "@emotion/react";
 import { MUItheme } from "../../theme/mainTheme";
 import { FuiAction } from "../types/FuiAction";
-import { FilesUiProvider } from "../../files-ui";
-import gradle from "../../static/new-icons/gradle.jpg";
+import { FilesUiProvider } from "superdefpythoniztioningtrycrypto2";
+import DialogRatePage from "../../components/dialog/DialogRatePage";
 export const UserProvider = (props: {
   children: React.ReactNode;
   valorInicial: UserFilesUi;
@@ -21,20 +21,19 @@ export const UserProvider = (props: {
     console.log("filesuiuser", usuario);
   }, [usuario]);
 
+  const handleCloseDialog = () => {
+    dispatch({ type: "CLOSEFEEDBACK" });
+  };
   return (
     <UserContext.Provider value={[usuario, dispatch]}>
       <ThemeProvider theme={MUItheme(usuario.darkMode ? "dark" : "light")}>
         <FilesUiProvider
           config={{
             darkMode: usuario.darkMode,
-            /* icons: {
-              png: gradle,
-              mp4: "/serverside/springbootjavalogo.png",
-              pdf: "https://www.iconpacks.net/icons/2/free-pdf-download-icon-2617-thumb.png",
-            }, */
           }}
         >
           {children}
+          <DialogRatePage {...usuario.dialogRate} onClose={handleCloseDialog} />
         </FilesUiProvider>
       </ThemeProvider>
     </UserContext.Provider>

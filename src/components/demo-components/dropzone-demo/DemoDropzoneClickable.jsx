@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dropzone } from "../../../files-ui";
+import { Dropzone } from "superdefpythoniztioningtrycrypto2";
 
 const DemoDropzoneClickable = (props) => {
   return (

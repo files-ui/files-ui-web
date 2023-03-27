@@ -5,8 +5,7 @@ import {
   ExtFile,
   UPLOADSTATUS,
   FileCard,
-} from "../../../files-ui";
-import TypeHighlight from "../../typeHighlight/TypeHighlight";
+} from "superdefpythoniztioningtrycrypto2";
 
 import "./DemoFileMosaicUpload.scss";
 const DemoFileMosaicUploadStatus = (props: { card?: boolean }) => {

@@ -19,3 +19,7 @@ a {
 section {
   scroll-margin-top: 64px;
 }
+
+.swal2-container {
+  z-index: 10600 !important;
+}

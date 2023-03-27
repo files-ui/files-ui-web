@@ -3,7 +3,7 @@ import {
   FileCard,
   FileInputButton,
   FileMosaic,
-} from "../../../files-ui";
+} from "superdefpythoniztioningtrycrypto2";
 import * as React from "react";
 export default function BasicDemoDropzone({ button }) {
   const [files, setFiles] = React.useState([]);

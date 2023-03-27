@@ -4,7 +4,7 @@ import {
   FileInputButton,
   FileMosaic,
   ExtFile,
-} from "../../../files-ui";
+} from "superdefpythoniztioningtrycrypto2";
 
 interface DemoFileMosaicImagePreviewProps {
   card?: boolean;

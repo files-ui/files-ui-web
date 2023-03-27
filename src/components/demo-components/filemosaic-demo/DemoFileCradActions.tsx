@@ -6,7 +6,7 @@ import {
   ImagePreview,
   VideoPreview,
   ExtFile,
-} from "../../../files-ui";
+} from "superdefpythoniztioningtrycrypto2";
 
 const sampleFile: ExtFile = {
   size: 28 * 1024 * 1024,

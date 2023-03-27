@@ -12,7 +12,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/react": "^18.0.25",
-    "axios": "^1.3.1",
     "node-sass": "^7.0.3",
     "rc-highlight": "^2.5.6",
     "react": "^18.2.0",
@@ -20,8 +19,9 @@
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "superdefpythoniztioningtrycrypto2": "^0.0.1",
     "sweetalert": "^2.1.2",
-    "theamazingunkowntext": "^1.0.0",
+    "sweetalert2": "^11.7.3",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
   },

@@ -5,10 +5,12 @@ import { UserFilesUi } from "../types/UserFilesUi";
 
 export const userReducer = (state: UserFilesUi, action: FuiAction): UserFilesUi => {
   const { type = "", payload = {} } = action;
-  console.log("userReducer", state, action);
+  //console.log("userReducer", state, action);
   switch (type) {
-    case "INICIARSESION":
-      return { ...state, ...payload };
+    case "OPENFEEDBACK":
+      return { ...state, dialogRate: payload.dialogRate };
+    case "CLOSEFEEDBACK":
+      return { ...state, dialogRate:undefined };
     case "TURNONLIGHT":
       return { ...state, darkMode: false };
     case "TURNOFFLIGHT":
@@ -18,12 +20,12 @@ export const userReducer = (state: UserFilesUi, action: FuiAction): UserFilesUi 
   }
 };
 
-export const userInitializer = () => {
+export const userInitializer = ():UserFilesUi => {
   const usuarioEncontrado = localStorage.getItem("filesuiuser");
 
   if (usuarioEncontrado !== "udefined" && usuarioEncontrado !== null) {
     return JSON.parse(usuarioEncontrado);
   } else {
-    return {};
+    return {darkMode:false,dialogRate:undefined};
   }
 };

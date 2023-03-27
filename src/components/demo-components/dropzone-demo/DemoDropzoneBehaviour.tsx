@@ -7,7 +7,7 @@ import {
   FileInputButton,
   FileMosaic,
   //FileMosaicProps,
-} from "../../../files-ui";
+} from "superdefpythoniztioningtrycrypto2";
 
 const mainContainerStyle: React.CSSProperties = {
   display: "flex",

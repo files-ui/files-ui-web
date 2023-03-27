@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dropzone, FileMosaic } from "../../../files-ui";
+import { Dropzone, FileMosaic } from "superdefpythoniztioningtrycrypto2";
 
 const DemoDropzoneHeaderConfig = (props) => {
   const [files, setFiles] = React.useState([]);

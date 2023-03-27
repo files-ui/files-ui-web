@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Avatar } from "../../../files-ui";
+import { Avatar } from "superdefpythoniztioningtrycrypto2";
 interface DemoAvatarFallBackProps {}
 
 const landscapeImage =
