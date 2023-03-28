@@ -1,4 +1,4 @@
-import { Paper, Stack, Box } from "@mui/material";
+import { Paper, Box } from "@mui/material";
 import * as React from "react";
 
 const DemoContainerFileMosaic = ({ children, card }) => {

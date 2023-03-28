@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FileCard, ExtFile } from "../files-ui";
+import { FileCard, ExtFile } from "@files-ui/react";
 const baseFiles: ExtFile[] = [
   {
     id: Math.random(),

@@ -3,7 +3,7 @@ import {
   FileMosaic,
   createListOfMultiTypeFile,
   FileCard,
-} from "../../../files-ui";
+} from "@files-ui/react";
 
 /* const sampleFileProps = {
   id: "fileId",

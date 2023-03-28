@@ -18,6 +18,8 @@ import MainTitle from "../../components/main-title/MainTitle";
 import RightMenuContainer from "../../components/layout-pages/RightMenuContainer";
 import { scrollHandler } from "../../utils/scrollHandler";
 import CodeHighlight from "../../components/codeHighlight/CodeHighlight";
+import { ImagePreview } from "@files-ui/react";
+import FooterPage from "../../components/layout-pages/FooterPage";
 const GettingStartedPage = ({ darkModeOn }) => {
   const [selectedItem, setSelectedItem] = React.useState(0);
 
@@ -68,6 +70,26 @@ const GettingStartedPage = ({ darkModeOn }) => {
             {" >= 17.0.0 "} are peer dependencies.
           </DescParagraph>
         </section>
+        <section id="dropzoneui">
+          <SubTitle content="Dropzone-ui" />
+
+          <DescParagraph>
+            If you come from Dropzone-ui thank you so much for using
+            dropzone-ui/react ❤️ !
+            <br />
+            Dropzone UI has grown very fast and has exceeded its original scope.
+            That's why we find it reasonable to rebrand it and create a new
+            package keeping the best and adding more features and new
+            components. This new package is here and its name is Files UI ⚡!!
+            <br />
+            In an very near future we'll stop giving support to dropzone-ui, so
+            we enforce you to upgrade to this new package.
+          </DescParagraph>
+          <ImagePreview
+            src="https://user-images.githubusercontent.com/43678736/225168231-35d7dc8d-f89e-43a1-8ce9-441bd59a74df.png"
+            alt="img-dui-to-fui"
+          ></ImagePreview>
+        </section>
         <section id="default-font">
           <SubTitle content="Default font" />
 
@@ -76,6 +98,13 @@ const GettingStartedPage = ({ darkModeOn }) => {
             can set your own font-family en each component.
           </DescParagraph>
         </section>
+        <FooterPage
+          page="Getting started"
+         // labelBefore="Usage"
+          //linkBefore="/usage"
+          labelAfter="Usage"
+          linkAfter="/usage"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu
@@ -102,9 +131,14 @@ const rightMenuItems = [
     referTo: "/getting-started#installation",
   },
   {
-    id: 2,
+    id: 3,
     label: "Peer dependency",
     referTo: "/getting-started#peer-dependency",
+  },
+  {
+    id: 2,
+    label: "Dropzone ui",
+    referTo: "/getting-started#dropzoneui",
   },
   { id: 3, label: "Default font", referTo: "/getting-started#default-font" },
 ];

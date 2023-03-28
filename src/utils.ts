@@ -1,4 +1,4 @@
-import { ExtFile, ExtFileInstance } from "./files-ui";
+import { ExtFile, ExtFileInstance } from "@files-ui/react";
 
 export const print_manager = (extFileList: ExtFile[] | ExtFileInstance[] | undefined, message: string = ""): void => {
     if (extFileList)

@@ -30,6 +30,7 @@ import CodeJSFileCardActions from "../../components/demo-components/filemosaic-d
 import DemoFileMosaicSmartImgFit from "../../components/demo-components/filemosaic-demo/DemoFileMosaicSmartImgFit";
 import CodeJSFileMosaicSmartImgFit from "../../components/demo-components/filemosaic-demo/CodeJSFileMosaicSmartImgFit";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 const FileMosaicDemoPage = (props) => {
   const [selectedItem, setSelectedItem] = React.useState(0);
@@ -407,6 +408,13 @@ const FileMosaicDemoPage = (props) => {
             </li>
           </ul>
         </section>
+        <FooterPage
+          page="FileMosaic Demo"
+          labelBefore="Dropzone Demo"
+          linkBefore="/components/dropzone"
+          labelAfter="FileInputButton demo"
+          linkAfter="/components/fileinputbutton"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

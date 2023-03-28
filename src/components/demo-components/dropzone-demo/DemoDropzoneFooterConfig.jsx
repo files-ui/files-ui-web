@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dropzone, FileMosaic } from "../../../files-ui";
+import { Dropzone, FileMosaic } from "@files-ui/react";
 
 const DemoDropzoneFooterConfig = (props) => {
   const [files, setFiles] = React.useState([]);

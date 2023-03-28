@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Avatar, AvatarProps } from "../../../files-ui";
+import { Avatar, AvatarProps } from "@files-ui/react";
 interface DemoAvatarFallBackProps {}
 const fallBackImage =
   "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg";

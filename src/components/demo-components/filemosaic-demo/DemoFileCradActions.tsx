@@ -6,7 +6,7 @@ import {
   ImagePreview,
   VideoPreview,
   ExtFile,
-} from "../../../files-ui";
+} from "@files-ui/react";
 
 const sampleFile: ExtFile = {
   size: 28 * 1024 * 1024,

@@ -7,6 +7,7 @@ import CodeDemoFullScrrenVid from "../../components/demo-components/fullsceen/Co
 import DemoFullScreenImg from "../../components/demo-components/fullsceen/DemoFullScreenImg";
 import DemoFullScreenVid from "../../components/demo-components/fullsceen/DemoFullScreenVid";
 import SubTitle from "../../components/demo-components/sub-title/SubTitle";
+import FooterPage from "../../components/layout-pages/FooterPage";
 import MainContentContainer from "../../components/layout-pages/MainContentContainer";
 import RightMenuContainer from "../../components/layout-pages/RightMenuContainer";
 import MainTitle from "../../components/main-title/MainTitle";
@@ -138,6 +139,13 @@ const FullScreenDemoPage: React.FC<FullScreenDemoPageProps> = (
             </li>
           </ul>
         </section>
+        <FooterPage
+          page="FullScreen Demo"
+          labelBefore="FileCard Demo"
+          linkBefore="/components/filecard"
+          labelAfter="Avatar API"
+          linkAfter="/api/avatar"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

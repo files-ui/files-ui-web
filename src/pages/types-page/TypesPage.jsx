@@ -2,6 +2,7 @@ import { Highlighter } from "rc-highlight";
 import * as React from "react";
 import DescParagraph from "../../components/demo-components/desc-paragraph/DescParagraph";
 import SubTitle from "../../components/demo-components/sub-title/SubTitle";
+import FooterPage from "../../components/layout-pages/FooterPage";
 //import DescParagraph from "../../components/demo-components/desc-paragraph/DescParagraph";
 import MainContentContainer from "../../components/layout-pages/MainContentContainer";
 import MainLayoutPage from "../../components/layout-pages/MainLayoutPage";
@@ -83,7 +84,7 @@ const rightMenuItems = [
 ];
 
 const TypesPage = (props) => {
-  const [user, ] = React.useContext(UserContext);
+  const [user] = React.useContext(UserContext);
   const darkMode = user.darkMode;
 
   const [selectedItem, setSelectedItem] = React.useState(0);
@@ -213,7 +214,6 @@ const TypesPage = (props) => {
             </Highlighter>
           </section>
           <section id="iconsset">
-          
             <SubTitle content={"IconsSet"} />{" "}
             <DescParagraph>
               Data type that keeps track of all keys of addmited mime types.
@@ -232,6 +232,13 @@ const TypesPage = (props) => {
               {IconsSetCode}
             </Highlighter>
           </section>
+          <FooterPage
+            page="Types"
+            labelBefore="Localization"
+            linkBefore="/localization"
+            labelAfter="Server side"
+            linkAfter="/server-side"
+          />
         </MainContentContainer>
       </MainLayoutPage>{" "}
       <RightMenuContainer>
@@ -260,7 +267,7 @@ const FilesUIConfigCODE = `export type FilesUIConfig = {
   localization?: Localization;
 }`;
 
-const IconsSetCode= `export type IconsSet = {
+const IconsSetCode = `export type IconsSet = {
   aac?: string;
   accdb?: string;
   abw?: string;

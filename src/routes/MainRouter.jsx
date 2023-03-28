@@ -14,7 +14,7 @@ import UsagePage from "./../pages/usage/UsagePage";
 import TypesPage from "./../pages/types-page/TypesPage";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import MainLayoutPage from "../components/layout-pages/MainLayoutPage";
-import FileReaderPage from "../pages/utilities/FileReaderPage";
+//import FileReaderPage from "../pages/utilities/FileReaderPage";
 //import FileUploaderPage from "../pages/utilities/FileUploaderPage";
 import AvatarDemoPage from "../pages/demo/AvatarDemoPage";
 import FileInputButtonApi from "../pages/api/FileInputButtonApi";

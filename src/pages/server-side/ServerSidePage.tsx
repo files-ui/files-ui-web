@@ -11,9 +11,10 @@ import MainTitle from "../../components/main-title/MainTitle";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import RightMenu from "../../components/RightMenu/RightMenu";
 import AnchorToTab from "../../components/util-components/AnchorToTab";
-import { FileMosaic } from "../../files-ui";
+import { FileMosaic } from "@files-ui/react";
 import { redirect } from "../../utils/redirect";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 const ServerSidePage = () => {
   const [selectedItem, setSelectedItem] = React.useState(0);
 
@@ -113,6 +114,13 @@ const ServerSidePage = () => {
             </Paper>
             <CodeDemoServerSideJava splittedOnly />
           </section>
+          <FooterPage
+            page="Server Side"
+            labelBefore="types"
+            linkBefore="/types"
+            labelAfter="File Download"
+            linkAfter="/file-download"
+          />
         </MainContentContainer>
         <RightMenuContainer>
           <RightMenu

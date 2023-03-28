@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Dropzone, FileInputButton } from "../../../files-ui";
+import { Dropzone, FileInputButton } from "@files-ui/react";
 
 const DemoDropzoneLabel = ({ button }) => {
   if (button)

@@ -13,6 +13,7 @@ import MainLayoutPage from "../../components/layout-pages/MainLayoutPage";
 import AnchorToTab from "../../components/util-components/AnchorToTab";
 import FileCardMosaicSwitch from "../../components/switch/FileCardMosaicSwitch";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 const FileIconsPage = (props) => {
   const [selectedItem, setSelectedItem] = React.useState(0);
 
@@ -76,6 +77,13 @@ const FileIconsPage = (props) => {
               <DemoFileMosaicFileIcons card={component === "FileCard"} />
             </Paper>
           </section>
+          <FooterPage
+            page="File Icons"
+            labelBefore="Video Preview API"
+            linkBefore="/api/videopreview"
+            labelAfter="Localization"
+            linkAfter="/localization"
+          />
         </MainContentContainer>
         <RightMenuContainer>
           <RightMenu

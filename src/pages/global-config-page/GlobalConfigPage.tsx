@@ -15,6 +15,7 @@ import RightMenu from "../../components/RightMenu/RightMenu";
 import DemoGlobalConfig from "../../components/demo-components/global-demo/DemoGlobalConfig";
 import FileCardMosaicSwitch from "../../components/switch/FileCardMosaicSwitch";
 import CodeDemoGlobalConfig from "../../components/demo-components/global-demo/CodeDemoGlobalConfig";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 interface GlobalConfigPageProps {}
 const GlobalConfigPage: React.FC<GlobalConfigPageProps> = (
@@ -118,6 +119,13 @@ const GlobalConfigPage: React.FC<GlobalConfigPageProps> = (
               </ul>
             </Alert>
           </section>
+          <FooterPage
+            page="Global Config"
+            labelBefore="File Download"
+            linkBefore="/file-download"
+            //         labelAfter="Global Config"
+            //       linkAfter="/global-config"
+          />
         </MainContentContainer>
         <RightMenuContainer>
           <RightMenu

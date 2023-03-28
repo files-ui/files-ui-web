@@ -3,11 +3,11 @@ import { Stack, Paper } from "@mui/material";
 import {
   FileCard,
   ExtFile,
-  FullScreen,
+/*   FullScreen,
   ImagePreview,
-  VideoPreview,
+  VideoPreview, */
   FileInputButton,
-} from "../../../files-ui";
+} from "@files-ui/react";
 import AnchorToTab from "../../util-components/AnchorToTab";
 import TypeHighlight from "../../typeHighlight/TypeHighlight";
 

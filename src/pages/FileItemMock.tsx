@@ -4,7 +4,7 @@ import {
   FileMosaicProps,
   ExtFile,
   UPLOADSTATUS,
-} from "../files-ui";
+} from "@files-ui/react";
 
 const baseFiles: ExtFile[] = [
   {

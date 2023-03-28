@@ -5,8 +5,7 @@ import {
   ExtFile,
   UPLOADSTATUS,
   FileCard,
-} from "../../../files-ui";
-import TypeHighlight from "../../typeHighlight/TypeHighlight";
+} from "@files-ui/react";
 
 import "./DemoFileMosaicUpload.scss";
 const DemoFileMosaicUploadStatus = (props: { card?: boolean }) => {

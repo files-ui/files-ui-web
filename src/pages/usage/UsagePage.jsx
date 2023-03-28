@@ -13,6 +13,7 @@ import RightMenuContainer from "../../components/layout-pages/RightMenuContainer
 import MainContentContainer from "../../components/layout-pages/MainContentContainer";
 import MainTitle from "../../components/main-title/MainTitle";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 const rightMenuItems = [
   { id: 0, label: "Quick start", referTo: "/usage#quick-start" },
   {
@@ -111,6 +112,13 @@ const UsagePage = (props) => {
           </Paper>
           <AdvancedDropzoneCodeJS />
         </section>
+        <FooterPage
+          page="Usage"
+          labelBefore="Getting started"
+          linkBefore="/getting-started"
+          labelAfter="Dropzone demo"
+          linkAfter="/components/dropzone"
+        />
       </MainContentContainer>
 
       <RightMenuContainer>

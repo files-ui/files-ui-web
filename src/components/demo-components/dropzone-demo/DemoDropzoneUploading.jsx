@@ -4,7 +4,7 @@ import {
   FileCard,
   FileInputButton,
   FileMosaic,
-} from "../../../files-ui";
+} from "@files-ui/react";
 
 const DemoDropzoneUploading = ({ button }) => {
   const [files, setFiles] = React.useState([]);

@@ -4,12 +4,12 @@ import {
   FileCard,
   FileCardProps,
   FileMosaic,
-} from "../../../files-ui";
+} from "@files-ui/react";
 const sampleFileProps = {
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "sampleFile" + ".jsx",
+  name: "sampleFile.jsx",
   valid: true,
 };
 const sampleFilePropsCard = (elevationNumber: number): ExtFile => {

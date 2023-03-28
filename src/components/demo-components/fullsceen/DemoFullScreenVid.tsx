@@ -5,7 +5,7 @@ import {
   FileMosaic,
   FullScreen,
   VideoPreview,
-} from "../../../files-ui";
+} from "@files-ui/react";
 import { ThorArrivesWakandaEN } from "../../../data/videoLinks";
 
 const DemoFullScreenVid = () => {

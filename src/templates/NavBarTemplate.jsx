@@ -46,11 +46,11 @@ function NavBarTemplate(props) {
     else dispatch({ type: "TURNONLIGHT" });
   };
 
-  const handleGoGitRepo = () => {
+ /*  const handleGoGitRepo = () => {
     alert("HAAA");
     window.open("https://github.com/files-ui", "_blank");
   };
-
+ */
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -142,7 +142,7 @@ function NavBarTemplate(props) {
           </Typography>
           <Box style={{ flexGrow: 1 }} />
           <Stack direction="row" spacing={1}>
-            <AnchorToTab href="https://github.com/files-ui">
+            <AnchorToTab href="https://github.com/files-ui/files-ui-react">
               <Tooltip title="Go to Files-ui GitHub repo">
                 <IconButton
                   style={{ borderRadius: "8px", border: "0.5px solid #eaeef3" }}

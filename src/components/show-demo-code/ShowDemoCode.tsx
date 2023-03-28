@@ -120,6 +120,8 @@ const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
           margin: "20px 0",
           fontSize: "15px",
           lineHeight: "",
+          maxHeight:"min(68vh, 1000px)",
+          overflow:"auto"
         }}
       >
         {code}

@@ -4,7 +4,7 @@ import {
   FileInputButton,
   FileMosaic,
   ExtFile,
-} from "../../../files-ui";
+} from "@files-ui/react";
 
 interface DemoFileMosaicImagePreviewProps {
   card?: boolean;

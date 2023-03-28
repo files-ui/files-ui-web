@@ -10,6 +10,7 @@ import PropsTableApi from "./PropsTableApi";
 import { FullScreenAPIPropRows } from "./FullScreenAPIPropRows";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 const rightMenuItems = [
   {
@@ -75,6 +76,13 @@ const FullScreenApi = () => {
         <section id="props">
           <PropsTableApi rows={FullScreenAPIPropRows} />
         </section>
+        <FooterPage
+          page="FullScreen API"
+          labelBefore="FileMosaic API"
+          linkBefore="/api/filemosaic"
+          labelAfter="ImagePreview API"
+          linkAfter="/api/imagepreview"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

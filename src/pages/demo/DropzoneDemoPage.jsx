@@ -40,6 +40,7 @@ import CodeDemoDropzoneDropLayer from "../../components/demo-components/dropzone
 import CodeDemoDropzoneBehaviour from "../../components/demo-components/dropzone-demo/CodeDemoDropzoneBehaviour";
 import CodeDemoDropzoneLabel from "../../components/demo-components/dropzone-demo/CodeDropzoneDemoLabel";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 const DropzoneDemoPage = (props) => {
   const [selectedItem, setSelectedItem] = React.useState(0);
@@ -657,6 +658,13 @@ const DropzoneDemoPage = (props) => {
             </ul>
           </DescParagraph>
         </section>
+        <FooterPage
+          page="Dropzone Demo"
+          labelBefore="Usage"
+          linkBefore="/usage"
+          labelAfter="FileMosaic Demo"
+          linkAfter="/components/filemosaic"
+        />
       </MainContentContainer>
 
       <RightMenuContainer>

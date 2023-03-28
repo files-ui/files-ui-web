@@ -5,7 +5,7 @@ import {
   FileMosaic,
   FullScreen,
   ImagePreview,
-} from "../../../files-ui";
+} from "@files-ui/react";
 
 const DemoFullScreenImg = () => {
   const [imgSrc, setImgSrc] = React.useState<string | undefined>(undefined);

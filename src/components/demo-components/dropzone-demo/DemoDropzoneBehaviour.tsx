@@ -7,7 +7,7 @@ import {
   FileInputButton,
   FileMosaic,
   //FileMosaicProps,
-} from "../../../files-ui";
+} from "@files-ui/react";
 
 const mainContainerStyle: React.CSSProperties = {
   display: "flex",

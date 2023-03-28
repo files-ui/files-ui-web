@@ -22,13 +22,19 @@
 </div>
 **Files UI** is a complete library for handling files in the UI. You can validate and upload them.
 
-<a href="https://github.com/dropzone-ui/react#readme">
-<img align="center" width="100%" src="https://user-images.githubusercontent.com/43678736/139614260-602b512c-cf78-48fe-ae57-1057e7ec8135.gif" alt="files-ui-preview">
+<a href="https://www.files-ui.com">
+<img align="center" width="100%" src="https://user-images.githubusercontent.com/43678736/228052494-99d970c0-1eb7-42c6-b22c-8c2295b8dc4a.gif" alt="files-ui-preview">
 </a>
+
+<p></p>
+
+:zap: Live demo and code generator : [files-ui.com](https://www.files-ui.com)
+
+:heart: it ?, support us by giving a :star: on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D
 
 ## Requirement
 
-`@files-ui/react` is based on [React Hooks](https://reactjs.org/docs/hooks-intro.html). It requires `react v16.8+`.
+`@files-ui/react` is based on [React Hooks](https://reactjs.org/docs/hooks-intro.html). It requires `react v16.8+` or greater.
 
 ## Installation
 

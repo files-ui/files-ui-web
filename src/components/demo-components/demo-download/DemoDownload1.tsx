@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FileCard, FileMosaic, ExtFile } from "../../../files-ui";
+import { FileCard, FileMosaic, ExtFile } from "@files-ui/react";
 
 const sampleFile: ExtFile = {
   size: 28 * 1024 * 1024,

@@ -1,15 +1,10 @@
 import * as React from "react";
 import { Stack, Paper } from "@mui/material";
 import {
-  FileCard,
-  ExtFile,
-  FullScreen,
-  ImagePreview,
-  VideoPreview,
-  FileInputButton,
-  Avatar,
+  // Avatar,
   MaterialButton,
-} from "../../../files-ui";
+} from "@files-ui/react";
+import { Avatar } from "@files-ui/react";
 import AnchorToTab from "../../util-components/AnchorToTab";
 import TypeHighlight from "../../typeHighlight/TypeHighlight";
 import { BIA_URL } from "../../../data/imagesURL";
@@ -21,7 +16,7 @@ const ExtraComponentsMainPageAvatar: React.FC<ExtraComponentsMainPageProps> = (
   props: ExtraComponentsMainPageProps
 ) => {
   const { darkMode } = props;
-  const [isUloading, setIsUploading] = React.useState<boolean>(false);
+  //const [isUloading, setIsUploading] = React.useState<boolean>(false);
 
   const [avatarSrc, setAvatarSrc] = React.useState<string | undefined | File>(
     BIA_URL
@@ -63,7 +58,7 @@ const ExtraComponentsMainPageAvatar: React.FC<ExtraComponentsMainPageProps> = (
         <Avatar
           src={avatarSrc}
           onChange={handleChange}
-          isLoading={isUloading}
+          //isLoading={isUloading}
           smartImgFit={"center"}
           style={{ width: "170px", height: "170px" }}
           //variant={"circle"}
@@ -71,7 +66,7 @@ const ExtraComponentsMainPageAvatar: React.FC<ExtraComponentsMainPageProps> = (
         <Avatar
           src={avatarSrc}
           onChange={handleChange}
-          isLoading={isUloading}
+          //isLoading={isUloading}
           smartImgFit={"center"}
           variant={"circle"}
           style={{ width: "170px", height: "170px" }}
@@ -80,7 +75,7 @@ const ExtraComponentsMainPageAvatar: React.FC<ExtraComponentsMainPageProps> = (
           onClick={() => setAvatarSrc(undefined)}
           disabled={avatarSrc === undefined}
         >
-          remove avatar
+          remove photo
         </MaterialButton>
       </Stack>
     </Paper>
@@ -88,9 +83,10 @@ const ExtraComponentsMainPageAvatar: React.FC<ExtraComponentsMainPageProps> = (
 };
 export default ExtraComponentsMainPageAvatar;
 
-const sampleFileProps: ExtFile = {
+/* const sampleFileProps: ExtFile = {
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
   name: "file created from props.jsx",
 };
+ */

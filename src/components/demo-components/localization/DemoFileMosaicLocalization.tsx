@@ -6,7 +6,7 @@ import {
   Localization,
   FileInputButton,
   FileCard,
-} from "../../../files-ui";
+} from "@files-ui/react";
 import { Autocomplete, TextField } from "@mui/material";
 import "./DemoLocalization.css";
 const DemoFileMosaicLocalization = (props: { card: boolean }) => {

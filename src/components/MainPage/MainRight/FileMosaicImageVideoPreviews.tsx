@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Stack, Paper } from "@mui/material";
-import { FileMosaic, ExtFile, FileMosaicProps } from "../../../files-ui";
+import { FileMosaic, ExtFile, FileMosaicProps } from "@files-ui/react";
 import DescParagraph from "../../demo-components/desc-paragraph/DescParagraph";
-import { FullScreen, ImagePreview, VideoPreview } from "../../../files-ui";
+import { FullScreen, ImagePreview, VideoPreview } from "@files-ui/react";
 import {
   // NarutoAndSasukeVsMomoshikiEN,
   // NarutoAndSasukeVsMomoshikiES,
