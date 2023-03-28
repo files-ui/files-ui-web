@@ -15,6 +15,7 @@ import TypeHighlight from "../../components/typeHighlight/TypeHighlight";
 import DemoFileMosaicLocalization from "../../components/demo-components/localization/DemoFileMosaicLocalization";
 import CodeJSFileMosaicLocalization from "../../components/demo-components/localization/CodeJSFileMosaicLocalization";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 const LocalizationPage = (props) => {
   const [selectedItem, setSelectedItem] = React.useState(0);
@@ -91,7 +92,13 @@ const LocalizationPage = (props) => {
             </Paper>
             <CodeJSFileMosaicLocalization card={component === "FileCard"} />
           </section>
-
+          <FooterPage
+            page="Localization"
+            labelBefore="File Icons"
+            linkBefore="/file-icons"
+            labelAfter="Types"
+            linkAfter="/types"
+          />
           <RightMenuContainer>
             <RightMenu
               width="240px"

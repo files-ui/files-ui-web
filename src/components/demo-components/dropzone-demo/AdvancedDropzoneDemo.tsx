@@ -10,7 +10,7 @@ import {
 } from "superdefpythoniztioningtrycrypto2";
 
 const BASE_URL =
-  "https://files-ui-server.vercel.app/39d33dff2d41b522c1ea276c4b82507f96b9699493d2e7b3f5c864ba743d9503";
+  "https://www.files-ui.com";
 
 export default function AdvancedDropzoneDemo() {
   const [extFiles, setExtFiles] = React.useState<ExtFile[]>([]);
@@ -75,7 +75,7 @@ export default function AdvancedDropzoneDemo() {
         }}
         onUploadStart={handleStart}
         onUploadFinish={handleFinish}
-        //fakeUpload
+        fakeUpload
         actionButtons={{
           position: "after",
           abortButton: {},

@@ -10,6 +10,7 @@ import PropsTableApi from "./PropsTableApi";
 import { DropzoneAPIPropsRows } from "../../data/DropzoneAPIPropsRows";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 const rightMenuItems = [
   {
     id: 0,
@@ -65,6 +66,13 @@ const DropzoneApi = () => {
         <section id="props">
           <PropsTableApi rows={DropzoneAPIPropsRows} />
         </section>
+        <FooterPage
+          page="Dropzone API"
+          labelBefore="Avatar API"
+          linkBefore="/api/avatar"
+          labelAfter="FileInputButton API"
+          linkAfter="/api/fileinputbutton"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

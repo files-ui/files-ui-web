@@ -10,6 +10,7 @@ import PropsTableApi from "./PropsTableApi";
 import { FileInputButtonPropsRows } from "../../data/FileInputButtonPropsRows";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 const rightMenuItems = [
   {
@@ -63,9 +64,17 @@ const FileInputButtonApi = (props) => {
             </ul>
           </Alert>
         </section>
+
         <section id="props">
           <PropsTableApi rows={FileInputButtonPropsRows} />
         </section>
+        <FooterPage
+          page="FileInputButton API"
+          labelBefore="Dropzone API"
+          linkBefore="/api/dropzone"
+          labelAfter="FileCard API"
+          linkAfter="/api/filecard"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

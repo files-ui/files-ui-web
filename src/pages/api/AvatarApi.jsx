@@ -10,6 +10,7 @@ import PropsTableApi from "./PropsTableApi";
 import { AvatarAPIPropsRows } from "../../data/AvatarAPIPropsRows";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 const rightMenuItems = [
   {
@@ -57,6 +58,13 @@ const AvatarApi = (props) => {
         <section id="props">
           <PropsTableApi rows={AvatarAPIPropsRows} />
         </section>
+        <FooterPage
+          page="Avatar API"
+          labelBefore="FullScreen Demo"
+          linkBefore="/components/fullscreen"
+          labelAfter="Dropzone API"
+          linkAfter="/api/dropzone"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

@@ -12,6 +12,7 @@ import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import DescParagraph from "../../components/demo-components/desc-paragraph/DescParagraph";
 import CodeHighlight from "../../components/codeHighlight/CodeHighlight";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 const rightMenuItems = [
   {
@@ -77,6 +78,13 @@ const VideoPreviewApi = () => {
         <section id="props">
           <PropsTableApi rows={VideoPreviewAPIPropsRows} />
         </section>
+        <FooterPage
+          page="VideoPreview API"
+          labelBefore="ImagePreview API"
+          linkBefore="/api/imagepreview"
+          labelAfter="File Icons"
+          linkAfter="/file-icons"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

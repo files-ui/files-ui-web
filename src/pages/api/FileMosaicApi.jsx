@@ -1,6 +1,7 @@
 import { Alert } from "@mui/material";
 import * as React from "react";
 import SubTitle from "../../components/demo-components/sub-title/SubTitle";
+import FooterPage from "../../components/layout-pages/FooterPage";
 import MainContentContainer from "../../components/layout-pages/MainContentContainer";
 import RightMenuContainer from "../../components/layout-pages/RightMenuContainer";
 import MainTitle from "../../components/main-title/MainTitle";
@@ -64,6 +65,13 @@ const FileMosaicApi = (props) => {
         <section id="props">
           <PropsTableApi rows={FileMosaicAPIPropsRows} />
         </section>
+        <FooterPage
+          page="FileMosaic API"
+          labelBefore="FileCard API"
+          linkBefore="/api/filecard"
+          labelAfter="FullScreen API"
+          linkAfter="/api/fullscreen"
+        />
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu

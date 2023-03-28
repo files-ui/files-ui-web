@@ -35,6 +35,7 @@ import CodeDemoDropzoneUploading from "../../components/demo-components/dropzone
 import DemoDropzoneActionButtons from "../../components/demo-components/dropzone-demo/DemoDropzoneActionButtons";
 import CodeDemoDropzoneActionButtons from "../../components/demo-components/dropzone-demo/CodeDemoDropzoneActionButtons";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 
 interface FileInputButtonDemoPageProps {}
 const FileInputButtonDemoPage: React.FC<FileInputButtonDemoPageProps> = (
@@ -464,6 +465,13 @@ const FileInputButtonDemoPage: React.FC<FileInputButtonDemoPageProps> = (
             </ul>
           </DescParagraph>
         </section>
+        <FooterPage
+          page="FileInputDemo Demo"
+          labelBefore="FileMosaic Demo"
+          linkBefore="/components/filemosaic"
+          labelAfter="FileCard Demo"
+          linkAfter="/components/filecard"
+        />
       </MainContentContainer>
 
       <RightMenuContainer>

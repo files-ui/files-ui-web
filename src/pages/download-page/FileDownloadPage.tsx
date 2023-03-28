@@ -9,6 +9,7 @@ import DemoDownload2 from "../../components/demo-components/demo-download/DemoDo
 import DemoDownload3 from "../../components/demo-components/demo-download/DemoDownload3";
 import DescParagraph from "../../components/demo-components/desc-paragraph/DescParagraph";
 import SubTitle from "../../components/demo-components/sub-title/SubTitle";
+import FooterPage from "../../components/layout-pages/FooterPage";
 import MainContentContainer from "../../components/layout-pages/MainContentContainer";
 import MainLayoutPage from "../../components/layout-pages/MainLayoutPage";
 import RightMenuContainer from "../../components/layout-pages/RightMenuContainer";
@@ -136,7 +137,6 @@ const FileDownloadPage = () => {
                   document.
                 </li>
               </ol>
-              
             </DescParagraph>
             <Paper
               variant="outlined"
@@ -169,6 +169,13 @@ const FileDownloadPage = () => {
               </li>
             </ul>
           </section>
+          <FooterPage
+            page="File Download"
+            labelBefore="Server Side"
+            linkBefore="/server-side"
+            labelAfter="Global Config"
+            linkAfter="/global-config"
+          />
         </MainContentContainer>
       </MainLayoutPage>
 

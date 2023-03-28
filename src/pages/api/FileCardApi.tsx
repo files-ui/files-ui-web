@@ -1,6 +1,7 @@
 import { Alert } from "@mui/material";
 import * as React from "react";
 import SubTitle from "../../components/demo-components/sub-title/SubTitle";
+import FooterPage from "../../components/layout-pages/FooterPage";
 import MainContentContainer from "../../components/layout-pages/MainContentContainer";
 import RightMenuContainer from "../../components/layout-pages/RightMenuContainer";
 import MainTitle from "../../components/main-title/MainTitle";
@@ -63,9 +64,16 @@ const FileCardApi = () => {
         <section id="props">
           <PropsTableApi rows={FileCardAPIPropsRows} />
         </section>
+        <FooterPage
+          page="FileCard API"
+          labelBefore="FileInputButton API"
+          linkBefore="/api/fileinputbutton"
+          labelAfter="FileMosaic API"
+          linkAfter="/api/filemosaic"
+        />
       </MainContentContainer>
       <RightMenuContainer>
-      <RightMenu
+        <RightMenu
           width="240px"
           items={rightMenuItems}
           selectedItemProp={selectedItem}

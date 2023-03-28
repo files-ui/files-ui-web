@@ -38,7 +38,7 @@ const MainNavBar = ({
         </div>
 
         <div className="right-part">
-          <AnchorToTab href="https://github.com/files-ui">
+          <AnchorToTab href="https://github.com/files-ui/files-ui-react">
             <Tooltip title="Go to Files-ui GitHub repo">
               <IconButton
                 style={{ borderRadius: "8px", border: "0.5px solid #eaeef3" }}

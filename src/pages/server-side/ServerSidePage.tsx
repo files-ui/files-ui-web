@@ -14,6 +14,7 @@ import AnchorToTab from "../../components/util-components/AnchorToTab";
 import { FileMosaic } from "superdefpythoniztioningtrycrypto2";
 import { redirect } from "../../utils/redirect";
 import { scrollHandler } from "../../utils/scrollHandler";
+import FooterPage from "../../components/layout-pages/FooterPage";
 const ServerSidePage = () => {
   const [selectedItem, setSelectedItem] = React.useState(0);
 
@@ -113,6 +114,13 @@ const ServerSidePage = () => {
             </Paper>
             <CodeDemoServerSideJava splittedOnly />
           </section>
+          <FooterPage
+            page="Server Side"
+            labelBefore="types"
+            linkBefore="/types"
+            labelAfter="File Download"
+            linkAfter="/file-download"
+          />
         </MainContentContainer>
         <RightMenuContainer>
           <RightMenu
