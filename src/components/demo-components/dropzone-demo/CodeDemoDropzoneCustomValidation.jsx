@@ -9,8 +9,8 @@ const CodeDemoDropzoneCustomValidation = ({
         splittedOnly={splittedOnly}
         codeCompleteJS={completeCodeJSButton}
         codeCompleteTS={completeCodeTSButton}
-        codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-        codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-custom-validation-ufvgcy?file=/src/App.js"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-custom-validation-ufvgcy?file=/src/App.js"
         codeSplittedJS={splittedCodeJSButton}
         codeSplittedTS={splittedCodeTSButton}
       />
