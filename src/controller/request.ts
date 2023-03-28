@@ -1,4 +1,4 @@
-import { JSON_PARSE_ERROR_RESPONSE, TIMEOUT_ERROR_RESPONSE } from "defpythoniztioningtrycrypto";
+import { JSON_PARSE_ERROR_RESPONSE, TIMEOUT_ERROR_RESPONSE } from "@files-ui/core";
 import { ServerResponse } from "@files-ui/react";
 
 
