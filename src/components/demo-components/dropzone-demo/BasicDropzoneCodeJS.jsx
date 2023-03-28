@@ -5,8 +5,8 @@ const BasicDropzoneCode = ({ splittedOnly = false, button = false }) => {
       splittedOnly={splittedOnly}
       codeCompleteJS={button ? completeCodeJSButton : completeCodeJS}
       codeCompleteTS={button ? completeCodeTSButton : completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/basic-demo-js-blssi1"
-      codeSandboxTS="https://codesandbox.io/s/basic-demo-js-blssi1"
+      codeSandboxJS="https://codesandbox.io/s/basic-demo-js-blssi1?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/basic-demo-js-blssi1?file=/src/App.js"
       codeSplittedJS={button ? splittedCodeJSButton : splittedCodeJS}
       codeSplittedTS={button ? splittedCodeTSButton : splittedCodeTS}
     />

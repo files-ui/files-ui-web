@@ -6,8 +6,8 @@ const AdvancedDropzoneCodeJS = (props) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="hhttps://codesandbox.io/s/advanced-demo-js-6euo8j?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/advanced-demo-js-6euo8j?file=/src/App.js"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />

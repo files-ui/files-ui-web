@@ -71,7 +71,7 @@ const UsagePage = (props) => {
           <iframe
             title="codesandbox"
             // add    ".../embed/..."
-            src="https://codesandbox.io/embed/basic-demo-js-blssi1"
+            src="https://codesandbox.io/embed/basic-demo-js-blssi1?file=/src/App.js"
             //src="https://codesandbox.io/embed/u9sy1h?hidenavigation=1&amp;fontsize=14&amp;view=preview"
             //src="https://codesandbox.io/s/material-ui-u9sy1h"
             style={{
