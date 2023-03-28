@@ -19,7 +19,7 @@ const CodeDemoDropzoneCustomValidation = ({
     <ShowDemoCode
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
-      codeCompleteTS={completeCodeTS}
+      codeCompleteTS={completeCodeTS}P
       codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-custom-validation-q0ikco"
       codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-custom-validation-q0ikco"
       codeSplittedJS={splittedCodeJS}

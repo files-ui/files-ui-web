@@ -9,7 +9,7 @@ const UploadPage = (props) => {
   return (
     <MainLayoutPage>
       <MainContentContainer>
-        <MainTitle>pload with Files ui</MainTitle>
+        <MainTitle>Upload with Files ui</MainTitle>
       </MainContentContainer>
       <RightMenuContainer>
         <RightMenu width="240px" items={[]} />

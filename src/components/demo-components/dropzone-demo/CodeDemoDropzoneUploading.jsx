@@ -9,8 +9,8 @@ const CodeDemoDropzoneUploading = ({
         splittedOnly={splittedOnly}
         codeCompleteJS={completeCodeJSButton}
         codeCompleteTS={completeCodeTSButton}
-        codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-        codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-upload-js-tbf5fu"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-upload-js-tbf5fu"
         codeSplittedJS={splittedCodeJSButton}
         codeSplittedTS={splittedCodeTSButton}
       />
@@ -20,8 +20,8 @@ const CodeDemoDropzoneUploading = ({
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-upload-js-jwru93"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-upload-js-jwru93"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
