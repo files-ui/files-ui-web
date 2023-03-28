@@ -3,8 +3,8 @@ import { Stack, Paper } from "@mui/material";
 import {
   // Avatar,
   MaterialButton,
-} from "superdefpythoniztioningtrycrypto2";
-import { Avatar } from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
+import { Avatar } from "@files-ui/react";
 import AnchorToTab from "../../util-components/AnchorToTab";
 import TypeHighlight from "../../typeHighlight/TypeHighlight";
 import { BIA_URL } from "../../../data/imagesURL";

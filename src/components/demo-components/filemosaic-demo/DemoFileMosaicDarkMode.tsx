@@ -4,7 +4,7 @@ import {
   FileCard,
   FileCardProps,
   FileMosaic,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 const sampleFileProps = {
   id: "fileId",
   size: 28 * 1024 * 1024,

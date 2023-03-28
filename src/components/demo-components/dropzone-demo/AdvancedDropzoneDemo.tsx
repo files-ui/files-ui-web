@@ -7,7 +7,7 @@ import {
   FullScreen,
   ImagePreview,
   VideoPreview,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 const BASE_URL =
   "https://www.files-ui.com";

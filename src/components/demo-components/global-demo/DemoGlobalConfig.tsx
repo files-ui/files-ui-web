@@ -8,7 +8,7 @@ import {
   FileCard,
   FilesUiProvider,
   IconsSet,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 import { Autocomplete, TextField, Button } from "@mui/material";
 import "./DemoGlobals.css";
 

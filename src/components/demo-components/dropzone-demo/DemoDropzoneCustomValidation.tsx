@@ -7,7 +7,7 @@ import {
   ValidateFileResponse,
   FileInputButton,
   FileCard,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 //validate files
 // file name must start with the following prefix: "test_file"

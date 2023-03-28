@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FileMosaic, FileInputButton, ExtFile } from "superdefpythoniztioningtrycrypto2";
+import { FileMosaic, FileInputButton, ExtFile } from "@files-ui/react";
 interface DemoFileMosaicImgPreviewProps {}
 const sampleFileProps: ExtFile = {
   id: ":0:",

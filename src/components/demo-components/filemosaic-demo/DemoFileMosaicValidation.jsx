@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FileCard, FileMosaic } from "superdefpythoniztioningtrycrypto2";
+import { FileCard, FileMosaic } from "@files-ui/react";
 
 const DemoFileMosaicValidation = ({ card }) => {
   if (card)

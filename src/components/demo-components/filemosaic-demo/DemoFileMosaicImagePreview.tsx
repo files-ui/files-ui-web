@@ -4,7 +4,7 @@ import {
   FileInputButton,
   FileMosaic,
   ExtFile,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 interface DemoFileMosaicImagePreviewProps {
   card?: boolean;

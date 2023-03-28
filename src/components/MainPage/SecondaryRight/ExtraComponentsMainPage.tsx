@@ -6,7 +6,7 @@ import {
   FullScreen,
   ImagePreview,
   VideoPreview,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 import AnchorToTab from "../../util-components/AnchorToTab";
 import TypeHighlight from "../../typeHighlight/TypeHighlight";
 import { ThorArrivesWakandaES } from "../../../data/videoLinks";

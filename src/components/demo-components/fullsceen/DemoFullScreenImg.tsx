@@ -5,7 +5,7 @@ import {
   FileMosaic,
   FullScreen,
   ImagePreview,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 const DemoFullScreenImg = () => {
   const [imgSrc, setImgSrc] = React.useState<string | undefined>(undefined);

@@ -18,7 +18,7 @@ import MainTitle from "../../components/main-title/MainTitle";
 import RightMenuContainer from "../../components/layout-pages/RightMenuContainer";
 import { scrollHandler } from "../../utils/scrollHandler";
 import CodeHighlight from "../../components/codeHighlight/CodeHighlight";
-import { ImagePreview } from "superdefpythoniztioningtrycrypto2";
+import { ImagePreview } from "@files-ui/react";
 import FooterPage from "../../components/layout-pages/FooterPage";
 const GettingStartedPage = ({ darkModeOn }) => {
   const [selectedItem, setSelectedItem] = React.useState(0);

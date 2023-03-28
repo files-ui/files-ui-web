@@ -1,5 +1,5 @@
 import { JSON_PARSE_ERROR_RESPONSE, TIMEOUT_ERROR_RESPONSE } from "defpythoniztioningtrycrypto";
-import { ServerResponse } from "superdefpythoniztioningtrycrypto2";
+import { ServerResponse } from "@files-ui/react";
 
 
 

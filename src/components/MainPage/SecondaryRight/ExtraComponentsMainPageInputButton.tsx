@@ -7,7 +7,7 @@ import {
   ImagePreview,
   VideoPreview, */
   FileInputButton,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 import AnchorToTab from "../../util-components/AnchorToTab";
 import TypeHighlight from "../../typeHighlight/TypeHighlight";
 

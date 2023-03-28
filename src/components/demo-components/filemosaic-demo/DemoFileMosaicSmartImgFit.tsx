@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ExtFile, FileCard, FileMosaic } from "superdefpythoniztioningtrycrypto2";
+import { ExtFile, FileCard, FileMosaic } from "@files-ui/react";
 
 const DemoFileMosaicSmartImgFit = (props: { card: boolean }) => {
   if (props.card)

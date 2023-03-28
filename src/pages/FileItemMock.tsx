@@ -4,7 +4,7 @@ import {
   FileMosaicProps,
   ExtFile,
   UPLOADSTATUS,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 const baseFiles: ExtFile[] = [
   {

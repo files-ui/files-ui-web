@@ -4,7 +4,7 @@ import {
   FileCard,
   FileInputButton,
   FileMosaic,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 const DemoDropzoneUploading = ({ button }) => {
   const [files, setFiles] = React.useState([]);

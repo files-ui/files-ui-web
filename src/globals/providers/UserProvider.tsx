@@ -5,7 +5,7 @@ import { userInitializer, userReducer } from "../reducers/userReducer";
 import { ThemeProvider } from "@emotion/react";
 import { MUItheme } from "../../theme/mainTheme";
 import { FuiAction } from "../types/FuiAction";
-import { FilesUiProvider } from "superdefpythoniztioningtrycrypto2";
+import { FilesUiProvider } from "@files-ui/react";
 import DialogRatePage from "../../components/dialog/DialogRatePage";
 export const UserProvider = (props: {
   children: React.ReactNode;

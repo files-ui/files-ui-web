@@ -5,7 +5,7 @@ import {
   ExtFile,
   UPLOADSTATUS,
   FileCard,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 import "./DemoFileMosaicUpload.scss";
 const DemoFileMosaicUploadStatus = (props: { card?: boolean }) => {

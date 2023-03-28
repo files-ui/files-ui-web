@@ -6,7 +6,7 @@ import {
   ImagePreview,
   VideoPreview,
   ExtFile,
-} from "superdefpythoniztioningtrycrypto2";
+} from "@files-ui/react";
 
 const sampleFile: ExtFile = {
   size: 28 * 1024 * 1024,

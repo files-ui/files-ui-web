@@ -11,7 +11,7 @@ import MainTitle from "../../components/main-title/MainTitle";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import RightMenu from "../../components/RightMenu/RightMenu";
 import AnchorToTab from "../../components/util-components/AnchorToTab";
-import { FileMosaic } from "superdefpythoniztioningtrycrypto2";
+import { FileMosaic } from "@files-ui/react";
 import { redirect } from "../../utils/redirect";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";

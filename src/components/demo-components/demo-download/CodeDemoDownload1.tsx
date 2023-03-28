@@ -41,7 +41,7 @@ export default DemoDownloadSameOrigin;`;
 
 
 const completeCodeTS =  `import * as React from "react";
-import { FileCard, FileMosaic, ExtFile } from "superdefpythoniztioningtrycrypto2";
+import { FileCard, FileMosaic, ExtFile } from "@files-ui/react";
 
 const sampleFile: ExtFile = {
   size: 28 * 1024 * 1024,
