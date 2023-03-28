@@ -18,7 +18,7 @@ export const UserProvider = (props: {
 
   React.useEffect(() => {
     localStorage.setItem("filesuiuser", JSON.stringify(usuario));
-    console.log("filesuiuser", usuario);
+    //console.log("filesuiuser", usuario);
   }, [usuario]);
 
   const handleCloseDialog = () => {
