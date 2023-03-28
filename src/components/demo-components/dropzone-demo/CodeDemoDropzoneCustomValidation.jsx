@@ -20,8 +20,8 @@ const CodeDemoDropzoneCustomValidation = ({
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-custom-validation-q0ikco"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-custom-validation-q0ikco"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -71,10 +71,8 @@ export default function App() {
       <FileInputButton
         onChange={updateFiles}
         value={files}
-        accept={"image/*"}
-        maxFileSize={280 * 1024}
-        maxFiles={2}
-        actionButtons={{ position: "bottom", cleanButton: {} }}
+        cleanFiles
+        validator={myOwnValidation}
       />
       {files.length > 0 && (
         <div
@@ -138,10 +136,8 @@ export default function App() {
       <FileInputButton
         onChange={updateFiles}
         value={files}
-        accept={"image/*"}
-        maxFileSize={280 * 1024}
-        maxFiles={2}
-        actionButtons={{ position: "bottom", cleanButton: {} }}
+        cleanFiles
+        validator={myOwnValidation}
       />
       {files.length > 0 && (
         <div

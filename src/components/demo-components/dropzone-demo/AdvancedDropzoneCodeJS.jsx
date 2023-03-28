@@ -72,6 +72,7 @@ const completeCodeJS = `import {
   ImagePreview,
   VideoPreview,
 } from "@files-ui/react";
+import * as React from "react;
 
 const BASE_URL =
  "https://www.myserver.com";
