@@ -7,8 +7,8 @@ const CodeDemoGlobalConfig = ({ card = false }) => {
       <ShowDemoCode
         codeCompleteJS={completeCodeJS}
         codeCompleteTS={completeCodeTS}
-        codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-        codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-global-config-filecard-1vm2f8?file=/src/App.js"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-global-config-filecard-1vm2f8?file=/src/App.js"
         codeSplittedJS={splittedCodeJS}
         codeSplittedTS={splittedCodeTS}
       />
@@ -17,8 +17,8 @@ const CodeDemoGlobalConfig = ({ card = false }) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJSCard}
       codeCompleteTS={completeCodeTSCard}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-global-config-filemosaic-ci66jj?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-global-config-filemosaic-ci66jj?file=/src/App.js"
       codeSplittedJS={splittedCodeJSCard}
       codeSplittedTS={splittedCodeTSCard}
     />
@@ -44,7 +44,7 @@ import {
   FilesUiProvider,
 } from "@files-ui/react";
 import { Autocomplete, TextField, Button } from "@mui/material";
-import "./DemoGlobals.css";
+import "./styles.css";
 
 const DemoGlobalConfig = () => {
   const [localization, setLocalization] = React.useState(undefined);
@@ -75,7 +75,7 @@ const DemoGlobalConfig = () => {
           disablePortal
           autoSelect
           size="small"
-          onChange={(e, value) => hadleSelect(value as LanguageItem)}
+          onChange={(e, value) => hadleSelect(value)}
           id="combo-box-demo"
           options={languages}
           sx={{ width: 300 }}
@@ -208,7 +208,7 @@ import {
   IconsSet,
 } from "@files-ui/react";
 import { Autocomplete, TextField, Button } from "@mui/material";
-import "./DemoGlobals.css";
+import "./styles.css";
 
 const DemoGlobalConfig = () => {
   const [localization, setLocalization] = React.useState<
@@ -381,7 +381,7 @@ import {
   IconsSet,
 } from "@files-ui/react";
 import { Autocomplete, TextField, Button } from "@mui/material";
-import "./DemoGlobals.css";
+import "./styles.css";
 
 const DemoGlobalConfig = () => {
   const [localization, setLocalization] = React.useState<
@@ -540,7 +540,7 @@ import {
   FilesUiProvider,
 } from "@files-ui/react";
 import { Autocomplete, TextField, Button } from "@mui/material";
-import "./DemoGlobals.css";
+import "./styles.css";
 
 const DemoGlobalConfig = () => {
   const [localization, setLocalization] = React.useState(undefined);
@@ -571,7 +571,7 @@ const DemoGlobalConfig = () => {
                 disablePortal
                 autoSelect
                 size="small"
-                onChange={(e, value) => hadleSelect(value as LanguageItem)}
+                onChange={(e, value) => hadleSelect(value)}
                 id="combo-box-demo"
                 options={languages}
                 sx={{ width: 300 }}
