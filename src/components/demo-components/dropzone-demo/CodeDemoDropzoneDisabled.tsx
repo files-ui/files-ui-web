@@ -6,8 +6,8 @@ const CodeDemoDropzoneDisabled = ({ splittedOnly = false, button = false }) => {
         splittedOnly={splittedOnly}
         codeCompleteJS={completeCodeJSButton}
         codeCompleteTS={completeCodeTSButton}
-        codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-        codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-disabled-vgqf2t"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-disabled-vgqf2t"
         codeSplittedJS={splittedCodeJSButton}
         codeSplittedTS={splittedCodeTSButton}
       />
@@ -17,8 +17,8 @@ const CodeDemoDropzoneDisabled = ({ splittedOnly = false, button = false }) => {
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-disabled-cgsoh0"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-disabled-cgsoh0"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
