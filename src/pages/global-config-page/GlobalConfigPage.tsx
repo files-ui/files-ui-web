@@ -99,7 +99,7 @@ const GlobalConfigPage: React.FC<GlobalConfigPageProps> = (
               <DemoGlobalConfig card={component === "FileCard"} />
             </Paper>
 
-            <CodeDemoGlobalConfig />
+            <CodeDemoGlobalConfig card={component === "FileCard"}/>
 
             <Alert severity="info">
               This demo is a combination of other samples that you can find in
