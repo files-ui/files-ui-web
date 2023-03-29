@@ -6,8 +6,8 @@ const CodeDemoActionButtons = ({ splittedOnly = false, button }) => {
         splittedOnly={splittedOnly}
         codeCompleteJS={completeCodeJSButton}
         codeCompleteTS={completeCodeTSButton}
-        codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-        codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-action-buttons-fqeosr?file=/src/App.js"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-action-buttons-fqeosr?file=/src/App.js"
         codeSplittedJS={splittedCodeJSButton}
         codeSplittedTS={splittedCodeTSButton}
       />
@@ -17,8 +17,8 @@ const CodeDemoActionButtons = ({ splittedOnly = false, button }) => {
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-action-buttons-ndxm7r?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-action-buttons-ndxm7r?file=/src/App.js"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -33,7 +33,7 @@ const splittedCodeJSButton = `<FileInputButton
   uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
   fakeUpload
   actionButtons={{
-    position: "bottom",
+    position: "after",
     uploadButton: { style: { textTransform: "uppercase" } },
     abortButton: {},
     cleanButton: {},
@@ -50,7 +50,7 @@ const splittedCodeTSButton = `<FileInputButton
   uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
   fakeUpload
   actionButtons={{
-    position: "bottom",
+    position: "after",
     uploadButton: { style: { textTransform: "uppercase" } },
     abortButton: {},
     cleanButton: {},
@@ -91,7 +91,7 @@ export default function App() {
         uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
         fakeUpload
         actionButtons={{
-          position: "bottom",
+          position: "after",
           uploadButton: { style: { textTransform: "uppercase" } },
           abortButton: {},
           cleanButton: {},
@@ -147,7 +147,7 @@ export default function App() {
         uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
         fakeUpload
         actionButtons={{
-          position: "bottom",
+          position: "after",
           uploadButton: { style: { textTransform: "uppercase" } },
           abortButton: {},
           cleanButton: {},
@@ -182,7 +182,7 @@ const splittedCodeJS = `<Dropzone
     uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
     fakeUpload
     actionButtons={{
-      position: "bottom",
+      position: "after",
       uploadButton: { style: { textTransform: "uppercase" } },
       abortButton: {},
       cleanButton: {},
@@ -200,7 +200,7 @@ const splittedCodeTS = `<Dropzone
     uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
     fakeUpload
     actionButtons={{
-      position: "bottom",
+      position: "after",
       uploadButton: { style: { textTransform: "uppercase" } },
       abortButton: {},
       cleanButton: {},
@@ -232,7 +232,7 @@ export default function App() {
         uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
         fakeUpload
         actionButtons={{
-            position: "bottom",
+            position: "after",
             uploadButton: { style: { textTransform: "uppercase" } },
             abortButton: {},
             cleanButton: {},
@@ -267,7 +267,7 @@ export default function App() {
         uploadConfig={{ url: "https://www.myawsomeserver.com/upload" }}
         fakeUpload
         actionButtons={{
-            position: "bottom",
+            position: "after",
             uploadButton: { style: { textTransform: "uppercase" } },
             abortButton: {},
             cleanButton: {},
