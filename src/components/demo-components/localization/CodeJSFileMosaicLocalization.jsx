@@ -6,8 +6,16 @@ const CodeJSFileMosaicLocalization = ({ card }) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS(card)}
       codeCompleteTS={completeCodeTS(card)}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS={
+        card
+          ? "https://codesandbox.io/s/files-ui-localization-filecard-cd3ewd?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-localization-filemosaic-g0ob4x?file=/src/App.js"
+      }
+      codeSandboxTS={
+        card
+          ? "https://codesandbox.io/s/files-ui-localization-filecard-cd3ewd?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-localization-filemosaic-g0ob4x?file=/src/App.js"
+      }
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -19,11 +27,13 @@ const splittedCodeJS = ``;
 const splittedCodeTS = ``;
 
 const completeCodeJS = (card) => `import * as React from "react";
-import { ${card ? "FileCard" : `FileMosaic`} } from "@files-ui/react";
+import { ${card ? "FileInputButton" : `Dropzone`}, ${
+  card ? "FileCard" : `FileMosaic`
+} } from "@files-ui/react";
 import "./styles.css";
 import { Autocomplete, TextField } from "@mui/material";
 
-const App = () => {
+const DemoLocalization = () => {
   const [localization, setLocalization] = React.useState(undefined);
 
   const hadleSelect = (value) => {
@@ -43,6 +53,7 @@ const App = () => {
         getOptionLabel={(option) => option.language}
         renderInput={(params) => <TextField {...params} label="Localization" />}
       />
+      <br/>
       ${
         !card
           ? `<div className="demo-localization-container">
@@ -88,7 +99,7 @@ const App = () => {
     </>
   );
 };
-export default DemoFileMosaicLocalization;
+export default DemoLocalization;
 
 const languages = [
   { language: "Español: ES-es", value: "ES-es" },
@@ -161,13 +172,13 @@ const extFiles = [
 ];`;
 
 const completeCodeTS = (card) => `import * as React from "react";
-import { ExtFile, ${
+import { ExtFile, ${card ? "FIleInputButton" : `Dropzone`}, ${
   card ? "FileCard" : `FileMosaic`
 }, Localization } from "@files-ui/react";
 import "./styles.css";
 import { Autocomplete, TextField } from "@mui/material";
 
-const App = () => {
+const DemoLocalization = () => {
   const [localization, setLocalization] = React.useState<
     Localization | undefined
   >(undefined);
@@ -235,7 +246,7 @@ const App = () => {
     </>
   );
 };
-export default DemoFileMosaicLocalization;
+export default DemoLocalization;
 
 interface LanguageItem {
   language: string;
