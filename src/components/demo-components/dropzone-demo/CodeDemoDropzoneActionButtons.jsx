@@ -6,8 +6,8 @@ const CodeDemoActionButtons = ({ splittedOnly = false, button }) => {
         splittedOnly={splittedOnly}
         codeCompleteJS={completeCodeJSButton}
         codeCompleteTS={completeCodeTSButton}
-        codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-action-buttons-fqeosr?file=/src/App.js"
-        codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-action-buttons-fqeosr?file=/src/App.js"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-action-buttons-ndxm7r?file=/src/App.js"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-action-buttons-ndxm7r?file=/src/App.js"
         codeSplittedJS={splittedCodeJSButton}
         codeSplittedTS={splittedCodeTSButton}
       />
@@ -17,8 +17,8 @@ const CodeDemoActionButtons = ({ splittedOnly = false, button }) => {
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-action-buttons-ndxm7r?file=/src/App.js"
-      codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-action-buttons-ndxm7r?file=/src/App.js"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-action-buttons-fqeosr?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-action-buttons-fqeosr?file=/src/App.js"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />

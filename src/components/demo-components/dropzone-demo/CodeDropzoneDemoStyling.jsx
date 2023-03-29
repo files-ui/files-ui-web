@@ -6,8 +6,8 @@ const CodeDemoDropzoneStyling = ({ splittedOnly = false, button }) => {
         splittedOnly={splittedOnly}
         codeCompleteJS={completeCodeJSButton}
         codeCompleteTS={completeCodeTSButton}
-        codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-        codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-styling-voljg0?file=/src/App.js"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-styling-voljg0?file=/src/App.js"
         codeSplittedJS={splittedCodeJSButton}
         codeSplittedTS={splittedCodeTSButton}
       />
@@ -17,8 +17,8 @@ const CodeDemoDropzoneStyling = ({ splittedOnly = false, button }) => {
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-styling-cggij0?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-styling-cggij0?file=/src/App.js"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -139,12 +139,7 @@ export default function App() {
         alignItems:"flex-start"
       }}
     >
-        <Dropzone
-            style={{ width: "300px" }}
-            onChange={updateFiles}
-            value={files}
-            color="#6200EE"
-        >
+        <Dropzone style={{ width: "300px" }} color="#6200EE">
           {/** Files*/}
         </Dropzone>
         <Dropzone
@@ -188,10 +183,7 @@ export default function App() {
         alignItems:"flex-start"
       }}
     >
-        <Dropzone
-          style={{ width: "300px" }}
-          color="#6200EE"
-        >
+        <Dropzone style={{ width: "300px" }} color="#6200EE">
           {/** Files*/}
         </Dropzone>
         <Dropzone
