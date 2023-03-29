@@ -7,8 +7,8 @@ const CodeDemoGlobalConfig = ({ card = false }) => {
       <ShowDemoCode
         codeCompleteJS={completeCodeJS}
         codeCompleteTS={completeCodeTS}
-        codeSandboxJS="https://codesandbox.io/s/files-ui-global-config-filecard-1vm2f8?file=/src/App.js"
-        codeSandboxTS="https://codesandbox.io/s/files-ui-global-config-filecard-1vm2f8?file=/src/App.js"
+        codeSandboxJS="https://codesandbox.io/s/files-ui-global-config-filemosaic-ci66jj?file=/src/App.js"
+        codeSandboxTS="https://codesandbox.io/s/files-ui-global-config-filemosaic-ci66jj?file=/src/App.js"
         codeSplittedJS={splittedCodeJS}
         codeSplittedTS={splittedCodeTS}
       />
@@ -17,8 +17,8 @@ const CodeDemoGlobalConfig = ({ card = false }) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJSCard}
       codeCompleteTS={completeCodeTSCard}
-      codeSandboxJS="https://codesandbox.io/s/files-ui-global-config-filemosaic-ci66jj?file=/src/App.js"
-      codeSandboxTS="https://codesandbox.io/s/files-ui-global-config-filemosaic-ci66jj?file=/src/App.js"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-global-config-filecard-1vm2f8?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-global-config-filecard-1vm2f8?file=/src/App.js"
       codeSplittedJS={splittedCodeJSCard}
       codeSplittedTS={splittedCodeTSCard}
     />
