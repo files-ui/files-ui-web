@@ -5,8 +5,8 @@ const CodeDemoDropzoneBehaviour = ({ splittedOnly = false, button=false }) => {
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJSButton}
       codeCompleteTS={completeCodeTSButton}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-fileinputbutton-behaviour-vdz89j"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-fileinputbutton-behaviour-vdz89j"
       codeSplittedJS={splittedCodeJSButton}
       codeSplittedTS={splittedCodeTSButton}
     />
@@ -16,8 +16,8 @@ const CodeDemoDropzoneBehaviour = ({ splittedOnly = false, button=false }) => {
       splittedOnly={splittedOnly}
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-dropzone-behaviour-6sel2y"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-dropzone-behaviour-6sel2y"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -44,7 +44,7 @@ const splittedCodeJSButton = `<FileInputButton onChange={updateFilesAdd} value={
 
 const splittedCodeTSButton = splittedCodeJSButton;
 const completeCodeJSButton = `import * as React from "react";
-import { Dropzone, FileCard } from "@files-ui/react";
+import { FileInputButton, FileCard } from "@files-ui/react";
 
 export default function App() {
     const [filesAdd, setFilesAdd] = React.useState([]);
