@@ -7,8 +7,16 @@ const CodeJSFileMosaicDarkMode = (props: { card?: boolean }) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS(card)}
       codeCompleteTS={completeCodeTS(card)}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS={
+        card
+          ? "https://codesandbox.io/s/files-ui-filecard-darkmode-gqyuc0?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-filemosaic-darkmode-u1wfyr?file=/src/App.js"
+      }
+      codeSandboxTS={
+        card
+          ? "https://codesandbox.io/s/files-ui-filecard-darkmode-gqyuc0?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-filemosaic-darkmode-u1wfyr?file=/src/App.js"
+      }
       codeSplittedJS={splittedCodeJS(card)}
       codeSplittedTS={splittedCodeTS(card)}
     />
@@ -41,22 +49,22 @@ const splittedCodeTS = (card?: boolean) =>
 
 const completeCodeJS = (card?: boolean) =>
   card
-    ? `import { ${card ? "FileCard" : "FileMosaic"} } from "@files-ui/react";
+    ? `import { FileCard } from "@files-ui/react";
 const sampleFilePropsCard = (elevationNumber) => {
   return {
     id: "fileId",
     size: 28 * 1024 * 1024,
     type: "text/plain",
     name: "elevation=" + elevationNumber + ".jsx",
-    valid: true,
+    valid: true
   };
 };
-const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
+const DemoFileCardDarkMode = () => {
   const removeFile = (id) => {
     console.log("delete button clicked on file: " + id);
   };
   return (
-    <>
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
       <div
         style={{
           display: "flex",
@@ -66,7 +74,7 @@ const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
           alignItems: "center",
           padding: "25px 0",
           flexGrow: 1,
-          gap: "7px",
+          gap: "7px"
         }}
       >
         {[0, 4, 16, 24].map((elevation) => (
@@ -88,7 +96,7 @@ const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
           alignItems: "center",
           padding: "25px 0",
           flexGrow: 1,
-          gap: "7px",
+          gap: "7px"
         }}
       >
         {[0, 4, 16, 24].map((elevation) => (
@@ -102,19 +110,20 @@ const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
-export default Demo${card ? "FileCard" : "FileMosaic"}DarkMode;`
+};
+export default DemoFileCardDarkMode;`
     : `import * as React from "react";
-import { ${card ? "FileCard" : "FileMosaic"} } from "@files-ui/react";
+import { FileMosaic } from "@files-ui/react";
 
 const sampleFileProps = {
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "file created from props.jsx",
+  name: "file created from props.jsx"
 };
-const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
+const DemoFileMosaicDarkMode = () => {
   const removeFile = (id) => {
     console.log("delete button clicked on file: " + id);
   };
@@ -126,12 +135,10 @@ const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
           justifyContent: "center",
           backgroundColor: "white",
           padding: "25px 0",
-          flexGrow:1
+          flexGrow: 1
         }}
       >
-        <${
-          card ? "FileCard" : "FileMosaic"
-        } {...sampleFileProps} info onDelete={removeFile} />
+        <FileMosaic {...sampleFileProps} info onDelete={removeFile} />
       </div>
       <div
         style={{
@@ -139,17 +146,15 @@ const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
           justifyContent: "center",
           backgroundColor: "#121212",
           padding: "25px 0",
-          flexGrow:1
+          flexGrow: 1
         }}
       >
-        <${
-          card ? "FileCard" : "FileMosaic"
-        } {...sampleFileProps} info darkMode onDelete={removeFile} />
+        <FileMosaic {...sampleFileProps} info darkMode onDelete={removeFile} />
       </div>
     </div>
   );
 };
-export default Demo${card ? "FileCard" : "FileMosaic"}DarkMode;`;
+export default DemoFileMosaicDarkMode;`;
 
 const completeCodeTS = (card?: boolean) =>
   card
@@ -170,7 +175,7 @@ const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
     console.log("delete button clicked on file: " + id);
   };
   return (
-    <>
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
       <div
         style={{
           display: "flex",
@@ -216,8 +221,9 @@ const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
+}
 export default Demo${card ? "FileCard" : "FileMosaic"}DarkMode;
 `
     : `import * as React from "react";
