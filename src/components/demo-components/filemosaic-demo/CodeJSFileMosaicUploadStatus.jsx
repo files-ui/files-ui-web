@@ -1,13 +1,21 @@
 import * as React from "react";
 import ShowDemoCode from "../../show-demo-code/ShowDemoCode";
 
-const CodeJSFileMosaicUploadStatus = ({card}) => {
+const CodeJSFileMosaicUploadStatus = ({ card }) => {
   return (
     <ShowDemoCode
       codeCompleteJS={completeCodeJS(card)}
       codeCompleteTS={completeCodeTS(card)}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS={
+        card
+          ? "https://codesandbox.io/s/files-ui-filecard-uploading-2oyd6u?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-filemosaic-uploading-ilrfhu?file=/src/App.js"
+      }
+      codeSandboxTS={
+        card
+          ? "https://codesandbox.io/s/files-ui-filecard-uploading-2oyd6u?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-filemosaic-uploading-ilrfhu?file=/src/App.js"
+      }
       codeSplittedJS={splittedCodeJS(card)}
       codeSplittedTS={splittedCodeTS(card)}
     />
@@ -15,17 +23,17 @@ const CodeJSFileMosaicUploadStatus = ({card}) => {
 };
 export default CodeJSFileMosaicUploadStatus;
 
-const splittedCodeJS =(card)=> ``;
+const splittedCodeJS = (card) => ``;
 
-const splittedCodeTS =(card)=> ``;
+const splittedCodeTS = (card) => ``;
 
-const completeCodeJS =(card)=> `import * as React from "react";
+const completeCodeJS = (card) => `import * as React from "react";
 import {
-  ${card?"FileCard":"FileMosaic"},
+  ${card ? "FileCard" : "FileMosaic"},
   useFakeProgress,
 } from "@files-ui/react";
 
-const Demo${card?"FileCard":"FileMosaic"}UploadStatus = () => {
+const Demo${card ? "FileCard" : "FileMosaic"}UploadStatus = () => {
   const progress = useFakeProgress();
 
   const [status1, setStatus1] = React.useState("uploading");
@@ -57,26 +65,40 @@ const Demo${card?"FileCard":"FileMosaic"}UploadStatus = () => {
   return (
     <>
       <FlexRowContainer>
-        <${card?"FileCard":"FileMosaic"} {...preparingFile} />
-        <${card?"FileCard":"FileMosaic"} {...preparingFile} onCancel={handleCancel} />
+        <${card ? "FileCard" : "FileMosaic"} {...preparingFile} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...preparingFile} onCancel={handleCancel} />
       </FlexRowContainer>
-
+      <br/>
       <FlexRowContainer>
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} />
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} progress={progress} />
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} onAbort={handleAbort} />
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} onAbort={handleAbort} progress={progress} />
+        <${card ? "FileCard" : "FileMosaic"} {...uploadingFile} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadingFile} progress={progress} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadingFile} onAbort={handleAbort} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadingFile} onAbort={handleAbort} progress={progress} />
       </FlexRowContainer>
-
+      <br/>
       <FlexRowContainer>
-        <${card?"FileCard":"FileMosaic"} {...uploadResultFiles[0]} uploadStatus={status1} />
-        <${card?"FileCard":"FileMosaic"} {...uploadResultFiles[1]} uploadStatus={status2} />
-        <${card?"FileCard":"FileMosaic"} {...uploadResultFiles[2]} uploadStatus={status3} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadResultFiles[0]} uploadStatus={status1} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadResultFiles[1]} uploadStatus={status2} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadResultFiles[2]} uploadStatus={status3} />
       </FlexRowContainer>
     </>
   );
 };
-export default Demo${card?"FileCard":"FileMosaic"}UploadStatus;
+export default Demo${card ? "FileCard" : "FileMosaic"}UploadStatus;
 
 const FlexRowContainer = ({ children }) => {
   return (
@@ -142,15 +164,15 @@ const uploadResultFiles = [
   },
 ];`;
 
-const completeCodeTS =(card)=> `import * as React from "react";
+const completeCodeTS = (card) => `import * as React from "react";
 import {
-  ${card?"FileCard":"FileMosaic"},
+  ${card ? "FileCard" : "FileMosaic"},
   useFakeProgress,
   ExtFile,
   UPLOADSTATUS,
 } from "@files-ui/react";
 
-const Demo${card?"FileCard":"FileMosaic"}UploadStatus = () => {
+const Demo${card ? "FileCard" : "FileMosaic"}UploadStatus = () => {
   const progress = useFakeProgress();
 
   const [status1, setStatus1] = React.useState<UPLOADSTATUS>("uploading");
@@ -182,26 +204,40 @@ const Demo${card?"FileCard":"FileMosaic"}UploadStatus = () => {
   return (
     <>
       <FlexRowContainer>
-        <${card?"FileCard":"FileMosaic"} {...preparingFile} />
-        <${card?"FileCard":"FileMosaic"} {...preparingFile} onCancel={handleCancel} />
+        <${card ? "FileCard" : "FileMosaic"} {...preparingFile} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...preparingFile} onCancel={handleCancel} />
       </FlexRowContainer>
-
+      <br/>
       <FlexRowContainer>
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} />
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} progress={progress} />
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} onAbort={handleAbort} />
-        <${card?"FileCard":"FileMosaic"} {...uploadingFile} onAbort={handleAbort} progress={progress} />
+        <${card ? "FileCard" : "FileMosaic"} {...uploadingFile} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadingFile} progress={progress} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadingFile} onAbort={handleAbort} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadingFile} onAbort={handleAbort} progress={progress} />
       </FlexRowContainer>
-
+      <br/>
       <FlexRowContainer>
-        <${card?"FileCard":"FileMosaic"} {...uploadResultFiles[0]} uploadStatus={status1} />
-        <${card?"FileCard":"FileMosaic"} {...uploadResultFiles[1]} uploadStatus={status2} />
-        <${card?"FileCard":"FileMosaic"} {...uploadResultFiles[2]} uploadStatus={status3} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadResultFiles[0]} uploadStatus={status1} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadResultFiles[1]} uploadStatus={status2} />
+        <${
+          card ? "FileCard" : "FileMosaic"
+        } {...uploadResultFiles[2]} uploadStatus={status3} />
       </FlexRowContainer>
     </>
   );
 };
-export default Demo${card?"FileCard":"FileMosaic"}UploadStatus;
+export default Demo${card ? "FileCard" : "FileMosaic"}UploadStatus;
 
 const FlexRowContainer = (props: { children: React.ReactNode }) => {
   return (
