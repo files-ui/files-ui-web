@@ -6,8 +6,8 @@ const CodeJSFileCardBasic = ({ card }) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS(card)}
       codeCompleteTS={completeCodeTS(card)}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-basic-filecard-yt5iwp?file=/src/App.js:0-830"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-basic-filecard-yt5iwp?file=/src/App.js:0-830"
       codeSplittedJS={splittedCodeJS(card)}
       codeSplittedTS={splittedCodeTS(card)}
     />
@@ -19,7 +19,7 @@ const splittedCodeJS = (card) => `<>
   {value ? (
     <${!card ? "FileMosaic" : "FileCard"} {...value} onDelete={removeFile} />
   ) : (
-    <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+    <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
   )}
   <${!card ? "FileMosaic" : "FileCard"} {...sampleFileProps} />
 </>
@@ -53,13 +53,13 @@ export default function App() {
     setValue(undefined);
   };
   return (
-    <div style={{display:"flex", gap:"10px"}}>
+    <div style={{display:"flex", gap:"10px", alignItems:"center"}}>
       {value ? (
         <${
           !card ? "FileMosaic" : "FileCard"
         } {...value} onDelete={removeFile} info/>
       ) : (
-        <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+        <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
       )}
       <${!card ? "FileMosaic" : "FileCard"} {...sampleFileProps} info/>
     </div>
@@ -68,9 +68,11 @@ export default function App() {
 
 const splittedCodeTS = (card) => `<>
   {value ? (
-    <${!card ? "FileMosaic" : "FileCard"} {...value} onDelete={removeFile} info/>
+    <${
+      !card ? "FileMosaic" : "FileCard"
+    } {...value} onDelete={removeFile} info/>
   ) : (
-    <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+    <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
   )}
   <${!card ? "FileMosaic" : "FileCard"} {...sampleFileProps} info/>
 </>
@@ -103,13 +105,13 @@ export default function App() {
     setValue(undefined);
   };
   return (
-    <div style={{display:"flex", gap:"10px"}}>
+    <div style={{display:"flex", gap:"10px", alignItems:"center"}}>
       {value ? (
         <${
           !card ? "FileMosaic" : "FileCard"
         } {...value} onDelete={removeFile} info/>
       ) : (
-        <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+        <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
       )}
       <${!card ? "FileMosaic" : "FileCard"} {...sampleFileProps} info/>
     </div>

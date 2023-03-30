@@ -6,8 +6,8 @@ const CodeJSFileMosaicBasic = (props) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-basic-filemosaic-d6n7fy"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-basic-filemosaic-d6n7fy"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -19,7 +19,7 @@ const splittedCodeJS = `<>
   {value ? (
     <FileMosaic {...value} onDelete={removeFile} />
   ) : (
-    <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+    <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
   )}
   <FileMosaic {...sampleFileProps} />
 </>
@@ -33,16 +33,16 @@ const sampleFileProps = {
 };`;
 
 const completeCodeJS = `import * as React from "react";
-import { InputButton, FileMosaic } from "@files-ui/react";
+import { FileInputButton, FileMosaic } from "@files-ui/react";
 
 const sampleFileProps = {
   id: ":0:",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "file created from props.jsx",
+  name: "file created from props.jsx"
 };
 
-export default function App() {
+export default function BasicFileMosaicDemo() {
   const [value, setValue] = React.useState(undefined);
 
   const updateFiles = (incommingFiles) => {
@@ -53,22 +53,22 @@ export default function App() {
     setValue(undefined);
   };
   return (
-    <div style={{display:"flex", gap:"10px"}}>
+    <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
       {value ? (
-        <FileMosaic {...value} onDelete={removeFile} info/>
+        <FileMosaic {...value} onDelete={removeFile} info />
       ) : (
-        <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+        <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
       )}
-      <FileMosaic {...sampleFileProps} info/>
+      <FileMosaic {...sampleFileProps} info />
     </div>
   );
-};`;
+}`;
 
 const splittedCodeTS = `<>
   {value ? (
     <FileMosaic {...value} onDelete={removeFile} info/>
   ) : (
-    <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+    <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
   )}
   <FileMosaic {...sampleFileProps} info/>
 </>
@@ -81,7 +81,7 @@ const sampleFileProps: ExtFile = {
   name: "file created from props.jsx",
 };`;
 const completeCodeTS = `import * as React from "react";
-import { InputButton, FileMosaic, ExtFile } from "@files-ui/react";
+import { FileInputButton, FileMosaic, ExtFile } from "@files-ui/react";
 
 const sampleFileProps:ExtFile = {
   id: ":0:",
@@ -90,7 +90,7 @@ const sampleFileProps:ExtFile = {
   name: "file created from props.jsx",
 };
 
-export default function App() {
+export default function BasicFileMosaicDemo() {
   const [value, setValue] = React.useState<ExtFile | undefined>(undefined);
 
   const updateFiles = (incommingFiles:ExtFile[]) => {
@@ -105,7 +105,7 @@ export default function App() {
       {value ? (
         <FileMosaic {...value} onDelete={removeFile} info/>
       ) : (
-        <FileInputButton value={value ? [value] : []} onChange={updateFile} />
+        <FileInputButton value={value ? [value] : []} onChange={updateFiles} />
       )}
       <FileMosaic {...sampleFileProps} info/>
     </div>
