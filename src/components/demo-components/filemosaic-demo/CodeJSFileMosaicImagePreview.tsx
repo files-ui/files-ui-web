@@ -57,7 +57,7 @@ const sampleFileProps = {
     imageUrl:"https://cdn.wallpapersafari.com/0/95/1zms6H.jpg"
 };
 
-export default function App() {
+export default function DemoImagePreview() {
   const [value, setValue] = React.useState(undefined);
 
   const updateFiles = (incommingFiles) => {
@@ -113,7 +113,7 @@ const sampleFileProps: ExtFile = {
     imageUrl:"https://cdn.wallpapersafari.com/0/95/1zms6H.jpg"
 };
 
-export default function App() {
+export default function DemoImagePreview() {
   const [value, setValue] = React.useState<ExtFile | undefined>(undefined);
 
   const updateFiles = (incommingFiles:ExtFile[]) => {
