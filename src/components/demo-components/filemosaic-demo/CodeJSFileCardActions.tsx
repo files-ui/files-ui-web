@@ -7,8 +7,16 @@ const CodeJSFileCardActions = (props: { card?: boolean }) => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS(card)}
       codeCompleteTS={completeCodeTS(card)}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS={
+        card
+          ? "https://codesandbox.io/s/files-ui-filecard-actions-u1iwrl?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-filemosaic-actions-tqfipw?file=/src/App.js"
+      }
+      codeSandboxTS={
+        card
+          ? "https://codesandbox.io/s/files-ui-filecard-actions-u1iwrl?file=/src/App.js"
+          : "https://codesandbox.io/s/files-ui-filemosaic-actions-tqfipw?file=/src/App.js"
+      }
       codeSplittedJS={splittedCodeJS(card)}
       codeSplittedTS={splittedCodeTS(card)}
     />
@@ -21,7 +29,7 @@ const splittedCodeTS = (card?: boolean) => ``;
 
 const completeCodeJS = (card?: boolean) => `import * as React from "react";
 import {
-  ${card?"FileCard":"FileMosaic"},
+  ${card ? "FileCard" : "FileMosaic"},
   FullScreen,
   ImagePreview,
   VideoPreview,
@@ -38,7 +46,7 @@ const IMG_URL =
 const VIDEO_URL =
   "https://srv23.y2mate.is/download?file=cd448fa7c7fe6c301970e890794fb682137140";
 
-const Demo${card?"FileCard":"FileMosaic"}Actions = ({ card }) => {
+const Demo${card ? "FileCard" : "FileMosaic"}Actions = ({ card }) => {
   const [imgSrc, setImgSrc] = React.useState(undefined);
   const [videoSrc, setVideoSrc] = React.useState(undefined);
   const handleDelete = (id) => {
@@ -58,17 +66,23 @@ const Demo${card?"FileCard":"FileMosaic"}Actions = ({ card }) => {
   };
   return (
     <>
-      <${card?"FileCard":"FileMosaic"} id={0} {...sampleFile} onDelete={handleDelete} />
-      <${card?"FileCard":"FileMosaic"} id={1} {...sampleFile} info />
-      <${card?"FileCard":"FileMosaic"} id={2} {...sampleFile} onSee={handleSee} imageUrl={IMG_URL} />
-      <${card?"FileCard":"FileMosaic"}
+      <${
+        card ? "FileCard" : "FileMosaic"
+      } id={0} {...sampleFile} onDelete={handleDelete} />
+      <${card ? "FileCard" : "FileMosaic"} id={1} {...sampleFile} info />
+      <${
+        card ? "FileCard" : "FileMosaic"
+      } id={2} {...sampleFile} onSee={handleSee} imageUrl={IMG_URL} />
+      <${card ? "FileCard" : "FileMosaic"}
         id={3}
         {...sampleFile}
         onWatch={handleWatch}
         videoUrl={VIDEO_URL}
       />
-      <${card?"FileCard":"FileMosaic"} id={4} {...sampleFile} downloadUrl={IMG_URL} />
-      <${card?"FileCard":"FileMosaic"}
+      <${
+        card ? "FileCard" : "FileMosaic"
+      } id={4} {...sampleFile} downloadUrl={IMG_URL} />
+      <${card ? "FileCard" : "FileMosaic"}
         id={5}
         {...sampleFile}
         onDownload={handleDownload}
@@ -89,11 +103,11 @@ const Demo${card?"FileCard":"FileMosaic"}Actions = ({ card }) => {
     </>
   );
 };
-export default Demo${card?"FileCard":"FileMosaic"}Actions;`;
+export default Demo${card ? "FileCard" : "FileMosaic"}Actions;`;
 
 const completeCodeTS = (card?: boolean) => `import * as React from "react";
 import {
-  ${card?"FileCard":"FileMosaic"},
+  ${card ? "FileCard" : "FileMosaic"},
   FullScreen,
   ImagePreview,
   VideoPreview,
@@ -111,7 +125,9 @@ const IMG_URL =
 const VIDEO_URL =
   "https://srv23.y2mate.is/download?file=cd448fa7c7fe6c301970e890794fb682137140";
 
-const Demo${card?"FileCard":"FileMosaic"}Actions = (props: { card?: boolean }) => {
+const Demo${
+  card ? "FileCard" : "FileMosaic"
+}Actions = (props: { card?: boolean }) => {
   const [imgSrc, setImgSrc] = React.useState<string | undefined>(undefined);
   const [videoSrc, setVideoSrc] = React.useState<File | string | undefined>(
     undefined
@@ -136,17 +152,23 @@ const Demo${card?"FileCard":"FileMosaic"}Actions = (props: { card?: boolean }) =
   };
   return (
     <>
-      <${card?"FileCard":"FileMosaic"} id={0} {...sampleFile} onDelete={handleDelete} />
-      <${card?"FileCard":"FileMosaic"} id={1} {...sampleFile} info />
-      <${card?"FileCard":"FileMosaic"} id={2} {...sampleFile} onSee={handleSee} imageUrl={IMG_URL} />
-      <${card?"FileCard":"FileMosaic"}
+      <${
+        card ? "FileCard" : "FileMosaic"
+      } id={0} {...sampleFile} onDelete={handleDelete} />
+      <${card ? "FileCard" : "FileMosaic"} id={1} {...sampleFile} info />
+      <${
+        card ? "FileCard" : "FileMosaic"
+      } id={2} {...sampleFile} onSee={handleSee} imageUrl={IMG_URL} />
+      <${card ? "FileCard" : "FileMosaic"}
         id={3}
         {...sampleFile}
         onWatch={handleWatch}
         videoUrl={VIDEO_URL}
       />
-      <${card?"FileCard":"FileMosaic"} id={4} {...sampleFile} downloadUrl={IMG_URL} />
-      <${card?"FileCard":"FileMosaic"}
+      <${
+        card ? "FileCard" : "FileMosaic"
+      } id={4} {...sampleFile} downloadUrl={IMG_URL} />
+      <${card ? "FileCard" : "FileMosaic"}
         id={5}
         {...sampleFile}
         onDownload={handleDownload}
@@ -167,4 +189,4 @@ const Demo${card?"FileCard":"FileMosaic"}Actions = (props: { card?: boolean }) =
     </>
   );
 };
-export default Demo${card?"FileCard":"FileMosaic"}Actions;`;
+export default Demo${card ? "FileCard" : "FileMosaic"}Actions;`;
