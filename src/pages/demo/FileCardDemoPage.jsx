@@ -444,7 +444,7 @@ const rightMenuItems = [
   {
     id: 7,
     label: "Smart image fit",
-    referTo: "/components/filemosaic#smart-image-fit",
+    referTo: "/components/filecard#smart-image-fit",
   },
   {
     id: 6,
