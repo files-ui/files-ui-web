@@ -133,7 +133,7 @@ const FullScreenDemoPage: React.FC<FullScreenDemoPageProps> = (
               <AnchorToTab href="/api/filecard">{"<FileCard/>"}</AnchorToTab>
             </li>
             <li>
-              <AnchorToTab href="/api/fileinputbuttom">
+              <AnchorToTab href="/api/fileinputbutton">
                 {"<FileInputButton/>"}
               </AnchorToTab>
             </li>
