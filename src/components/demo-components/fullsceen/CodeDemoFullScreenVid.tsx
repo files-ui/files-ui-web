@@ -6,13 +6,13 @@ const CodeDemoFullScrrenVid = () => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-fullscreen-video-js-slvks6?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-fullscreen-video-js-slvks6?file=/src/App.js"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
   );
-};
+}; 
 export default CodeDemoFullScrrenVid;
 
 const splittedCodeJS = `<FileCard id={0} {...videoSample} onWatch={handleWatch} />
@@ -33,14 +33,20 @@ const videoSample = {
 };`;
 
 const completeCodeJS = `import * as React from "react";
-import { FileCard, FileMosaic, FullScreen, ImagePreview } from "@files-ui/react";
+import {
+  FileCard,
+  FileMosaic,
+  FullScreen,
+  VideoPreview
+} from "@files-ui/react";
+import ThorArrivesWakandaEN from "./static/ThorArrivesWakandaEN.mp4";
 
 const videoSample = {
-    id: "fileId-1",
-    size: 28 * 1024 * 1024,
-    type: "video/mp4",
-    name: "Thor arrives wakanda.mp4",
-    videoUrl: ThorArrivesWakandaEN,
+  id: "fileId-1",
+  size: 28 * 1024 * 1024,
+  type: "video/mp4",
+  name: "Thor arrives wakanda.mp4",
+  videoUrl: ThorArrivesWakandaEN
 };
 
 export default function App() {
@@ -49,7 +55,13 @@ export default function App() {
     setVideoSrc(videoSource);
   };
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-evenly"
+      }}
+    >
       <FileCard id={0} {...videoSample} onWatch={handleWatch} />
       <FileMosaic id={0} {...videoSample} onWatch={handleWatch} />
       <FullScreen
@@ -58,9 +70,9 @@ export default function App() {
       >
         <VideoPreview src={videoSrc} autoPlay controls />
       </FullScreen>
-    </>
+    </div>
   );
-};`;
+}`;
 
 const splittedCodeTS = `<FileCard id={0} {...videoSample} onWatch={handleWatch} />
 <FileMosaic id={0} {...videoSample} onWatch={handleWatch} />
@@ -80,7 +92,7 @@ const videoSample: ExtFile = {
 };`;
 
 const completeCodeTS = `import * as React from "react";
-import { ExtFile, FileCard, FileMosaic, FullScreen, ImagePreview } from "@files-ui/react";
+import { ExtFile, FileCard, FileMosaic, FullScreen, VideoPreview } from "@files-ui/react";
 
 const videoSample: ExtFile = {
     id: "fileId-1",
