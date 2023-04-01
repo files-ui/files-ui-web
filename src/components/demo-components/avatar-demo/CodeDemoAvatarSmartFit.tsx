@@ -8,8 +8,8 @@ const CodeDemoAvatarSmartFit: React.FC<CodeDemoAvatarPickFileProps> = (
     <ShowDemoCode
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-avatar-smrtimgfit-xw5g9o"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-avatar-smrtimgfit-xw5g9o"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -34,7 +34,7 @@ const landscapeImage =
 const portraitImage =
   "https://i.pinimg.com/originals/b6/1d/6a/b61d6a1079d8e54932dcde9dc260dd2e.gif";
 
-export default function DemoAvatarSmartImageFit = () => {
+export default function DemoAvatarSmartImageFit() {
   return (
     <>
       <Avatar src={landscapeImage} readOnly smartImgFit={false} />
