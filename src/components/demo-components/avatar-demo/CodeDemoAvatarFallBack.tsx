@@ -8,8 +8,8 @@ const CodeDemoAvatarFallBack: React.FC<CodeDemoAvatarPickFileProps> = (
     <ShowDemoCode
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-avatar-fallback-vdn7xi"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-avatar-fallback-vdn7xi"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
@@ -37,7 +37,7 @@ import { Avatar } from "@files-ui/react";
 const fallBackImage =
   "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg";
 
-export default function DemoAvatarFallBack = () => {
+export default function DemoAvatarFallBack() {
   const [imageSource, setImageSource] = React.useState("broken/url");
   const [imageSource2, setImageSource2] = React.useState(undefined);
   return (
@@ -65,7 +65,7 @@ import { Avatar, AvatarProps } from "@files-ui/react";
 const fallBackImage =
   "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg";
 
-export default function DemoAvatarFallBack = () => {
+export default function DemoAvatarFallBack() {
   const [imageSource, setImageSource] 
               = React.useState<AvatarProps["src"] | undefined>("/broken/url");
   const [imageSource2, setImageSource2] 
