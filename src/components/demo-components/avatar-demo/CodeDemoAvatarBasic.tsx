@@ -6,8 +6,8 @@ const CodeDemoAvatarBasic = () => {
     <ShowDemoCode
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-avatar-basic-js-kmbq66"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-avatar-basic-js-kmbq66"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
