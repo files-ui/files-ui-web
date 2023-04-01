@@ -6,8 +6,8 @@ const CodeDemoAvatarLabels = () => {
   <ShowDemoCode
   codeCompleteJS={completeCodeJS}
   codeCompleteTS={completeCodeTS}
-  codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-  codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+  codeSandboxJS="https://codesandbox.io/s/files-ui-avatar-labels-2mcbgn?file=/src/App.js:0-771"
+  codeSandboxTS="https://codesandbox.io/s/files-ui-avatar-labels-2mcbgn?file=/src/App.js:0-771"
   codeSplittedJS={splittedCodeJS}
   codeSplittedTS={splittedCodeTS}
   />
@@ -40,25 +40,25 @@ const imageSrc =
 
 const DemoAvatarLabels = () => {
   return (
-  <>
+    <>
       <Avatar
-          alt="Isabella"
-          emptyLabel={"You can choose an image..."}
-          onChange={() => {}}
+        alt="Isabella"
+        emptyLabel={"You can choose an image..."}
+        onChange={() => {}}
       />
       <Avatar
-          src={imageSrc}
-          alt="Isabella"
-          changeLabel={"Do you want to change this amazing picture?"}
-          onChange={() => {}}
+        src={imageSrc}
+        alt="Isabella"
+        changeLabel={"Do you want to change this amazing picture?"}
+        onChange={() => {}}
       />
       <Avatar
-          src={imageSrc}
-          alt="Isabella"
-          loadingLabel={"You can drink a cup of coffee in the meanwhile"}
-          isLoading={true}
+        src={imageSrc}
+        alt="Isabella"
+        loadingLabel={"You can drink a cup of coffee in the meanwhile"}
+        isLoading={true}
       />
-  </>
+    </>
   );
 };
 export default DemoAvatarLabels;`;
