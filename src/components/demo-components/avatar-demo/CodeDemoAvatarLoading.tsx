@@ -8,8 +8,8 @@ const CodeDemoAvatarLoading: React.FC<CodeDemoAvatarPickFileProps> = (
     <ShowDemoCode
       codeCompleteJS={completeCodeJS}
       codeCompleteTS={completeCodeTS}
-      codeSandboxJS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
-      codeSandboxTS="https://codesandbox.io/s/dropzone-ui-basic-3j01v"
+      codeSandboxJS="https://codesandbox.io/s/files-ui-avatar-loading-i4c628?file=/src/App.js"
+      codeSandboxTS="https://codesandbox.io/s/files-ui-avatar-loading-i4c628?file=/src/App.js"
       codeSplittedJS={splittedCodeJS}
       codeSplittedTS={splittedCodeTS}
     />
