@@ -21,8 +21,10 @@ export const FileInputButtonPropsRows = [
     description: (
       <>
         Probably one of the most important methods (callbacks). Returns as first
-        parameter an array of `ExtFile` objects. This callback is fired when the
-        delete icon is clicked. If set, the delete icon will be shown.
+        parameter an array of `ExtFile` objects. This callback is fired every
+        time the array of ExtFile changes. On validation, on delete, on drop, on
+        select from file dialog or when upload proces changes the status of
+        files.
         <br />
         <strong>Signature:</strong>
         <br />
