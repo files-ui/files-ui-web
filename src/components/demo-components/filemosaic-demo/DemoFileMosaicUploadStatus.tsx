@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import * as React from "react";
 import {
   FileMosaic,
@@ -7,7 +8,7 @@ import {
   FileCard,
 } from "@files-ui/react";
 
-import "./DemoFileMosaicUpload.scss";
+import "./DemoFileMosaicUpload.css";
 const DemoFileMosaicUploadStatus = (props: { card?: boolean }) => {
   const progress = useFakeProgress();
 
@@ -27,7 +28,7 @@ const DemoFileMosaicUploadStatus = (props: { card?: boolean }) => {
     //clean
     return () => {
       console.log("clear interval", _myInterval);
-      clearInterval(_myInterval as NodeJS.Timer);
+      clearInterval(_myInterval as any);
     };
   }, []);
 
@@ -125,7 +126,7 @@ const preparingFile: ExtFile = {
   id: "fileId-0",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "preparing file.jsx",
+  name: "preparing file.tsx",
   uploadStatus: "preparing",
 };
 

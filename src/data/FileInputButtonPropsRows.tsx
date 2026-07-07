@@ -117,6 +117,17 @@ export const FileInputButtonPropsRows = [
     ),
   },
   {
+    name: "maxConcurrentUploads",
+    type: <TypeHighlight np>number</TypeHighlight>,
+    default: <TypeHighlight np>1</TypeHighlight>,
+    description: (
+      <>
+        The maximum number of files to upload concurrently when{" "}
+        <CodeHighlight>uploadConfig</CodeHighlight> is set.
+      </>
+    ),
+  },
+  {
     name: "fakeUpload",
     type: <TypeHighlight np>boolean</TypeHighlight>,
     default: <TypeHighlight np></TypeHighlight>,
@@ -190,7 +201,7 @@ export const FileInputButtonPropsRows = [
     default: <TypeHighlight np></TypeHighlight>,
     description: (
       <>
-        The classname to override the css styles in .css or .sass file instead
+        The classname to override the css styles in .css file instead
         of using in-line styles.
       </>
     ),

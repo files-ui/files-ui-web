@@ -15,7 +15,7 @@ export type MainMenuSideBarItems = {
 }
 
 export type MainMenuSideBarProps = {
-    items: MainMenuSideBarItems[],
-    selectedIndex:number,
-    setSelectedIndex:Function,
+    items?: MainMenuSideBarItems[],
+    selectedIndex?:number,
+    setSelectedIndex?:Function,
 }

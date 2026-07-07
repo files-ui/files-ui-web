@@ -142,6 +142,19 @@ export const FileCardAPIPropsRows = [
     ),
   },
   {
+    id: 71,
+    name: "videoUrl",
+    type: <TypeHighlight np>{"string"}</TypeHighlight>,
+    default: <TypeHighlight np></TypeHighlight>,
+    description: (
+      <>
+        A string representation or web URL of a video file. If set, watch and
+        download actions will use this source with higher priority over generic
+        download URLs.
+      </>
+    ),
+  },
+  {
     id: 7,
     name: "backgroundBlurImage",
     type: <TypeHighlight np>{"boolean"}</TypeHighlight>,
@@ -345,6 +358,39 @@ export const FileCardAPIPropsRows = [
         <strong>Signature:</strong>
         <br />
         <CodeHighlight>{" (evt: React.MouseEvent) => void"}</CodeHighlight>
+      </>
+    ),
+  },
+  {
+    name: "selectable",
+    type: <TypeHighlight np>boolean</TypeHighlight>,
+    default: <TypeHighlight np>false</TypeHighlight>,
+    description: <>If true, a checkbox overlay will be shown for file selection.</>,
+  },
+  {
+    name: "selected",
+    type: <TypeHighlight np>boolean</TypeHighlight>,
+    default: <TypeHighlight np>false</TypeHighlight>,
+    description: (
+      <>
+        The current selected state of the file when{" "}
+        <CodeHighlight>selectable</CodeHighlight> is true.
+      </>
+    ),
+  },
+  {
+    name: "onSelect",
+    type: <TypeHighlight np>func</TypeHighlight>,
+    default: <TypeHighlight np></TypeHighlight>,
+    description: (
+      <>
+        Callback fired when the selection checkbox state changes.
+        <br />
+        <strong>Signature:</strong>
+        <br />
+        <CodeHighlight>
+          {"(fileId: number | string | undefined, selected: boolean) => void"}
+        </CodeHighlight>
       </>
     ),
   },

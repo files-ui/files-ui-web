@@ -12,127 +12,122 @@ import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import RightMenu from "../../components/RightMenu/RightMenu";
 import AnchorToTab from "../../components/util-components/AnchorToTab";
 import { FileMosaic } from "@files-ui/react";
-import { redirect } from "../../utils/redirect";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";
+import { redirect } from "../../utils/redirect";
 const ServerSidePage = () => {
   const [selectedItem, setSelectedItem] = React.useState(0);
 
   React.useEffect(() => {
     window.addEventListener("scroll", () =>
-      scrollHandler(rightMenuItems, setSelectedItem)
+      scrollHandler(rightMenuItems, setSelectedItem),
     );
     return () => {
       window.removeEventListener("scroll", () =>
-        scrollHandler(rightMenuItems, setSelectedItem)
+        scrollHandler(rightMenuItems, setSelectedItem),
       );
     };
   }, []);
   return (
-    <React.Fragment>
-      <MainLayoutPage selectedIndex={6}>
-        <MainContentContainer>
-          <MainTitle>Server Side implementations</MainTitle>
-          <MainParagraph>
-            Some implementations to correctly handle uploaded files using Files
-            UI.
-          </MainParagraph>
-          <DescParagraph>
-            <ul>
-              <li>
-                If you think more server-side samples should be added or would
-                like to contribute by fixing or adding a new server-side sampler
-                in programming languages not yet covered, please contact us.
-              </li>
-            </ul>
-          </DescParagraph>
-          <section id="expressjs">
-            <SubTitle content="Express JS" />
-            <Paper
-              variant="outlined"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "nowrap",
-                alignItems: "center",
-                padding: "25px",
-                justifyContent: "space-evenly",
-              }}
-            >
-              <FileMosaic
-                {...logoExpress}
-                onClick={() =>
-                  redirect(
-                    "https://github.com/files-ui/files-ui-web-test/tree/master/expressjs"
-                  )
-                }
-                //{...logoExpress.extraData}
-                //smartImgFit={"center"}
-              />{" "}
-              <DescParagraph>
-                The following code is just the main part of a project.
-                <br />
-                Check it up in the following{" "}
-                <AnchorToTab href="https://github.com/files-ui/files-ui-web-test/tree/master/expressjs">
-                  link
-                </AnchorToTab>
-                .
-              </DescParagraph>
-            </Paper>
-            <CodeDemoServerSideExpress splittedOnly />
-          </section>
-          <section id="springboot">
-            <SubTitle content="Java - Spring boot" />{" "}
-            <Paper
-              variant="outlined"
-              style={{
-                display: "flex",
-                flexDirection: "revert",
-                flexWrap: "nowrap",
-                alignItems: "center",
-                justifyContent: "space-evenly",
-                padding: "25px",
-              }}
-            >
-              <FileMosaic
-                {...logoJava}
-                onClick={() =>
-                  redirect(
-                    "https://github.com/files-ui/files-ui-web-test/tree/master/springboot"
-                  )
-                }
-              />{" "}
-              <DescParagraph>
-                The following code is just the main part of a project.
-                <br />
-                Check it up in the following{" "}
-                <AnchorToTab href="https://github.com/files-ui/files-ui-web-test/tree/master/springboot">
-                  link
-                </AnchorToTab>
-                .
-              </DescParagraph>
-            </Paper>
-            <CodeDemoServerSideJava splittedOnly />
-          </section>
-          <FooterPage
-            page="Server Side"
-            labelBefore="types"
-            linkBefore="/types"
-            labelAfter="File Download"
-            linkAfter="/file-download"
-          />
-        </MainContentContainer>
-        <RightMenuContainer>
-          <RightMenu
+    <MainLayoutPage selectedIndex={6}>
+      <MainContentContainer>
+        <MainTitle>Server Side implementations</MainTitle>
+        <MainParagraph>
+          Some implementations to correctly handle uploaded files using Files
+          UI.
+        </MainParagraph>
+        <DescParagraph>
+          <ul>
+            <li>
+              If you think more server-side samples should be added or would
+              like to contribute by fixing or adding a new server-side sampler
+              in programming languages not yet covered, please contact us.
+            </li>
+          </ul>
+        </DescParagraph>
+        <section id="expressjs">
+          <SubTitle content="Express JS" />
+          <Paper
+            variant="outlined"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "nowrap",
+              alignItems: "center",
+              padding: "25px",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <FileMosaic
+              {...logoExpress}
+              onClick={() =>
+                redirect(
+                  "https://github.com/files-ui/files-ui-web-test/tree/master/expressjs",
+                )
+              }
+            />{" "}
+            <DescParagraph>
+              The following code is just the main part of a project.
+              <br />
+              Check it up in the following{" "}
+              <AnchorToTab href="https://github.com/files-ui/files-ui-web-test/tree/master/expressjs">
+                link
+              </AnchorToTab>
+              .
+            </DescParagraph>
+          </Paper>
+          <CodeDemoServerSideExpress splittedOnly />
+        </section>
+        <section id="springboot">
+          <SubTitle content="Java - Spring boot" />{" "}
+          <Paper
+            variant="outlined"
+            style={{
+              display: "flex",
+              flexDirection: "revert",
+              flexWrap: "nowrap",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              padding: "25px",
+            }}
+          >
+            <FileMosaic
+              {...logoJava}
+              onClick={() =>
+                redirect(
+                  "https://github.com/files-ui/files-ui-web-test/tree/master/springboot",
+                )
+              }
+            />{" "}
+            <DescParagraph>
+              The following code is just the main part of a project.
+              <br />
+              Check it up in the following{" "}
+              <AnchorToTab href="https://github.com/files-ui/files-ui-web-test/tree/master/springboot">
+                link
+              </AnchorToTab>
+              .
+            </DescParagraph>
+          </Paper>
+          <CodeDemoServerSideJava splittedOnly />
+        </section>
+        <FooterPage
+          page="Server Side"
+          labelBefore="types"
+          linkBefore="/types"
+          labelAfter="File Download"
+          linkAfter="/file-download"
+        />
+      </MainContentContainer>
+      <RightMenuContainer>
+        <RightMenu
           width="240px"
           items={rightMenuItems}
           selectedItemProp={selectedItem}
           setSelected={setSelectedItem}
         />
-        </RightMenuContainer>
-        
-      </MainLayoutPage>
-    </React.Fragment>
+      </RightMenuContainer>
+    </MainLayoutPage>
   );
 };
 export default ServerSidePage;
@@ -154,7 +149,7 @@ const logoExpress = {
   id: ":0:",
   //size: 28 * 1024 * 1024,
   type: "image/png",
-  imageUrl: "/serverside/nodeexpress.jpg",
+  imageUrl: "/server-side-icons/nodeexpress.jpg",
   name: "Click me!",
 };
 
@@ -162,6 +157,6 @@ const logoJava = {
   id: ":1:",
   //size: 28 * 1024 * 1024,
   type: "image/png",
-  imageUrl: "/serverside/springbootjavalogo.png",
+  imageUrl: "/server-side-icons/springbootjavalogo.png",
   name: "Click me!",
 };

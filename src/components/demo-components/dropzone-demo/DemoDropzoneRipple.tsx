@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Dropzone, FileInputButton } from "@files-ui/react";
 
-const DemoDropzoneRipple = ({ button = false }) => {
+const DemoDropzoneRipple = ({ button = false }: { button?: any } = {}) => {
   if (button)
     return (
       <div

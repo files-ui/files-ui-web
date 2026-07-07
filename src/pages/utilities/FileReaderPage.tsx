@@ -15,7 +15,7 @@ const rightMenuItems = [
 
 interface FileReaderPageProps {}
 const FileReaderPage: React.FC<FileReaderPageProps> = (
-  props: FileReaderPageProps
+  //props: FileReaderPageProps
 ) => {
   return (
     <React.Fragment>

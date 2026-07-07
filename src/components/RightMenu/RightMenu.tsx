@@ -1,8 +1,8 @@
-import List from "@mui/material/List/List";
-import ListSubheader from "@mui/material/ListSubheader/ListSubheader";
+import List from "@mui/material/List";
+import ListSubheader from "@mui/material/ListSubheader";
 import * as React from "react";
-import { RightMenuProps } from "./RightMenuProps";
-import "./RightMenu.scss";
+import type { RightMenuProps } from "./RightMenuProps";
+import "./RightMenu.css";
 import { UserContext } from "../../globals/contexts/UserContext";
 const RightMenu: React.FC<RightMenuProps> = (props: RightMenuProps) => {
   const { items, width, selectedItemProp: selectedItem = 0 } = props;

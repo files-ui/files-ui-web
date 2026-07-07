@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DescParagraphProps } from "./DescParagraphProps";
-import "./DescParagraphProps.scss";
+import "./DescParagraphProps.css";
 const DescParagraph: React.FC<DescParagraphProps> = (
   props: DescParagraphProps
 ) => {

@@ -1,5 +1,5 @@
 import ShowDemoCode from "../../show-demo-code/ShowDemoCode";
-const CodeDemoDropzoneLabel = ({ splittedOnly = false, button = false }) => {
+const CodeDemoDropzoneLabel = ({ splittedOnly = false, button = false }: { splittedOnly?: boolean; button?: any } = {}) => {
   if (button)
     return (
       <ShowDemoCode

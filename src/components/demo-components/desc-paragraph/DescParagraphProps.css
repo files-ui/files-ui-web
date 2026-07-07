@@ -1,0 +1,22 @@
+.paragraph-desc {
+  font-size: 1rem;
+  line-height: 1.565;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-bottom: 16px;
+  margin-top: 0;
+  word-break: break-word;
+}
+.paragraph-desc.dark-mode {
+  color: rgba(255, 255, 255, 0.7);
+}
+.paragraph-desc .code {
+  background-color: rgba(102, 178, 255, 0.15);
+  color: #1a2027;
+  padding: 0 5px;
+  display: inline-block;
+  font-size: 0.89rem;
+  direction: ltr;
+  font-weight: bolder;
+  border-radius: 4px;
+}

@@ -55,7 +55,7 @@ const sampleFilePropsCard = (elevationNumber) => {
     id: "fileId",
     size: 28 * 1024 * 1024,
     type: "text/plain",
-    name: "elevation=" + elevationNumber + ".jsx",
+    name: "elevation=" + elevationNumber + ".tsx",
     valid: true
   };
 };
@@ -121,7 +121,7 @@ const sampleFileProps = {
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "file created from props.jsx"
+  name: "file created from props.tsx"
 };
 const DemoFileMosaicDarkMode = () => {
   const removeFile = (id) => {
@@ -166,7 +166,7 @@ const sampleFilePropsCard = (elevationNumber: number): ExtFile => {
     id: "fileId",
     size: 28 * 1024 * 1024,
     type: "text/plain",
-    name: "elevation=" + elevationNumber + ".jsx",
+    name: "elevation=" + elevationNumber + ".tsx",
     valid: true,
   };
 };
@@ -233,7 +233,7 @@ const sampleFileProps: ExtFile = {
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "file created from props.jsx",
+  name: "file created from props.tsx",
 };
 const Demo${card ? "FileCard" : "FileMosaic"}DarkMode = () => {
   const removeFile = (id: string | number | undefined) => {

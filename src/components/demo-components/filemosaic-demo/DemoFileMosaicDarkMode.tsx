@@ -9,7 +9,7 @@ const sampleFileProps = {
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "sampleFile.jsx",
+  name: "sampleFile.tsx",
   valid: true,
 };
 const sampleFilePropsCard = (elevationNumber: number): ExtFile => {
@@ -17,7 +17,7 @@ const sampleFilePropsCard = (elevationNumber: number): ExtFile => {
     id: "fileId",
     size: 28 * 1024 * 1024,
     type: "text/plain",
-    name: "elevation=" + elevationNumber + ".jsx",
+    name: "elevation=" + elevationNumber + ".tsx",
     valid: true,
   };
 };

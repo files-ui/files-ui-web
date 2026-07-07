@@ -1,16 +1,17 @@
+import type { FuiAction } from "../types/FuiAction";
+import type { UserFilesUi } from "../types/UserFilesUi";
 
-import { FuiAction } from "../types/FuiAction";
-import { UserFilesUi } from "../types/UserFilesUi";
-
-
-export const userReducer = (state: UserFilesUi, action: FuiAction): UserFilesUi => {
+export const userReducer = (
+  state: UserFilesUi,
+  action: FuiAction,
+): UserFilesUi => {
   const { type = "", payload = {} } = action;
   //console.log("userReducer", state, action);
   switch (type) {
     case "OPENFEEDBACK":
       return { ...state, dialogRate: payload.dialogRate };
     case "CLOSEFEEDBACK":
-      return { ...state, dialogRate:undefined };
+      return { ...state, dialogRate: undefined };
     case "TURNONLIGHT":
       return { ...state, darkMode: false };
     case "TURNOFFLIGHT":
@@ -20,12 +21,12 @@ export const userReducer = (state: UserFilesUi, action: FuiAction): UserFilesUi 
   }
 };
 
-export const userInitializer = ():UserFilesUi => {
+export const userInitializer = (): UserFilesUi => {
   const usuarioEncontrado = localStorage.getItem("filesuiuser");
 
   if (usuarioEncontrado !== "udefined" && usuarioEncontrado !== null) {
     return JSON.parse(usuarioEncontrado);
   } else {
-    return {darkMode:false,dialogRate:undefined};
+    return { darkMode: false, dialogRate: undefined };
   }
 };

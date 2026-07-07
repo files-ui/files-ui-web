@@ -1,4 +1,4 @@
-import { DialogRatePageProps } from "../../components/dialog/DialogRateProps";
+import type { DialogRatePageProps } from "../../components/dialog/DialogRateProps";
 
 export type UserFilesUi = {
     id?: string;

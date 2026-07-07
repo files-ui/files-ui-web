@@ -1,7 +1,7 @@
 import * as React from "react";
 import ShowDemoCode from "../../show-demo-code/ShowDemoCode";
 
-const CodeJSFileMosaicImagePreview = (props: { card: boolean }) => {
+const CodeJSFileMosaicImagePreview = (props: { card?: boolean }) => {
   const { card } = props;
   return (
     <ShowDemoCode

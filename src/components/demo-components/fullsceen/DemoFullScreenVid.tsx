@@ -6,11 +6,10 @@ import {
   FullScreen,
   VideoPreview,
 } from "@files-ui/react";
-import { ThorArrivesWakandaEN } from "../../../data/videoLinks";
 
 const DemoFullScreenVid = () => {
   const [videoSrc, setVideoSrc] = React.useState<File | string | undefined>(
-    undefined
+    undefined,
   );
   const handleWatch = (videoSource: File | string | undefined) => {
     setVideoSrc(videoSource);
@@ -29,7 +28,9 @@ const DemoFullScreenVid = () => {
   );
 };
 export default DemoFullScreenVid;
+const publicVideoUrlBase = import.meta.env.BASE_URL + "static/media/videos/";
 
+const ThorArrivesWakandaEN = publicVideoUrlBase + "ThorEN.mp4";
 const videoSample: ExtFile = {
   id: "fileId-1",
   size: 28 * 1024 * 1024,

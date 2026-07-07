@@ -11,7 +11,7 @@ import {
 const sampleFile: ExtFile = {
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "actions sampleFile.jsx",
+  name: "actions sampleFile.tsx",
   valid: true,
 };
 const IMG_URL =

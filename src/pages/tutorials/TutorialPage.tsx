@@ -1,7 +1,9 @@
 import * as React from "react";
-import { TutorialPageProps } from "./TutorialPageProps";
+import type { TutorialPageProps } from "./TutorialPageProps";
 
-const TutorialPage:React.FC<TutorialPageProps> = (props:TutorialPageProps) =>{
+const TutorialPage:React.FC<TutorialPageProps> = (
+//    props:TutorialPageProps
+) =>{
     return(
         <div>
         TutorialPage

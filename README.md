@@ -1,69 +1,75 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/43678736/226257748-6ba2f8cf-59c5-40d1-a545-a388ddab0f68.png" width="150" height="150" alt="fui-logo"/>
-</p>
-<h1 align="center">Files ui</h1>
+# React + TypeScript + Vite
 
-<div align="center">
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dropzone-ui/react/blob/HEAD/LICENSE)
-[![npm latest package](https://img.shields.io/npm/v/@dropzone-ui/react.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen)](https://www.npmjs.com/package/@dropzone-ui/react)
-[![Rate on Openbase](https://badges.openbase.com/js/rating/@dropzone-ui/react.svg)](https://openbase.com/js/@dropzone-ui/react?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
-[![kandi X-Ray](https://kandi.openweaver.com/badges/xray.svg)](https://kandi.openweaver.com/typescript/dropzone-ui/dropzone-ui-react)
-[![Node.js CI](https://github.com/dropzone-ui/react-dropzone/actions/workflows/node.js.yml/badge.svg)](https://github.com/dropzone-ui/dropzone-ui-react)
-[![Build Status](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react.svg?branch=master)](https://app.travis-ci.com/dropzone-ui/dropzone-ui-react)
+Currently, two official plugins are available:
 
-[![Known Vulnerabilities](https://snyk.io/test/github/dropzone-ui/react/badge.svg)](https://snyk.io/test/github/dropzone-ui/react)
-[![Package Quality](https://packagequality.com/shield/dropzone-ui.svg)](https://packagequality.com/#?package=dropzone-ui)
-[![install size](https://packagephobia.com/badge?p=@dropzone-ui/react)](https://packagephobia.com/result?p=@dropzone-ui/react)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/dropzone-ui/react.svg)](http://isitmaintained.com/project/dropzone-ui/react)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![GitHub Repo stars](https://img.shields.io/github/stars/dropzone-ui/react?label=Star%20me%20please%20:D&style=social)](https://github.com/dropzone-ui/react)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-</div>
-**Files UI** is a complete library for handling files in the UI. You can validate and upload them.
+## React Compiler
 
-<a href="https://www.files-ui.com">
-<img align="center" width="100%" src="https://user-images.githubusercontent.com/43678736/228052494-99d970c0-1eb7-42c6-b22c-8c2295b8dc4a.gif" alt="files-ui-preview">
-</a>
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-<p></p>
+## Expanding the ESLint configuration
 
-:zap: Live demo and code generator : [files-ui.com](https://www.files-ui.com)
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-:heart: it ?, support us by giving a :star: on :octocat: [Github](https://github.com/dropzone-ui/dropzone-ui) :D
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## Requirement
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-`@files-ui/react` is based on [React Hooks](https://reactjs.org/docs/hooks-intro.html). It requires `react v16.8+` or greater.
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-## Installation
-
-@files-ui/react is available as an [npm package](https://www.npmjs.com/package/@files-ui/react).
-
-```sh
-// with npm
-npm i @files-ui/react
 ```
 
-```sh
-// with yarn
-yarn add @files-ui/react
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
 ```
-
-## License
-
-This project is licensed under the terms of the
-[MIT license](/LICENSE).
-
-<p align="center">
-<a href="https://github.com/files-ui/files-ui-react#">
-<img src="http://randojs.com/images/barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/>
-</a>
-</p>
-
-<br/>
-<p align="center">
-<a href="https://github.com/files-ui/files-ui-react#readme">
-<img src="http://randojs.com/images/backToTopButtonTransparentBackground.png" alt="Back to top" height="28"/>
-</a>
-</p>

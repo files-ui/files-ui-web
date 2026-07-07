@@ -1,6 +1,6 @@
 import * as React from "react";
 import { UserContext } from "../../globals/contexts/UserContext";
-import "./CodeHighlight.scss";
+import "./CodeHighlight.css";
 
 interface CodeHighlightProps {
   children?: React.ReactNode;

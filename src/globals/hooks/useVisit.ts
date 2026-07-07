@@ -9,7 +9,7 @@ export const useVisit = (): Date => {
         }, 1000 * 60 * 3);
         return () => {
             if (timer)
-                clearInterval(timer);
+                clearInterval(timer as any);
         }
     }, []);
 

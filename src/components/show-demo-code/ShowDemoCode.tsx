@@ -17,7 +17,7 @@ interface ShowDemoCodeProps {
   splittedOnly?: boolean;
 }
 const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
-  props: ShowDemoCodeProps
+  props: ShowDemoCodeProps,
 ) => {
   const {
     codeSandboxJS = "https://codesandbox.io/s/dropzone-ui-basic-3j01v",
@@ -31,7 +31,7 @@ const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
   const [showComplete, setShowComplete] = React.useState(false);
   const [showJS, setShowJS] = React.useState(true);
 
-  const [usuario, ] = React.useContext(UserContext);
+  const [usuario] = React.useContext(UserContext);
   const darkMode = usuario.darkMode;
 
   const code: string = showComplete
@@ -39,18 +39,21 @@ const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
       ? codeCompleteJS
       : codeCompleteTS
     : showJS
-    ? codeSplittedJS
-    : codeSplittedTS;
+      ? codeSplittedJS
+      : codeSplittedTS;
 
   return (
     <React.Fragment>
       {!splittedOnly && (
         <Stack
           direction={"row"}
-          justifyContent="space-between"
+          //justifyContent="space-between"
           style={{ margin: "20px 0" }}
         >
-          <Stack direction={"row"} justifyContent="flex-start">
+          <Stack
+            direction={"row"}
+            //justifyContent="flex-start"
+          >
             {code.length > 0 && (
               <ButtonGroup
                 variant="outlined"
@@ -64,7 +67,9 @@ const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
                   //startIcon={}
                   onClick={() => setShowJS(true)}
                 >
-                  <JSIcon color={darkMode?"rgb(178, 186, 194)":"rgb(45, 56, 67)"}/>
+                  <JSIcon
+                    color={darkMode ? "rgb(178, 186, 194)" : "rgb(45, 56, 67)"}
+                  />
                 </Button>
                 <Button
                   size="small"
@@ -74,13 +79,15 @@ const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
                   //  endIcon={}
                   onClick={() => setShowJS(false)}
                 >
-                  <TSIcon color={darkMode?"rgb(178, 186, 194)":"rgb(45, 56, 67)"}/>
+                  <TSIcon
+                    color={darkMode ? "rgb(178, 186, 194)" : "rgb(45, 56, 67)"}
+                  />
                 </Button>
               </ButtonGroup>
             )}
           </Stack>
 
-          <Stack direction={"row"} justifyContent="flex-end" spacing={1}>
+          <Stack direction={"row"} spacing={1}>
             <Tooltip title={showComplete ? "Hide full code" : "Show full code"}>
               <IconButton
                 style={{ borderRadius: "50%", border: "0.5px solid #eaeef3" }}
@@ -98,7 +105,7 @@ const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
                 onClick={() => {
                   window?.open(
                     showJS ? codeSandboxJS : codeSandboxTS,
-                    "_blank"
+                    "_blank",
                   );
                 }}
                 //color="secondary"
@@ -120,8 +127,8 @@ const ShowDemoCode: React.FC<ShowDemoCodeProps> = (
           margin: "20px 0",
           fontSize: "15px",
           lineHeight: "",
-          maxHeight:"min(68vh, 1000px)",
-          overflow:"auto"
+          maxHeight: "min(68vh, 1000px)",
+          overflow: "auto",
         }}
       >
         {code}

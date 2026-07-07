@@ -28,7 +28,7 @@ export const ActionButtonsAPIRows = [
     default: <TypeHighlight np></TypeHighlight>,
     description: (
       <>
-        The classname to override the css styles in .css or .sass file instead
+        The classname to override the css styles in .css file instead
         of using in-line styles. Classname is applied to the main container.
       </>
     ),

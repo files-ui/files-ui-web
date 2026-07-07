@@ -1,5 +1,5 @@
 import ShowDemoCode from "../../show-demo-code/ShowDemoCode";
-const CodeDemoDropzoneBehaviour = ({ splittedOnly = false, button=false }) => {
+const CodeDemoDropzoneBehaviour = ({ splittedOnly = false, button=false }: { splittedOnly?: boolean; button?: any } = {}) => {
   if(button) return (
     <ShowDemoCode
       splittedOnly={splittedOnly}

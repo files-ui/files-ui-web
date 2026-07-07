@@ -22,7 +22,7 @@ const myOwnValidation = (file: File): ValidateFileResponse => {
   }
   return { valid: validResult, errors: errorList };
 };
-const DemoDropzoneCustomValidation = (props: { button: boolean }) => {
+const DemoDropzoneCustomValidation = (props: { button?: boolean }) => {
   const [files, setFiles] = React.useState<ExtFile[]>([]);
   const updateFiles = (incommingFiles: ExtFile[]) => {
     //do something with the files

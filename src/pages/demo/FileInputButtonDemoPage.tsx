@@ -1,5 +1,5 @@
-import Alert from "@mui/material/Alert/Alert";
-import AlertTitle from "@mui/material/AlertTitle/AlertTitle";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 import Paper from "@mui/material/Paper";
 import * as React from "react";
 import CodeHighlight from "../../components/codeHighlight/CodeHighlight";

@@ -262,7 +262,7 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
                   )}
                   <ListItemText
                     primary={label || ""}
-                    primaryTypographyProps={{ fontWeight: "600" }}
+                    //primaryTypographyProps={{ fontWeight: "600" }}
                   />
                 </ListItemButton>
 
@@ -335,7 +335,7 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
                   )}
                   <ListItemText
                     primary={label || ""}
-                    primaryTypographyProps={{ fontWeight: "600" }}
+                    //primaryTypographyProps={{ fontWeight: "600" }}
                   />
                   {subMenu && <>{isOpen ? <ExpandLess /> : <ExpandMore />}</>}
                 </ListItemButton>

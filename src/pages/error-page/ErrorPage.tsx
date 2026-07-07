@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ErrorPageProps } from "./ErrorPageProps";
-import "./ErrorPage.scss";
+import "./ErrorPage.css";
 import { Box, Button } from "@mui/material";
 import MainTitle from "../../components/main-title/MainTitle";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";

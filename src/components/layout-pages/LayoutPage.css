@@ -1,0 +1,6 @@
+.files-ui-layout {
+  color: #1a2027;
+}
+.files-ui-layout.darkmode {
+  color: rgba(255, 255, 255, 0.7);
+}

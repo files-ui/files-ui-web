@@ -1,3 +1,4 @@
+import CodeHighlight from "../components/codeHighlight/CodeHighlight";
 import TypeHighlight from "../components/typeHighlight/TypeHighlight";
 
 export const UploadConfigAPIRows = [
@@ -78,6 +79,27 @@ export const UploadConfigAPIRows = [
     description: (
       <>
         A message to show in the footer when the uploading process takes place.
+      </>
+    ),
+  },
+  {
+    name: "chunked",
+    type: <TypeHighlight np>{"boolean"}</TypeHighlight>,
+    default: <TypeHighlight np>false</TypeHighlight>,
+    description: (
+      <>
+        If true, files will be split into chunks and uploaded sequentially.
+      </>
+    ),
+  },
+  {
+    name: "chunkSize",
+    type: <TypeHighlight np>{"number"}</TypeHighlight>,
+    default: <TypeHighlight np></TypeHighlight>,
+    description: (
+      <>
+        The size in bytes for each chunk when{" "}
+        <CodeHighlight>chunked</CodeHighlight> is true.
       </>
     ),
   },

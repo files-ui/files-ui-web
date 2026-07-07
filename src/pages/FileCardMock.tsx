@@ -3,7 +3,7 @@ import { FileCard, ExtFile } from "@files-ui/react";
 const baseFiles: ExtFile[] = [
   {
     id: Math.random(),
-    name: "A very very long title for files-ui.jsx",
+    name: "A very very long title for files-ui.tsx",
     type: "text/plain",
     size: 280000,
     valid: true,
@@ -19,7 +19,7 @@ const baseFiles: ExtFile[] = [
       "https://super-ficcion.com/wp-content/uploads/2022/10/como-podria-regresar-iron-man-1-780x470.webp",
   },
 ];
-const FileCardMock = ({ darkMode = false, elevation = 2 }) => {
+const FileCardMock = ({ darkMode = false }) => {
   const [files, setFiles] = React.useState(baseFiles);
   const removeFile = (id: string | number | undefined) => {
     setFiles((files) => files.filter((f) => f.id !== id));
@@ -29,7 +29,7 @@ const FileCardMock = ({ darkMode = false, elevation = 2 }) => {
     <>
       {files.map((file, index) => (
         <FileCard
-          key={file.id}
+          key={file.id || index + 1}
           {...file}
           preview
           onDelete={removeFile}

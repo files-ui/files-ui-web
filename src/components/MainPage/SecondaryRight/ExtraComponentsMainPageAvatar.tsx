@@ -48,11 +48,14 @@ const ExtraComponentsMainPageAvatar: React.FC<ExtraComponentsMainPageProps> = (
       <Stack
         direction={"column"}
         spacing={2}
-        alignItems="center"
-        justifyContent={"space-evenly"}
+        //alignItems="center"
+        //justifyContent={"space-evenly"}
         sx={{
           flexWrap: "wrap",
           flexGrow: 1,
+          
+          justifyContent: "space-evenly",
+          alignItems:"center"
         }}
       >
         <Avatar
@@ -87,6 +90,6 @@ export default ExtraComponentsMainPageAvatar;
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "file created from props.jsx",
+  name: "file created from props.tsx",
 };
  */

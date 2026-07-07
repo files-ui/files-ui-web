@@ -1,4 +1,4 @@
-import { UserFilesUi } from "./UserFilesUi";
+import type { UserFilesUi } from "./UserFilesUi";
 
 export type FilesUIAction = {
     type?: string; 

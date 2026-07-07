@@ -2,7 +2,7 @@ import { Button, Divider, IconButton } from "@mui/material";
 import * as React from "react";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import "./FooterPage.scss";
+import "./FooterPage.css";
 import { UserContext } from "../../globals/contexts/UserContext";
 import { useNavigateToTop } from "../../hooks/useNavigateToTop";
 

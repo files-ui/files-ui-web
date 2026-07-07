@@ -24,7 +24,7 @@ const itemContainerStyle: React.CSSProperties = {
   alignItems: "center",
 };
 
-const DemoDropzoneBehaviour = ({ button = false }) => {
+const DemoDropzoneBehaviour = ({ button = false }: { button?: any } = {}) => {
   const [filesAdd, setFilesAdd] = React.useState<ExtFile[]>([]);
   const [filesReplace, setFilesReplace] = React.useState<ExtFile[]>([]);
 

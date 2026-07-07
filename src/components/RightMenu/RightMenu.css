@@ -1,0 +1,16 @@
+.right-menu-anchor-item {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding-left: 5px;
+  width: 100%;
+  border-left: unset;
+  color: #6f7e8c;
+}
+.right-menu-anchor-item.selected, .right-menu-anchor-item:hover {
+  border-left-width: 2px;
+  border-left-style: solid;
+  color: rgb(0, 114, 229);
+}
+.right-menu-anchor-item.selected.darkmode, .right-menu-anchor-item:hover.darkmode {
+  color: rgb(102, 178, 255);
+}

@@ -74,7 +74,7 @@ const FileDownloadPage = () => {
             <SubTitle content="Different origin URL and 'downloadUrl' prop specified" />
             <DescParagraph>
               When only <CodeHighlight>downloadUrl</CodeHighlight> is specified
-              and if the resource is located in any other host (on Stean for
+              and if the resource is located in any other host (on Steam for
               instance), the component will open a new tab and display the
               content.
             </DescParagraph>

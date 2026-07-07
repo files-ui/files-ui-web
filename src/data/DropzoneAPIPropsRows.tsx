@@ -138,6 +138,17 @@ export const DropzoneAPIPropsRows = [
     ),
   },
   {
+    name: "maxConcurrentUploads",
+    type: <TypeHighlight np>number</TypeHighlight>,
+    default: <TypeHighlight np>1</TypeHighlight>,
+    description: (
+      <>
+        The maximum number of files to upload concurrently when{" "}
+        <CodeHighlight>uploadConfig</CodeHighlight> is set.
+      </>
+    ),
+  },
+  {
     name: "fakeUpload",
     type: <TypeHighlight np>boolean</TypeHighlight>,
     default: <TypeHighlight np></TypeHighlight>,
@@ -228,7 +239,7 @@ export const DropzoneAPIPropsRows = [
     default: <TypeHighlight np></TypeHighlight>,
     description: (
       <>
-        The classname to override the css styles in .css or .sass file instead
+        The classname to override the css styles in .css file instead
         of using in-line styles. Classname is applied to the main container.
       </>
     ),
@@ -397,6 +408,28 @@ export const DropzoneAPIPropsRows = [
     ),
     default: <TypeHighlight np>{'"add"'}</TypeHighlight>,
     description: <>The behaviour when new files are selected or dropped</>,
+  },
+  {
+    name: "lazyLoad",
+    type: <TypeHighlight np>boolean</TypeHighlight>,
+    default: <TypeHighlight np>false</TypeHighlight>,
+    description: (
+      <>
+        If true, dropzone children will be lazily mounted using{" "}
+        <CodeHighlight>IntersectionObserver</CodeHighlight>.
+      </>
+    ),
+  },
+  {
+    name: "lazyLoadBuffer",
+    type: <TypeHighlight np>number</TypeHighlight>,
+    default: <TypeHighlight np>300</TypeHighlight>,
+    description: (
+      <>
+        Root margin in pixels used by the lazy loading observer. Children within
+        this buffer will be preloaded before entering the viewport.
+      </>
+    ),
   },
   {
     name: "children",

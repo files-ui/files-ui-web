@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ParagraphMainProps } from "./MainParagraphProps";
-import "./MainParagraph.scss";
+import "./MainParagraph.css";
 import { UserContext } from "../../globals/contexts/UserContext";
 const MainParagraph: React.FC<ParagraphMainProps> = (
   props: ParagraphMainProps

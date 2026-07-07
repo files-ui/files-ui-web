@@ -9,7 +9,7 @@ import {
 const baseFiles: ExtFile[] = [
   {
     id: Math.random(),
-    name: "A very very long title for files-ui.jsx",
+    name: "A very very long title for files-ui.tsx",
     type: "text/plain",
     size: 280000,
     //valid: true,
@@ -132,7 +132,7 @@ const FileItemMock = ({ darkMode = false, mosaic = false }) => {
           <>
             {files.map((file, index) => (
               <FileMosaic
-                key={file.id || 1 + 1}
+                key={file.id || 1 + 1 + index}
                 {...file}
                 localization={"ES-es"}
                 // preview
@@ -154,7 +154,7 @@ const FileItemMock = ({ darkMode = false, mosaic = false }) => {
           <>
             {files.map((file, index) => (
               <FileMosaic
-                key={file.id || 1 + 10}
+                key={file.id || 1 + 10 + index}
                 {...file}
                 preview
                 onDelete={removeFile}

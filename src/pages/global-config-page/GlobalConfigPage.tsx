@@ -13,13 +13,13 @@ import TypeHighlight from "../../components/typeHighlight/TypeHighlight";
 import RightMenuContainer from "../../components/layout-pages/RightMenuContainer";
 import RightMenu from "../../components/RightMenu/RightMenu";
 import DemoGlobalConfig from "../../components/demo-components/global-demo/DemoGlobalConfig";
-import FileCardMosaicSwitch from "../../components/switch/FileCardMosaicSwitch";
 import CodeDemoGlobalConfig from "../../components/demo-components/global-demo/CodeDemoGlobalConfig";
 import FooterPage from "../../components/layout-pages/FooterPage";
+import FileCardMosaicSwitch from "../../components/switch/FileCardMosaicSwitch";
 
 interface GlobalConfigPageProps {}
 const GlobalConfigPage: React.FC<GlobalConfigPageProps> = (
-  props: GlobalConfigPageProps
+  //props: GlobalConfigPageProps
 ) => {
   const [selectedItem, setSelectedItem] = React.useState(0);
 

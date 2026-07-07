@@ -1,4 +1,4 @@
-import { UserFilesUi } from "./UserFilesUi";
+import type { UserFilesUi } from "./UserFilesUi";
 
 export type FuiAction = {
     type?: "OPENFEEDBACK" | "CLOSEFEEDBACK" | "TURNONLIGHT" | "TURNOFFLIGHT";

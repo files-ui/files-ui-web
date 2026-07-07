@@ -6,8 +6,9 @@ const sampleFile: ExtFile = {
   type: "video/mp4",
   name: "NarutoAndSasukevsMomoshiiki.mp4",
 };
+const publicVideoUrlBase = import.meta.env.BASE_URL + "static/media/videos/";
 
-const VIDEO_URL = "/videodemo/NarutoEN.mp4";
+const VIDEO_URL = publicVideoUrlBase + "/NarutoEN.mp4";
 
 const DemoDownloadSameOrigin = () => {
   return (

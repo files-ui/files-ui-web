@@ -50,12 +50,14 @@ const ExtraComponentsMainPageInputButton: React.FC<
       <Stack
         direction={"column"}
         spacing={2}
-        alignItems="center"
-        justifyContent={"space-evenly"}
+        //alignItems="center"
+        //justifyContent={"space-evenly"}
         sx={{
           flexWrap: "wrap",
           flexGrow:1,
           //height: "100%",
+          justifyContent: "space-evenly",
+          alignItems:"center"
         }}
       >
         {value ? (
@@ -74,5 +76,5 @@ const sampleFileProps: ExtFile = {
   id: "fileId",
   size: 28 * 1024 * 1024,
   type: "text/plain",
-  name: "file created from props.jsx",
+  name: "file created from props.tsx",
 };
