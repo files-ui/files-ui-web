@@ -92,6 +92,7 @@ const FileMosaicImageVideoPreviews: React.FC<
               {...f}
               onSee={handleSee}
               onWatch={handleWatch}
+              
               {...f.extraData}
               alwaysActive
               onDownload={f.downloadUrl ? handleDownload : undefined}
