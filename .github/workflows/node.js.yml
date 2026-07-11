@@ -1,7 +1,4 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: Node.js CI & Vercel Deploy
 
 on:
   push:
@@ -11,19 +8,45 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - name: Checkout source code
+      uses: actions/checkout@v4
+
+    - name: Use Latest Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 'latest' # Forces GitHub Actions to fetch the absolute latest version of Node.js
         cache: 'npm'
-    - run: npm i @files-ui/react
+
+    - name: Install dependencies
+      run: npm install
+
+    # --- VERCEL DEPLOYMENT STEPS ---
+    # These steps only execute when a PR is successfully merged into master
+    
+    - name: Install Vercel CLI
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      run: npm install --global vercel
+
+    - name: Pull Vercel Environment Information
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      env:
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    - name: Build Project Artifacts
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      env:
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    - name: Deploy Project Artifacts to Vercel
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      env:
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
