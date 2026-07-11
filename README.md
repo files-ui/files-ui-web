@@ -4,7 +4,7 @@
 </p>
 </a>
 
-<h1 align="center">Files UI Web Test (Documentation Site)</h1>
+<h1 align="center">Files UI Web (Documentation Site)</h1>
 
 
 

@@ -17,7 +17,7 @@ jobs:
     - name: Use Latest Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 'latest' # Forces GitHub Actions to fetch the absolute latest version of Node.js
+        node-version: '24'
         cache: 'npm'
 
     - name: Install dependencies
