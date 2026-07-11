@@ -13,7 +13,7 @@
     "@dynamicss/dynamicss": "^2.2.8",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@files-ui/core": "^2.0.9+",
+    "@files-ui/core": "^2.0.9",
     "@files-ui/react": "^1.3.0",
     "@mui/icons-material": "^9.2.0",
     "@mui/material": "^9.2.0",
