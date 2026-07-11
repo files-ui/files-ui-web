@@ -88,14 +88,13 @@ const FileMosaicImageVideoPreviews: React.FC<
           {files.map((f: ExtFile, index: number) => (
             <FileMosaic
               key={index}
-              darkMode={darkMode}
               {...f}
               onSee={handleSee}
               onWatch={handleWatch}
               
               {...f.extraData}
               alwaysActive
-              onDownload={f.downloadUrl ? handleDownload : undefined}
+              //onDownload={f.downloadUrl ? handleDownload : undefined}
             />
           ))}
           <FullScreen

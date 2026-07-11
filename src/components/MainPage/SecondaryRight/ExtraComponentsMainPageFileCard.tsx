@@ -69,11 +69,7 @@ const ExtraComponentsMainPageFileCard: React.FC<
       >
         {files.map((f: ExtFile, index: number) => (
           <FileCard
-            onClick={() => {
-              //alert("haaa");
-            }}
             key={index}
-            //darkMode={darkMode}
             {...f}
             onSee={handleSee}
             onWatch={handleWatch}
