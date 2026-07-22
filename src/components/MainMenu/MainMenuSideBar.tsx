@@ -67,6 +67,11 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
           index: 26,
           onClick: () => navigate("/components/fullscreen"),
         },
+        {
+          label: "Skeletons",
+          index: 27,
+          onClick: () => navigate("/components/skeletons"),
+        },
       ],
     },
     {
@@ -107,14 +112,9 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
           onClick: () => navigate("/api/fullscreen"),
         },
         {
-          label: "ImagePreview",
+          label: "Skeletons",
           index: 37,
-          onClick: () => navigate("/api/imagepreview"),
-        },
-        {
-          label: "VideoPreview",
-          index: 38,
-          onClick: () => navigate("/api/videopreview"),
+          onClick: () => navigate("/api/skeletons"),
         },
       ],
     },
