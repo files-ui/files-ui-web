@@ -72,6 +72,11 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
           index: 27,
           onClick: () => navigate("/components/skeletons"),
         },
+        {
+          label: "useFilesUI Hook",
+          index: 28,
+          onClick: () => navigate("/components/usefilesui"),
+        },
       ],
     },
     {
@@ -159,6 +164,28 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
       label: "Global config",
       index: 10,
       onClick: () => navigate("/global-config"),
+    },
+    {
+      label: "Next.js",
+      index: 11,
+      isOpen: false,
+      subMenu: [
+        {
+          label: "Getting started",
+          index: 111,
+          onClick: () => navigate("/nextjs/getting-started"),
+        },
+        {
+          label: "Server Actions",
+          index: 112,
+          onClick: () => navigate("/nextjs/server-actions"),
+        },
+        {
+          label: "App Router & RSC",
+          index: 113,
+          onClick: () => navigate("/nextjs/app-router"),
+        },
+      ],
     },
   ];
 

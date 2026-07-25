@@ -45,6 +45,10 @@ import DemoDropzoneLazyLoad from "../../components/demo-components/dropzone-demo
 import CodeDemoDropzoneLazyLoad from "../../components/demo-components/dropzone-demo/CodeDemoDropzoneLazyLoad";
 import DemoDropzoneChunkedUpload from "../../components/demo-components/dropzone-demo/DemoDropzoneChunkedUpload";
 import CodeDemoDropzoneChunkedUpload from "../../components/demo-components/dropzone-demo/CodeDemoDropzoneChunkedUpload";
+import DemoDropzoneUseFilesUIBasic from "../../components/demo-components/dropzone-demo/DemoDropzoneUseFilesUIBasic";
+import CodeDemoDropzoneUseFilesUIBasic from "../../components/demo-components/dropzone-demo/CodeDemoDropzoneUseFilesUIBasic";
+import DemoDropzoneUseFilesUIAction from "../../components/demo-components/dropzone-demo/DemoDropzoneUseFilesUIAction";
+import CodeDemoDropzoneUseFilesUIAction from "../../components/demo-components/dropzone-demo/CodeDemoDropzoneUseFilesUIAction";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";
 
@@ -189,6 +193,29 @@ const DropzoneDemoPage = (props) => {
           </Alert>
         </section>
 
+        <section id="usefilesui-headless">
+          <SubTitle content="useFilesUI headless hook (third sample)" />
+          <DescParagraph>
+            This third sample shows the new headless architecture used by
+            Dropzone in v2.0.0. You can build your own UI while reusing
+            validation, drag and drop handlers, upload orchestration, and file
+            state from <TypeHighlight>useFilesUI</TypeHighlight>.
+          </DescParagraph>
+
+          <Paper variant="outlined" style={{ padding: "25px" }}>
+            <DemoDropzoneUseFilesUIBasic />
+          </Paper>
+
+          <CodeDemoDropzoneUseFilesUIBasic />
+
+          <Alert severity="info">
+            <AlertTitle> Headless architecture </AlertTitle>
+            Use <TypeHighlight>getDragHandlers</TypeHighlight> and{" "}
+            <TypeHighlight>getInputProps</TypeHighlight> to wire your own UI
+            controls while keeping upload and validation logic centralized.
+          </Alert>
+        </section>
+
         <section id="custom-validation">
           <SubTitle content="Custom validation" />
           <DescParagraph>
@@ -289,6 +316,23 @@ const DropzoneDemoPage = (props) => {
           </Paper>
 
           <CodeDemoDropzoneChunkedUpload />
+        </section>
+
+        <section id="uploading-with-action">
+          <SubTitle content="Uploading with action (no URL)" />
+          <DescParagraph>
+            For modern React/Next.js flows, you can use the new
+            <TypeHighlight> action </TypeHighlight> upload path from
+            <TypeHighlight>useFilesUI</TypeHighlight>. This removes the need to
+            define an upload URL in the component and lets your action handle
+            file processing directly.
+          </DescParagraph>
+
+          <Paper variant="outlined" style={{ padding: "25px" }}>
+            <DemoDropzoneUseFilesUIAction />
+          </Paper>
+
+          <CodeDemoDropzoneUseFilesUIAction />
         </section>
 
         <section id="action-buttons">
@@ -742,6 +786,11 @@ const rightMenuItems = [
     referTo: "/components/dropzone#validation",
   },
   {
+    id: 19,
+    label: "useFilesUI headless",
+    referTo: "/components/dropzone#usefilesui-headless",
+  },
+  {
     id: 2,
     label: "Custom validation",
     referTo: "/components/dropzone#custom-validation",
@@ -755,6 +804,11 @@ const rightMenuItems = [
     id: 16,
     label: "Chunked upload",
     referTo: "/components/dropzone#chunked-upload",
+  },
+  {
+    id: 20,
+    label: "Uploading with action",
+    referTo: "/components/dropzone#uploading-with-action",
   },
   /*  {
     id: 4,

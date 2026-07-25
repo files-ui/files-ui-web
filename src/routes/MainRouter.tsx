@@ -26,6 +26,10 @@ import MainPage from "../pages/MainPage";
 import SizeVariantsPage from "../components/demo-pages/SizeVariantsPage";
 import SkeletonsDemoPage from "../pages/demo/SkeletonsDemoPage";
 import SkeletonsApi from "../pages/api/SkeletonsApi";
+import NextJsGettingStartedPage from "../pages/nextjs/NextJsGettingStartedPage";
+import NextJsServerActionsPage from "../pages/nextjs/NextJsServerActionsPage";
+import NextJsAppRouterPage from "../pages/nextjs/NextJsAppRouterPage";
+import UseFilesUIDemoPage from "../pages/demo/UseFilesUIDemoPage";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "/components/skeletons",
         element: <SkeletonsDemoPage />,
+      },
+      {
+        path: "/components/usefilesui",
+        element: <UseFilesUIDemoPage />,
       },
     ],
   },
@@ -156,6 +164,9 @@ const router = createBrowserRouter([
   }, */
   { path: "/global-config", element: <GlobalConfigPage /> },
   { path: "/demo/size-variants", element: <SizeVariantsPage /> },
+  { path: "/nextjs/getting-started", element: <NextJsGettingStartedPage /> },
+  { path: "/nextjs/server-actions", element: <NextJsServerActionsPage /> },
+  { path: "/nextjs/app-router", element: <NextJsAppRouterPage /> },
 ]);
 
 const MainRouter = (props) => {

@@ -2,6 +2,7 @@ import { Paper } from "@mui/material";
 import * as React from "react";
 import CodeDemoServerSideJava from "../../components/demo-components/demo-server-side/CodeDemoServerSideJava";
 import CodeDemoServerSideExpress from "../../components/demo-components/demo-server-side/CodeDemoServerSideExpress";
+import CodeDemoServerSideNextJs from "../../components/demo-components/demo-server-side/CodeDemoServerSideNextJs";
 import DescParagraph from "../../components/demo-components/desc-paragraph/DescParagraph";
 import SubTitle from "../../components/demo-components/sub-title/SubTitle";
 import MainContentContainer from "../../components/layout-pages/MainContentContainer";
@@ -11,6 +12,7 @@ import MainTitle from "../../components/main-title/MainTitle";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import RightMenu from "../../components/RightMenu/RightMenu";
 import AnchorToTab from "../../components/util-components/AnchorToTab";
+import CodeHighlight from "../../components/codeHighlight/CodeHighlight";
 import { FileMosaic } from "@files-ui/react";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";
@@ -111,6 +113,29 @@ const ServerSidePage = () => {
           </Paper>
           <CodeDemoServerSideJava splittedOnly />
         </section>
+        <section id="nextjs16">
+          <SubTitle content="Next.js 16 - App Router + Server Actions" />
+          <DescParagraph>
+            Use a client boundary for interactive upload components and keep page
+            composition in Server Components. Import uploader components from
+            dedicated client subpaths such as <CodeHighlight>@files-ui/react/client/dropzone</CodeHighlight>.
+          </DescParagraph>
+          <DescParagraph>
+            The recommended flow is:
+            <ul>
+              <li>Define a Server Action with <CodeHighlight>"use server"</CodeHighlight>.</li>
+              <li>Render <CodeHighlight>Dropzone</CodeHighlight> from a Client Component with <CodeHighlight>"use client"</CodeHighlight>.</li>
+              <li>Compose that Client Component from a Server Component page.</li>
+            </ul>
+          </DescParagraph>
+          <DescParagraph>
+            Read the complete reference in the repository docs:
+            <AnchorToTab href="https://github.com/files-ui/files-ui/blob/main/docs/react/ServerComponents.md">
+              ServerComponents.md
+            </AnchorToTab>
+          </DescParagraph>
+          <CodeDemoServerSideNextJs splittedOnly />
+        </section>
         <FooterPage
           page="Server Side"
           labelBefore="types"
@@ -142,6 +167,11 @@ const rightMenuItems = [
     id: 1,
     label: "Spring Boot (Java)",
     referTo: "/server-side#springboot",
+  },
+  {
+    id: 2,
+    label: "Next.js 16",
+    referTo: "/server-side#nextjs16",
   },
 ];
 
