@@ -4,6 +4,7 @@ import {
   ExtFile,
   FileMosaic,
   FullScreen,
+  ImagePreview,
 } from "@files-ui/react";
 
 const BASE_URL = "https://www.myserver.com";
@@ -69,11 +70,9 @@ export default function AdvancedDropzoneDemo() {
         ))}
       </Dropzone>
 
-      <FullScreen
-        open={!!imageSrc}
-        onClose={() => setImageSrc(undefined)}
-        srcImage={imageSrc}
-      />
+      <FullScreen open={!!imageSrc} onClose={() => setImageSrc(undefined)}>
+        <ImagePreview src={imageSrc} />
+      </FullScreen>
     </>
   );
 }
