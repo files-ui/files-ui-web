@@ -89,20 +89,28 @@ const UsagePage = (props) => {
         <section id="advanced-example">
           <SubTitle content="Advanced Example" />
           <DescParagraph>
-            In this example we set dropzone with the props that allows
-            validation and upload. These props are:
+            This example demonstrates file validation, upload configuration, and
+            image preview functionality:
             <ul>
               <li>
-                For validating: <CodeHighlight>accept</CodeHighlight>,{" "}
-                <CodeHighlight>maxFiles</CodeHighlight> and{" "}
-                <CodeHighlight>maxFileSize</CodeHighlight>
+                <strong>Validation:</strong> <CodeHighlight>accept</CodeHighlight>{" "}
+                for file types, <CodeHighlight>maxFiles</CodeHighlight> to limit
+                quantity, and <CodeHighlight>maxFileSize</CodeHighlight> for size
+                restrictions
               </li>
               <li>
-                For uploading: <CodeHighlight>uploadConfig</CodeHighlight>
+                <strong>Upload:</strong> <CodeHighlight>uploadConfig</CodeHighlight>{" "}
+                for server configuration and <CodeHighlight>fakeUpload</CodeHighlight>{" "}
+                for testing without a real server
               </li>
               <li>
-                For simulating the upload process:{" "}
-                <CodeHighlight>fakeUpload</CodeHighlight>
+                <strong>Preview:</strong> <CodeHighlight>FullScreen</CodeHighlight>{" "}
+                component with <CodeHighlight>srcImage</CodeHighlight> prop for
+                viewing images
+              </li>
+              <li>
+                <strong>Actions:</strong> <CodeHighlight>actionButtons</CodeHighlight>{" "}
+                for upload, delete, and abort controls
               </li>
             </ul>
           </DescParagraph>

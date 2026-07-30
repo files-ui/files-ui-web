@@ -20,16 +20,17 @@ import { scrollHandler } from "../../utils/scrollHandler";
 import CodeHighlight from "../../components/codeHighlight/CodeHighlight";
 import { ImagePreview } from "@files-ui/react";
 import FooterPage from "../../components/layout-pages/FooterPage";
+import CodeDemoFilesUiProvider from "./CodeDemoFilesUiProvider";
 const GettingStartedPage = ({ darkModeOn }: { darkModeOn?: any } = {}) => {
   const [selectedItem, setSelectedItem] = React.useState(0);
 
   React.useEffect(() => {
     window.addEventListener("scroll", () =>
-      scrollHandler(rightMenuItems, setSelectedItem)
+      scrollHandler(rightMenuItems, setSelectedItem),
     );
     return () => {
       window.removeEventListener("scroll", () =>
-        scrollHandler(rightMenuItems, setSelectedItem)
+        scrollHandler(rightMenuItems, setSelectedItem),
       );
     };
   }, []);
@@ -65,7 +66,8 @@ const GettingStartedPage = ({ darkModeOn }: { darkModeOn?: any } = {}) => {
           <SubTitle content="Peer dependency" />
 
           <DescParagraph>
-            <CodeHighlight>react </CodeHighlight> {"^17.0.2 || ^18.0.0 || ^19.0.0 "}and{" "}
+            <CodeHighlight>react </CodeHighlight>{" "}
+            {"^17.0.2 || ^18.0.0 || ^19.0.0 "}and{" "}
             <CodeHighlight>react-dom</CodeHighlight>
             {" ^17.0.2 || ^18.0.0 || ^19.0.0 "} are peer dependencies.
           </DescParagraph>
@@ -81,9 +83,6 @@ const GettingStartedPage = ({ darkModeOn }: { darkModeOn?: any } = {}) => {
             That's why we find it reasonable to rebrand it and create a new
             package keeping the best and adding more features and new
             components. This new package is here and its name is Files UI ⚡!!
-            <br />
-            In an very near future we'll stop providing support to dropzone-ui, so
-            we enforce you to upgrade to this new package.
           </DescParagraph>
           <ImagePreview
             src="https://user-images.githubusercontent.com/43678736/225168231-35d7dc8d-f89e-43a1-8ce9-441bd59a74df.png"
@@ -94,13 +93,50 @@ const GettingStartedPage = ({ darkModeOn }: { darkModeOn?: any } = {}) => {
           <SubTitle content="Default font" />
 
           <DescParagraph>
-            Files UI components use the Poppins font by default. However, you
-            can set your own font-family on each component.
+            Files UI components use the Poppins font by default. If Poppins is
+            not loaded in your application, components gracefully fall back to
+            system fonts.
+          </DescParagraph>
+
+          <h3>Using Poppins (opt-in):</h3>
+          <DescParagraph>
+            Add one of the following to your application entry point:
+          </DescParagraph>
+          <CodeHighlight>
+            {`<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900" />`}
+          </CodeHighlight>
+        </section>
+
+        <section id="custom-font">
+          <SubTitle content="Custom font" />
+
+          <DescParagraph>
+            You can set a global custom font for all Files UI components using
+            the <CodeHighlight>fontFamily</CodeHighlight> prop in{" "}
+            <CodeHighlight>FilesUiProvider</CodeHighlight>:
+          </DescParagraph>
+
+          {/* Replaced the old CodeHighlight block with the new Demo component */}
+          <CodeDemoFilesUiProvider />
+
+          <DescParagraph>
+            When <CodeHighlight>fontFamily</CodeHighlight> is set, a single
+            stylesheet is injected that overrides the default Poppins stack with
+            your chosen font plus standard system fallbacks. If{" "}
+            <CodeHighlight>fontFamily</CodeHighlight> is not set, components
+            keep their default behavior.
+          </DescParagraph>
+          <DescParagraph>
+            Remember to load your custom font (via{" "}
+            <CodeHighlight>{"<link>"}</CodeHighlight>, CSS{" "}
+            <CodeHighlight>@import</CodeHighlight>, or a package like{" "}
+            <CodeHighlight>@fontsource/inter</CodeHighlight>) in your
+            application so the browser can render it.
           </DescParagraph>
         </section>
         <FooterPage
           page="Getting started"
-         // labelBefore="Usage"
+          // labelBefore="Usage"
           //linkBefore="/usage"
           labelAfter="Usage"
           linkAfter="/usage"
@@ -131,14 +167,15 @@ const rightMenuItems = [
     referTo: "/getting-started#installation",
   },
   {
-    id: 3,
+    id: 2,
     label: "Peer dependency",
     referTo: "/getting-started#peer-dependency",
   },
   {
-    id: 2,
+    id: 3,
     label: "Dropzone ui",
     referTo: "/getting-started#dropzoneui",
   },
-  { id: 3, label: "Default font", referTo: "/getting-started#default-font" },
+  { id: 4, label: "Default font", referTo: "/getting-started#default-font" },
+  { id: 5, label: "Custom font", referTo: "/getting-started#custom-font" },
 ];

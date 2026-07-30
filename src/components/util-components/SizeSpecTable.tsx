@@ -14,6 +14,7 @@ import {
 
 interface SizeSpec {
   property: string;
+  xs: string;
   small: string;
   medium: string;
   large: string;
@@ -22,38 +23,44 @@ interface SizeSpec {
 const FileMosaicSpecs: SizeSpec[] = [
   {
     property: "Container Width",
-    small: "88px",
+    xs: "88px",
+    small: "110px",
     medium: "132px",
     large: "176px",
   },
   {
     property: "Icon Layer Size",
-    small: "88px",
+    xs: "88px",
+    small: "110px",
     medium: "132px",
     large: "176px",
   },
-  { property: "Font Size", small: "13px", medium: "15px", large: "17px" },
+  { property: "Font Size", xs: "10.5px", small: "12.75px", medium: "15px", large: "18px" },
   {
     property: "Size Text Font",
-    small: "0.65rem",
+    xs: "0.55rem",
+    small: "0.6rem",
     medium: "0.7rem",
     large: "0.8rem",
   },
   {
     property: "Status Font",
+    xs: "0.6rem",
     small: "0.7rem",
     medium: "0.8rem",
     large: "0.9rem",
   },
-  { property: "Icon Font", small: "0.6rem", medium: "0.7rem", large: "0.8rem" },
+  { property: "Icon Font", xs: "0.5rem", small: "0.6rem", medium: "0.7rem", large: "0.8rem" },
   {
     property: "Icon Min Size",
+    xs: "13px",
     small: "16px",
     medium: "19px",
     large: "22px",
   },
   {
     property: "Border Radius",
+    xs: "5px",
     small: "6px",
     medium: "8px",
     large: "10px",
@@ -63,26 +70,30 @@ const FileMosaicSpecs: SizeSpec[] = [
 const FileCardSpecs: SizeSpec[] = [
   {
     property: "Container Width",
-    small: "240px",
+    xs: "220px",
+    small: "270px",
     medium: "320px",
-    large: "400px",
+    large: "420px",
   },
   {
     property: "Container Height",
-    small: "75px",
+    xs: "70px",
+    small: "85px",
     medium: "100px",
-    large: "125px",
+    large: "130px",
   },
-  { property: "Icon Size", small: "75px", medium: "100px", large: "125px" },
-  { property: "Font Size", small: "13px", medium: "15px", large: "17px" },
+  { property: "Icon Size", xs: "70px", small: "85px", medium: "100px", large: "130px" },
+  { property: "Font Size", xs: "11.25px", small: "12.75px", medium: "15px", large: "17.25px" },
   {
     property: "Upload Text Font",
+    xs: "0.6rem",
     small: "0.7rem",
     medium: "0.8rem",
     large: "0.9rem",
   },
   {
     property: "Border Radius",
+    xs: "5px",
     small: "6px",
     medium: "8px",
     large: "10px",
@@ -96,6 +107,7 @@ interface SizeSpecTableProps {
 const SizeSpecTable: React.FC<SizeSpecTableProps> = ({ component = "FileMosaic" }) => {
   const specs = component === "FileMosaic" ? FileMosaicSpecs : FileCardSpecs;
   const colors = {
+    xs: "#fff3e0",
     small: "#e3f2fd",
     medium: "#f3e5f5",
     large: "#e8f5e9",
@@ -110,8 +122,11 @@ const SizeSpecTable: React.FC<SizeSpecTableProps> = ({ component = "FileMosaic" 
         <Table aria-label="size specifications">
           <TableHead>
             <TableRow sx={{ backgroundColor: "#f5f5f5" }}>
-              <TableCell sx={{ fontWeight: 700, width: "30%" }}>
+              <TableCell sx={{ fontWeight: 700, width: "25%" }}>
                 Property
+              </TableCell>
+              <TableCell sx={{ fontWeight: 700, backgroundColor: colors.xs }}>
+                XS
               </TableCell>
               <TableCell sx={{ fontWeight: 700, backgroundColor: colors.small }}>
                 Small
@@ -135,6 +150,15 @@ const SizeSpecTable: React.FC<SizeSpecTableProps> = ({ component = "FileMosaic" 
                 }}
               >
                 <TableCell sx={{ fontWeight: 500 }}>{spec.property}</TableCell>
+                <TableCell
+                  sx={{
+                    backgroundColor: colors.xs,
+                    fontFamily: "monospace",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  {spec.xs}
+                </TableCell>
                 <TableCell
                   sx={{
                     backgroundColor: colors.small,

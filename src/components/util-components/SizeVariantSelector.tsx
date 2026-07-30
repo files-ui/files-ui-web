@@ -3,8 +3,8 @@ import { ToggleButton, ToggleButtonGroup, Box, Typography } from "@mui/material"
 import AspectRatioIcon from "@mui/icons-material/AspectRatio";
 
 interface SizeVariantSelectorProps {
-  value: "small" | "medium" | "large";
-  onChange: (value: "small" | "medium" | "large") => void;
+  value: "xs" | "small" | "medium" | "large";
+  onChange: (value: "xs" | "small" | "medium" | "large") => void;
   label?: string;
 }
 
@@ -15,7 +15,7 @@ const SizeVariantSelector: React.FC<SizeVariantSelectorProps> = ({
 }) => {
   const handleChange = (
     _event: React.MouseEvent<HTMLElement>,
-    newValue: "small" | "medium" | "large" | null
+    newValue: "xs" | "small" | "medium" | "large" | null
   ) => {
     if (newValue !== null) {
       onChange(newValue);
@@ -47,6 +47,10 @@ const SizeVariantSelector: React.FC<SizeVariantSelectorProps> = ({
           },
         }}
       >
+        <ToggleButton value="xs" aria-label="extra small">
+          <AspectRatioIcon sx={{ mr: 1, fontSize: "0.85rem" }} />
+          XS
+        </ToggleButton>
         <ToggleButton value="small" aria-label="small">
           <AspectRatioIcon sx={{ mr: 1, fontSize: "1rem" }} />
           Small

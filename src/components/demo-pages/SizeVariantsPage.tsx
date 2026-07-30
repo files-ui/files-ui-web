@@ -1,7 +1,4 @@
 import * as React from "react";
-import { FileMosaic, FileCard, 
-  //FileMosaicSkeleton, FileCardSkeleton 
-} from "@files-ui/react";
 import {
   Box,
   Card,
@@ -10,14 +7,39 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Container,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SizeSpecTable from "../util-components/SizeSpecTable";
 import DemoFileMosaicSizeVariants from "../demo-components/filemosaic-demo/DemoFileMosaicSizeVariants";
 import DemoFileCardSizeVariants from "../demo-components/filecard-demo/DemoFileCardSizeVariants";
 import DemoSizeComparison from "../demo-components/size-comparison/DemoSizeComparison";
-import SizeVariantSelector from "../util-components/SizeVariantSelector";
+
+const codeExamples = [
+  {
+    title: "FileMosaic - Small",
+    code: `import { FileMosaic } from "@files-ui/react";\n\nconst file = {\n  id: "file1",\n  size: 1024,\n  type: "image/jpeg",\n  name: "photo.jpg"\n};\n\nexport default function App() {\n  return (\n    <FileMosaic\n      {...file}\n      variant="small"\n      info\n      preview\n    />\n  );\n}`,
+  },
+  {
+    title: "FileMosaic - Medium",
+    code: `import { FileMosaic } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileMosaic\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="medium"\n      info\n      preview\n    />\n  );\n}`,
+  },
+  {
+    title: "FileMosaic - Large",
+    code: `import { FileMosaic } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileMosaic\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="large"\n      info\n      preview\n    />\n  );\n}`,
+  },
+  {
+    title: "FileCard - Small",
+    code: `import { FileCard } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileCard\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="small"\n      elevation={8}\n    />\n  );\n}`,
+  },
+  {
+    title: "FileCard - Medium",
+    code: `import { FileCard } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileCard\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="medium"\n      elevation={8}\n    />\n  );\n}`,
+  },
+  {
+    title: "FileCard - Large",
+    code: `import { FileCard } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileCard\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="large"\n      elevation={8}\n    />\n  );\n}`,
+  },
+];
 
 const SizeVariantsPage: React.FC = () => {
   const [expandedDemo, setExpandedDemo] = React.useState<string | false>(false);
@@ -30,7 +52,7 @@ const SizeVariantsPage: React.FC = () => {
           Size Variants Feature
         </Typography>
         <Typography variant="h6" sx={{ color: "text.secondary", mb: 4 }}>
-          Enhanced FileMosaic and FileCard Components with Three Size Options
+          Enhanced FileMosaic and FileCard Components with Four Size Options
         </Typography>
 
         <Box
@@ -47,7 +69,7 @@ const SizeVariantsPage: React.FC = () => {
             ✨ New Feature: The <code>variant</code> prop controls component size
           </Typography>
           <Typography variant="caption" sx={{ display: "block", mt: 1 }}>
-            Available: 'small' | 'medium' (default) | 'large'
+            Available: 'xs' | 'small' | 'medium' (default) | 'large'
           </Typography>
         </Box>
       </Box>
@@ -138,131 +160,28 @@ const SizeVariantsPage: React.FC = () => {
           </Typography>
 
           <Box sx={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 2 }}>
-            <Card>
-              <CardContent>
-                <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
-                  FileMosaic - Small
-                </Typography>
-                <Typography
-                  component="pre"
-                  sx={{
-                    backgroundColor: "#f5f5f5",
-                    p: 1.5,
-                    borderRadius: 1,
-                    overflow: "auto",
-                    fontSize: "0.75rem",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {`import { FileMosaic } from "@files-ui/react";\n\nconst file = {\n  id: "file1",\n  size: 1024,\n  type: "image/jpeg",\n  name: "photo.jpg"\n};\n\nexport default function App() {\n  return (\n    <FileMosaic\n      {...file}\n      variant="small"\n      info\n      preview\n    />\n  );\n}`}
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent>
-                <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
-                  FileMosaic - Medium
-                </Typography>
-                <Typography
-                  component="pre"
-                  sx={{
-                    backgroundColor: "#f5f5f5",
-                    p: 1.5,
-                    borderRadius: 1,
-                    overflow: "auto",
-                    fontSize: "0.75rem",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {`import { FileMosaic } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileMosaic\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="medium"\n      info\n      preview\n    />\n  );\n}`}
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent>
-                <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
-                  FileMosaic - Large
-                </Typography>
-                <Typography
-                  component="pre"
-                  sx={{
-                    backgroundColor: "#f5f5f5",
-                    p: 1.5,
-                    borderRadius: 1,
-                    overflow: "auto",
-                    fontSize: "0.75rem",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {`import { FileMosaic } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileMosaic\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="large"\n      info\n      preview\n    />\n  );\n}`}
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent>
-                <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
-                  FileCard - Small
-                </Typography>
-                <Typography
-                  component="pre"
-                  sx={{
-                    backgroundColor: "#f5f5f5",
-                    p: 1.5,
-                    borderRadius: 1,
-                    overflow: "auto",
-                    fontSize: "0.75rem",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {`import { FileCard } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileCard\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="small"\n      elevation={8}\n    />\n  );\n}`}
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent>
-                <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
-                  FileCard - Medium
-                </Typography>
-                <Typography
-                  component="pre"
-                  sx={{
-                    backgroundColor: "#f5f5f5",
-                    p: 1.5,
-                    borderRadius: 1,
-                    overflow: "auto",
-                    fontSize: "0.75rem",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {`import { FileCard } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileCard\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="medium"\n      elevation={8}\n    />\n  );\n}`}
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent>
-                <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
-                  FileCard - Large
-                </Typography>
-                <Typography
-                  component="pre"
-                  sx={{
-                    backgroundColor: "#f5f5f5",
-                    p: 1.5,
-                    borderRadius: 1,
-                    overflow: "auto",
-                    fontSize: "0.75rem",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {`import { FileCard } from "@files-ui/react";\n\nexport default function App() {\n  return (\n    <FileCard\n      id="file1"\n      size={1024}\n      type="image/jpeg"\n      name="photo.jpg"\n      variant="large"\n      elevation={8}\n    />\n  );\n}`}
-                </Typography>
-              </CardContent>
-            </Card>
+            {codeExamples.map((example, index) => (
+              <Card key={index}>
+                <CardContent>
+                  <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
+                    {example.title}
+                  </Typography>
+                  <Typography
+                    component="pre"
+                    sx={{
+                      backgroundColor: "#f5f5f5",
+                      p: 1.5,
+                      borderRadius: 1,
+                      overflow: "auto",
+                      fontSize: "0.75rem",
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    {example.code}
+                  </Typography>
+                </CardContent>
+              </Card>
+            ))}
           </Box>
         </Box>
 
@@ -279,6 +198,10 @@ const SizeVariantsPage: React.FC = () => {
                   When to Use Each Size
                 </Typography>
                 <Box component="ul" sx={{ pl: 2, m: 0 }}>
+                  <Typography component="li" variant="body2" sx={{ mb: 1 }}>
+                    <strong>XS:</strong> Compact inline lists, chat attachments,
+                    icon-dense layouts
+                  </Typography>
                   <Typography component="li" variant="body2" sx={{ mb: 1 }}>
                     <strong>Small:</strong> Mobile thumbnails, sidebar listings,
                     gallery grids with high density
@@ -387,7 +310,7 @@ const SizeVariantsPage: React.FC = () => {
                 <Typography component="pre" sx={{ fontSize: "0.85rem", overflow: "auto" }}>
                   {`interface FileMosaicProps {
   // New prop
-  variant?: "small" | "medium" | "large";
+  variant?: "xs" | "small" | "medium" | "large";
   // Default: "medium"
   
   // Existing props still work
@@ -409,7 +332,7 @@ const SizeVariantsPage: React.FC = () => {
                 <Typography component="pre" sx={{ fontSize: "0.85rem", overflow: "auto" }}>
                   {`interface FileCardProps {
   // New prop
-  variant?: "small" | "medium" | "large";
+  variant?: "xs" | "small" | "medium" | "large";
   // Default: "medium"
   
   // Existing props still work
@@ -431,15 +354,14 @@ const SizeVariantsPage: React.FC = () => {
           <Card sx={{ backgroundColor: "#f0f7ff", border: "2px solid #2196f3" }}>
             <CardContent>
               <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
-                📝 What's New in v1.3.0
+                📝 What's New in v2.0.0
               </Typography>
               <Box component="ul" sx={{ pl: 2, m: 0 }}>
                 <Typography component="li" variant="body2" sx={{ mb: 1 }}>
                   ✨ Added <code>variant</code> prop to FileMosaic and FileCard
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1 }}>
-                  ✨ Three size variants: small (88×88px), medium (132×132px),
-                  large (176×176px)
+                  ✨ Four size variants: xs, small, medium (default), large
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1 }}>
                   ✨ All dependent elements (icons, text, status) scale
@@ -453,7 +375,8 @@ const SizeVariantsPage: React.FC = () => {
                   ✨ 100% backward compatible (default = medium)
                 </Typography>
                 <Typography component="li" variant="body2">
-                  ✨ 32 new tests covering all size variants and scenarios
+                  ✨ Dedicated variant coverage in the test suite, including
+                  SizeVariants.test.tsx
                 </Typography>
               </Box>
             </CardContent>

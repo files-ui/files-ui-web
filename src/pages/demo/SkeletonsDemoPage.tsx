@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Paper } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import {
   AvatarSkeleton,
   DropzoneSkeleton,
@@ -16,23 +16,21 @@ import MainTitle from "../../components/main-title/MainTitle";
 import MainParagraph from "../../components/paragraph-main/MainParagraph";
 import RightMenu from "../../components/RightMenu/RightMenu";
 import { scrollHandler } from "../../utils/scrollHandler";
+import CodeDemoSkeletons from "../../components/demo-components/skeleton-demo/CodeDemoSkeletons";
 
 const rightMenuItems = [
   { id: 0, label: "Demos", referTo: "/components/skeletons#demos" },
   { id: 1, label: "API", referTo: "/components/skeletons#api" },
 ];
 
-const SkeletonsDemoPage = () => {
-  const [selectedItem, setSelectedItem] = React.useState(0);
+const SkeletonsDemoPage: React.FC = () => {
+  const [selectedItem, setSelectedItem] = React.useState<number>(0);
 
   React.useEffect(() => {
-    window.addEventListener("scroll", () =>
-      scrollHandler(rightMenuItems, setSelectedItem)
-    );
+    const handleScroll = () => scrollHandler(rightMenuItems, setSelectedItem);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", () =>
-        scrollHandler(rightMenuItems, setSelectedItem)
-      );
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -44,43 +42,59 @@ const SkeletonsDemoPage = () => {
           Skeleton components provide loading placeholders for the core visual
           components in the library.
         </MainParagraph>
+        
         <section id="demos">
           <SubTitle content="Demos" />
           <DescParagraph>
             Each skeleton mirrors the shape of its real component so loading
             states stay visually consistent.
           </DescParagraph>
+          
           <Paper
             variant="outlined"
-            style={{
-              padding: "25px",
+            sx={{
+              p: 3,
               display: "grid",
-              gap: "20px",
+              gap: 3,
               gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              mb: 4,
             }}
           >
-            <div>
-              <h3>FileMosaicSkeleton</h3>
+            <Box>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600 }} gutterBottom>
+                FileMosaicSkeleton
+              </Typography>
               <FileMosaicSkeleton />
-            </div>
-            <div>
-              <h3>FileCardSkeleton</h3>
+            </Box>
+            <Box>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600 }} gutterBottom>
+                FileCardSkeleton
+              </Typography>
               <FileCardSkeleton />
-            </div>
-            <div>
-              <h3>DropzoneSkeleton</h3>
+            </Box>
+            <Box>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600 }} gutterBottom>
+                DropzoneSkeleton
+              </Typography>
               <DropzoneSkeleton />
-            </div>
-            <div>
-              <h3>AvatarSkeleton</h3>
+            </Box>
+            <Box>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600 }} gutterBottom>
+                AvatarSkeleton
+              </Typography>
               <AvatarSkeleton />
-            </div>
-            <div>
-              <h3>FileInputButtonSkeleton</h3>
+            </Box>
+            <Box>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600 }} gutterBottom>
+                FileInputButtonSkeleton
+              </Typography>
               <FileInputButtonSkeleton />
-            </div>
+            </Box>
           </Paper>
+
+          <CodeDemoSkeletons />
         </section>
+        
         <section id="api">
           <SubTitle content="API" />
           <DescParagraph>
@@ -89,6 +103,7 @@ const SkeletonsDemoPage = () => {
             and style.
           </DescParagraph>
         </section>
+        
         <FooterPage
           page="Skeletons Demo"
           labelBefore="FullScreen Demo"
@@ -97,6 +112,7 @@ const SkeletonsDemoPage = () => {
           linkAfter="/api/skeletons"
         />
       </MainContentContainer>
+      
       <RightMenuContainer>
         <RightMenu
           width="240px"

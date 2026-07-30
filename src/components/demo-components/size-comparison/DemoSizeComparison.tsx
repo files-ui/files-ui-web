@@ -1,7 +1,10 @@
 import * as React from "react";
-import { FileMosaic, FileCard, 
-//  FileMosaicSkeleton, FileCardSkeleton
- } from "@files-ui/react";
+import {
+  FileMosaic,
+  FileCard,
+  FileMosaicSkeleton,
+  FileCardSkeleton,
+} from "@files-ui/react";
 import {
   Box,
   Card,
@@ -20,14 +23,15 @@ const sampleFileProps = {
 };
 
 const DemoSizeComparison: React.FC = () => {
-  const [variant, setVariant] = React.useState<"small" | "medium" | "large">(
-    "medium"
-  );
+  const [variant, setVariant] = React.useState<
+    "xs" | "small" | "medium" | "large"
+  >("medium");
 
   const sizes = {
-    small: { fileMosaic: "88×88px", fileCard: "240×75px" },
+    xs: { fileMosaic: "88×88px", fileCard: "220×70px" },
+    small: { fileMosaic: "110×110px", fileCard: "270×85px" },
     medium: { fileMosaic: "132×132px", fileCard: "320×100px" },
-    large: { fileMosaic: "176×176px", fileCard: "400×125px" },
+    large: { fileMosaic: "176×176px", fileCard: "420×130px" },
   };
 
   return (
@@ -45,7 +49,13 @@ const DemoSizeComparison: React.FC = () => {
 
       {/* Size Info */}
       <Paper sx={{ p: 3, mb: 4, backgroundColor: "#f9f9f9" }}>
-        <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" }, gap: 2 }}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+            gap: 2,
+          }}
+        >
           <Box>
             <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
               FileMosaic
@@ -70,7 +80,13 @@ const DemoSizeComparison: React.FC = () => {
       </Typography>
 
       {/* Split View Comparison */}
-      <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" }, gap: 3 }}>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+          gap: 3,
+        }}
+      >
         {/* FileMosaic Column */}
         <Box>
           <Card sx={{ mb: 2 }}>
@@ -83,7 +99,7 @@ const DemoSizeComparison: React.FC = () => {
                 <Box sx={{ textAlign: "center" }}>
                   <FileMosaic
                     {...sampleFileProps}
-                    //variant={variant}
+                    variant={variant}
                     info
                     preview
                   />
@@ -99,7 +115,7 @@ const DemoSizeComparison: React.FC = () => {
                 Loading State (Skeleton)
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center" }}>
-              {/*   <FileMosaicSkeleton variant={variant} /> */}
+                <FileMosaicSkeleton sizeVariant={variant} />
               </Box>
             </CardContent>
           </Card>
@@ -116,7 +132,7 @@ const DemoSizeComparison: React.FC = () => {
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <FileCard
                   {...sampleFileProps}
-                  //variant={variant}
+                  variant={variant}
                   elevation={8}
                 />
               </Box>
@@ -130,7 +146,7 @@ const DemoSizeComparison: React.FC = () => {
                 Loading State (Skeleton)
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center" }}>
-                {/* <FileCardSkeleton variant={variant} /> */}
+                <FileCardSkeleton sizeVariant={variant} />
               </Box>
             </CardContent>
           </Card>
@@ -143,31 +159,64 @@ const DemoSizeComparison: React.FC = () => {
           Scale Visualization
         </Typography>
         <Paper sx={{ p: 3, backgroundColor: "#f9f9f9" }}>
-          <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" }, gap: 3, justifyContent: "center" }}>
-            {["small", "medium", "large"].map((size) => (
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 3,
+              justifyContent: "center",
+              alignItems: "stretch",
+              width: "100%",
+              "& > .MuiCard-root": {
+                // Responsive widths mimicking your 1, 2, and 4 column layout
+                width: {
+                  xs: "100%", // 1 column
+                  sm: "calc(50% - 12px)", // 2 columns (accounting for gap)
+                  md: "calc(25% - 18px)", // 4 columns (accounting for gap)
+                },
+                minWidth: "250px", // Prevents items from squishing too much
+              },
+            }}
+          >
+            {(["xs", "small", "medium", "large"] as const).map((size) => (
               <Card key={size} sx={{ textAlign: "center", p: 2 }}>
                 <CardContent>
-                  <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 2 }}>
-                    {size.charAt(0).toUpperCase() + size.slice(1)}
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ fontWeight: 600, mb: 2 }}
+                  >
+                    {size === "xs"
+                      ? "XS"
+                      : size.charAt(0).toUpperCase() + size.slice(1)}
                   </Typography>
-                  <Box sx={{ display: "flex", gap: 2, justifyContent: "center" }}>
+                  <Box
+                    sx={{ display: "flex", gap: 2, justifyContent: "center" }}
+                  >
                     <Box sx={{ textAlign: "center" }}>
-                      <Box sx={{ fontSize: "0.75rem", mb: 1, color: "text.secondary" }}>
+                      <Box
+                        sx={{
+                          fontSize: "0.75rem",
+                          mb: 1,
+                          color: "text.secondary",
+                        }}
+                      >
                         FileMosaic
                       </Box>
-                      <FileMosaic
-                        {...sampleFileProps}
-                        //variant={size as any}
-                        info
-                      />
+                      <FileMosaic {...sampleFileProps} variant={size} info />
                     </Box>
                     <Box sx={{ textAlign: "center" }}>
-                      <Box sx={{ fontSize: "0.75rem", mb: 1, color: "text.secondary" }}>
+                      <Box
+                        sx={{
+                          fontSize: "0.75rem",
+                          mb: 1,
+                          color: "text.secondary",
+                        }}
+                      >
                         FileCard
                       </Box>
                       <FileCard
                         {...sampleFileProps}
-                        //variant={size as any}
+                        variant={size}
                         elevation={8}
                       />
                     </Box>
@@ -184,7 +233,33 @@ const DemoSizeComparison: React.FC = () => {
         <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
           Recommended Use Cases
         </Typography>
-        <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" }, gap: 2 }}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "1fr 1fr",
+              md: "1fr 1fr 1fr 1fr",
+            },
+            gap: 2,
+          }}
+        >
+          <Card>
+            <CardContent>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
+                XS
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                • Compact inline lists
+                <br />
+                • Chat attachments
+                <br />
+                • Minimal space usage
+                <br />• Icon-sized previews
+              </Typography>
+            </CardContent>
+          </Card>
+
           <Card>
             <CardContent>
               <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
