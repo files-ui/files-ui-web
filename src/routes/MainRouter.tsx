@@ -19,12 +19,17 @@ import FileInputButtonDemoPage from "../pages/demo/FileInputButtonDemoPage";
 import FileDownloadPage from "../pages/download-page/FileDownloadPage";
 import FileIconsPage from "../pages/file-icons/FileIconsPage";
 import LocalizationPage from "../pages/localization/LocalizationPage";
-import VideoPreviewApi from "../pages/api/VideoPreviewApi";
-import ImagePreviewApi from "../pages/api/ImagePreviewApi";
 import FullScreenApi from "../pages/api/FullScreenApi";
 import FullScreenDemoPage from "../pages/demo/FullScreenDemoPage";
 import GlobalConfigPage from "../pages/global-config-page/GlobalConfigPage";
 import MainPage from "../pages/MainPage";
+import SizeVariantsPage from "../components/demo-pages/SizeVariantsPage";
+import SkeletonsDemoPage from "../pages/demo/SkeletonsDemoPage";
+import SkeletonsApi from "../pages/api/SkeletonsApi";
+import NextJsGettingStartedPage from "../pages/nextjs/NextJsGettingStartedPage";
+import NextJsServerActionsPage from "../pages/nextjs/NextJsServerActionsPage";
+import NextJsAppRouterPage from "../pages/nextjs/NextJsAppRouterPage";
+import UseFilesUIDemoPage from "../pages/demo/UseFilesUIDemoPage";
 
 const router = createBrowserRouter([
   {
@@ -76,6 +81,14 @@ const router = createBrowserRouter([
         path: "/components/fullscreen",
         element: <FullScreenDemoPage />,
       },
+      {
+        path: "/components/skeletons",
+        element: <SkeletonsDemoPage />,
+      },
+      {
+        path: "/components/usefilesui",
+        element: <UseFilesUIDemoPage />,
+      },
     ],
   },
   {
@@ -111,12 +124,8 @@ const router = createBrowserRouter([
         element: <FullScreenApi />,
       },
       {
-        path: "/api/imagepreview",
-        element: <ImagePreviewApi />,
-      },
-      {
-        path: "/api/videopreview",
-        element: <VideoPreviewApi />,
+        path: "/api/skeletons",
+        element: <SkeletonsApi />,
       },
     ],
   },
@@ -154,6 +163,10 @@ const router = createBrowserRouter([
     element: <FileUploaderPage />,
   }, */
   { path: "/global-config", element: <GlobalConfigPage /> },
+  { path: "/demo/size-variants", element: <SizeVariantsPage /> },
+  { path: "/nextjs/getting-started", element: <NextJsGettingStartedPage /> },
+  { path: "/nextjs/server-actions", element: <NextJsServerActionsPage /> },
+  { path: "/nextjs/app-router", element: <NextJsAppRouterPage /> },
 ]);
 
 const MainRouter = (props) => {

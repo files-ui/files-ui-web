@@ -17,121 +17,85 @@ export default AdvancedDropzoneCodeJS;
 
 const splittedCodeJS = `<Dropzone
   onChange={updateFiles}
-  minHeight="195px"
-  value={extFiles}
-  accept="image/*, video/*"
+  value={files}
+  accept="image/*"
   maxFiles={3}
-  maxFileSize={2 * 1024*1024}
-  label="Drag'n drop files here or click to browse"
+  maxFileSize={2 * 1024 * 1024}
+  label="Drop images here or click to browse"
   uploadConfig={{
-    // autoUpload: true
-    url: BASE_URL + "/file/28048465460",
+    url: BASE_URL + "/api/upload",
     cleanOnUpload: true,
   }}
   onUploadStart={handleStart}
   onUploadFinish={handleFinish}
-  //fakeUpload
+  fakeUpload
   actionButtons={{
     position: "after",
-    abortButton: {},
-    deleteButton: {},
     uploadButton: {},
+    deleteButton: {},
+    abortButton: {},
   }}
 >
-    {extFiles.map((file) => (
-      <FileMosaic
-        {...file}
-        key={file.id}
-        onDelete={onDelete}
-        onSee={handleSee}
-        onWatch={handleWatch}
-        onAbort={handleAbort}
-        onCancel={handleCancel}
-        resultOnTooltip
-        preview
-        info
-      />
-    ))}
+  {files.map((file) => (
+    <FileMosaic
+      key={file.id}
+      {...file}
+      onDelete={removeFile}
+      onSee={handleSee}
+      resultOnTooltip
+      preview
+      info
+    />
+  ))}
 </Dropzone>
-<FullScreen
-  open={imageSrc !== undefined}
-  onClose={() => setImageSrc(undefined)}
->
-  <ImagePreview src={imageSrc} />
-</FullScreen>
-<FullScreen
-  open={videoSrc !== undefined}
-  onClose={() => setVideoSrc(undefined)}
->
-  <VideoPreview src={videoSrc} autoPlay controls />
-</FullScreen>`;
-const completeCodeJS = `import {
-  Dropzone,
-  FileMosaic,
-  FullScreen,
-  ImagePreview,
-  VideoPreview,
-} from "@files-ui/react";
-import * as React from "react;
 
-const BASE_URL =
- "https://www.myserver.com";
+<FullScreen
+  open={!!imageSrc}
+  onClose={() => setImageSrc(undefined)}
+  srcImage={imageSrc}
+/>`;
+const completeCodeJS = `import * as React from "react";
+import { Dropzone, FileMosaic, FullScreen } from "@files-ui/react";
+
+const BASE_URL = "https://www.myserver.com";
 
 export default function AdvancedDropzoneDemo() {
- const [extFiles, setExtFiles] = React.useState([]);
- const [imageSrc, setImageSrc] = React.useState(undefined);
- const [videoSrc, setVideoSrc] = React.useState(undefined);
- 
- const updateFiles = (incommingFiles) => {
-   console.log("incomming files", incommingFiles);
-   setExtFiles(incommingFiles);
- };
- const onDelete = (id) => {
-   setExtFiles(extFiles.filter((x) => x.id !== id));
- };
- const handleSee = (imageSource) => {
-   setImageSrc(imageSource);
- };
- const handleWatch = (videoSource) => {
-   setVideoSrc(videoSource);
- };
- const handleStart = (filesToUpload) => {
-   console.log("advanced demo start upload", filesToUpload);
- };
- const handleFinish = (uploadedFiles) => {
-   console.log("advanced demo finish upload", uploadedFiles);
- };
- const handleAbort = (id) => {
-   setExtFiles(
-     extFiles.map((ef) => {
-       if (ef.id === id) {
-         return { ...ef, uploadStatus: "aborted" };
-       } else return { ...ef };
-     })
-   );
- };
- const handleCancel = (id) => {
-   setExtFiles(
-     extFiles.map((ef) => {
-       if (ef.id === id) {
-         return { ...ef, uploadStatus: undefined };
-       } else return { ...ef };
-     })
-   );
- };
- return (
-   <>
-     <Dropzone
+  const [files, setFiles] = React.useState([]);
+  const [imageSrc, setImageSrc] = React.useState(undefined);
+
+  const updateFiles = (incommingFiles) => {
+    setFiles(incommingFiles);
+  };
+
+  const removeFile = (id) => {
+    setFiles(files.filter((x) => x.id !== id));
+  };
+
+  const handleSee = (imageSource) => {
+    if (typeof imageSource === "string") {
+      setImageSrc(imageSource);
+    }
+  };
+
+  const handleStart = (filesToUpload) => {
+    console.log("Upload started:", filesToUpload);
+  };
+
+  const handleFinish = (uploadedFiles) => {
+    console.log("Upload finished:", uploadedFiles);
+  };
+
+  return (
+    <>
+      <Dropzone
         onChange={updateFiles}
-        minHeight="195px"
-        value={extFiles}
-        accept="image/*, video/*"
+        value={files}
+        accept="image/*"
         maxFiles={3}
-        maxFileSize={2 * 1024*1024}
-        label="Drag'n drop files here or click to browse"
+        maxFileSize={2 * 1024 * 1024}
+        label="Drop images here or click to browse"
         uploadConfig={{
-          // autoUpload: true
-          url: BASE_URL + "/file",
+          url: BASE_URL + "/api/upload",
           cleanOnUpload: true,
         }}
         onUploadStart={handleStart}
@@ -139,155 +103,106 @@ export default function AdvancedDropzoneDemo() {
         fakeUpload
         actionButtons={{
           position: "after",
-          abortButton: {},
-          deleteButton: {},
           uploadButton: {},
+          deleteButton: {},
+          abortButton: {},
         }}
-     >
-       {extFiles.map((file) => (
-         <FileMosaic
-           {...file}
-           key={file.id}
-           onDelete={onDelete}
-           onSee={handleSee}
-           onWatch={handleWatch}
-           onAbort={handleAbort}
-           onCancel={handleCancel}
-           resultOnTooltip
-           alwaysActive
-           preview
-           info
-         />
-       ))}
-     </Dropzone>
-     <FullScreen
-       open={imageSrc !== undefined}
-       onClose={() => setImageSrc(undefined)}
-     >
-       <ImagePreview src={imageSrc} />
-     </FullScreen>
-     <FullScreen
-       open={videoSrc !== undefined}
-       onClose={() => setVideoSrc(undefined)}
-     >
-       <VideoPreview src={videoSrc} autoPlay controls />
-     </FullScreen>
-   </>
- );
+      >
+        {files.map((file) => (
+          <FileMosaic
+            key={file.id}
+            {...file}
+            onDelete={removeFile}
+            onSee={handleSee}
+            resultOnTooltip
+            preview
+            info
+          />
+        ))}
+      </Dropzone>
+
+      <FullScreen
+        open={!!imageSrc}
+        onClose={() => setImageSrc(undefined)}
+        srcImage={imageSrc}
+      />
+    </>
+  );
 }`;
 
-const completeCodeTS = `import {
-  Dropzone,
-  ExtFile,
-  FileMosaic,
-  FileMosaicProps,
-  FullScreen,
-  ImagePreview,
-  VideoPreview,
- } from "@files-ui/react";
+const completeCodeTS = `import * as React from "react";
+import { Dropzone, ExtFile, FileMosaic, FullScreen } from "@files-ui/react";
 
- const BASE_URL =
- "https://www.myserver.com";
+const BASE_URL = "https://www.myserver.com";
 
 export default function AdvancedDropzoneDemo() {
- const [extFiles, setExtFiles] = React.useState<ExtFile[]>([]);
- const [imageSrc, setImageSrc] = React.useState<File | string | undefined>(
-   undefined
- );
- const [videoSrc, setVideoSrc] = React.useState<File | string | undefined>(
-   undefined
- );
- const updateFiles = (incommingFiles: ExtFile[]) => {
-   console.log("incomming files", incommingFiles);
-   setExtFiles(incommingFiles);
- };
- const onDelete = (id: FileMosaicProps["id"]) => {
-   setExtFiles(extFiles.filter((x) => x.id !== id));
- };
- const handleSee = (imageSource: File | string | undefined) => {
-   setImageSrc(imageSource);
- };
- const handleWatch = (videoSource: File | string | undefined) => {
-   setVideoSrc(videoSource);
- };
- const handleStart = (filesToUpload: ExtFile[]) => {
-   console.log("advanced demo start upload", filesToUpload);
- };
- const handleFinish = (uploadedFiles: ExtFile[]) => {
-   console.log("advanced demo finish upload", uploadedFiles);
- };
- const handleAbort = (id: FileMosaicProps["id"]) => {
-   setExtFiles(
-     extFiles.map((ef) => {
-       if (ef.id === id) {
-         return { ...ef, uploadStatus: "aborted" };
-       } else return { ...ef };
-     })
-   );
- };
- const handleCancel = (id: FileMosaicProps["id"]) => {
-   setExtFiles(
-     extFiles.map((ef) => {
-       if (ef.id === id) {
-         return { ...ef, uploadStatus: undefined };
-       } else return { ...ef };
-     })
-   );
- };
- return (
-   <>
-     <Dropzone
-       onChange={updateFiles}
-       minHeight="195px"
-       value={extFiles}
-       maxFiles={3}
-       // FmaxFileSize={2998000 * 20}
-       label="Drag'n drop files here or click to browse"
-       // accept=".png,image/*, video/*"
-       uploadConfig={{
-         // autoUpload: true
-         url: BASE_URL + "/file/28048465460",
-         cleanOnUpload: true,
-      }}
-       onUploadStart={handleStart}
-       onUploadFinish={handleFinish}
-       fakeUpload
-       actionButtons={{
-         position: "after",
-         abortButton: {},
-         deleteButton: {},
-         uploadButton: {},
-      }}
-     >
-       {extFiles.map((file) => (
-         <FileMosaic
-           {...file}
-           key={file.id}
-           onDelete={onDelete}
-           onSee={handleSee}
-           onWatch={handleWatch}
-           onAbort={handleAbort}
-           onCancel={handleCancel}
-           resultOnTooltip
-           alwaysActive
-           preview
-           info
-         />
-       ))}
-     </Dropzone>
-     <FullScreen
-       open={imageSrc !== undefined}
-       onClose={() => setImageSrc(undefined)}
-     >
-       <ImagePreview src={imageSrc} />
-     </FullScreen>
-     <FullScreen
-       open={videoSrc !== undefined}
-       onClose={() => setVideoSrc(undefined)}
-     >
-       <VideoPreview src={videoSrc} autoPlay controls />
-     </FullScreen>
-   </>
- );
+  const [files, setFiles] = React.useState<ExtFile[]>([]);
+  const [imageSrc, setImageSrc] = React.useState<string | undefined>(undefined);
+
+  const updateFiles = (incommingFiles: ExtFile[]) => {
+    setFiles(incommingFiles);
+  };
+
+  const removeFile = (id: string | number | undefined) => {
+    setFiles(files.filter((x) => x.id !== id));
+  };
+
+  const handleSee = (imageSource: File | string | undefined) => {
+    if (typeof imageSource === "string") {
+      setImageSrc(imageSource);
+    }
+  };
+
+  const handleStart = (filesToUpload: ExtFile[]) => {
+    console.log("Upload started:", filesToUpload);
+  };
+
+  const handleFinish = (uploadedFiles: ExtFile[]) => {
+    console.log("Upload finished:", uploadedFiles);
+  };
+
+  return (
+    <>
+      <Dropzone
+        onChange={updateFiles}
+        value={files}
+        accept="image/*"
+        maxFiles={3}
+        maxFileSize={2 * 1024 * 1024}
+        label="Drop images here or click to browse"
+        uploadConfig={{
+          url: BASE_URL + "/api/upload",
+          cleanOnUpload: true,
+        }}
+        onUploadStart={handleStart}
+        onUploadFinish={handleFinish}
+        fakeUpload
+        actionButtons={{
+          position: "after",
+          uploadButton: {},
+          deleteButton: {},
+          abortButton: {},
+        }}
+      >
+        {files.map((file) => (
+          <FileMosaic
+            key={file.id}
+            {...file}
+            onDelete={removeFile}
+            onSee={handleSee}
+            resultOnTooltip
+            preview
+            info
+          />
+        ))}
+      </Dropzone>
+
+      <FullScreen
+        open={!!imageSrc}
+        onClose={() => setImageSrc(undefined)}
+        srcImage={imageSrc}
+      />
+    </>
+  );
 }`;
 const splittedCodeTS = splittedCodeJS;

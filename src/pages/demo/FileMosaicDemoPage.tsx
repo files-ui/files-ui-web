@@ -33,6 +33,8 @@ import DemoFileMosaicVideoDownload from "../../components/demo-components/filemo
 import CodeJSFileMosaicVideoDownload from "../../components/demo-components/filemosaic-demo/CodeJSFileMosaicVideoDownload";
 import DemoFileMosaicSelection from "../../components/demo-components/filemosaic-demo/DemoFileMosaicSelection";
 import CodeJSFileMosaicSelection from "../../components/demo-components/filemosaic-demo/CodeJSFileMosaicSelection";
+import DemoFileMosaicSizeVariants from "../../components/demo-components/filemosaic-demo/DemoFileMosaicSizeVariants";
+import CodeDemoFileMosaicSizeVariants from "../../components/demo-components/filemosaic-demo/CodeDemoFileMosaicSizeVariants";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";
 
@@ -406,6 +408,25 @@ const FileMosaicDemoPage = (props) => {
           <CodeJSFileMosaicSmartImgFit card={false} />
         </section>
 
+        <section id="size-variants">
+          <SubTitle content="Size variants" />
+          <DescParagraph>
+            Use the <CodeHighlight>variant</CodeHighlight> prop to switch between
+            <TypeHighlight> xs</TypeHighlight>, <TypeHighlight> small</TypeHighlight>,{" "}
+            <TypeHighlight>medium</TypeHighlight>, and <TypeHighlight>large</TypeHighlight>
+            component sizes.
+            <br />
+            For a complete playground and comparison tables, check the{" "}
+            <AnchorToTab href="/demo/size-variants">size variants demo page</AnchorToTab>.
+          </DescParagraph>
+
+          <DemoContainerFileMosaic>
+            <DemoFileMosaicSizeVariants />
+          </DemoContainerFileMosaic>
+
+          <CodeDemoFileMosaicSizeVariants />
+        </section>
+
         <section id="api">
           <SubTitle content="API" />
           <DescParagraph>
@@ -506,6 +527,11 @@ const rightMenuItems = [
     id: 7,
     label: "Smart image fit",
     referTo: "/components/filemosaic#smart-image-fit",
+  },
+  {
+    id: 10,
+    label: "Size variants",
+    referTo: "/components/filemosaic#size-variants",
   },
   {
     id: 6,

@@ -18,12 +18,12 @@ const rightMenuItems = [
   {
     id: 0,
     label: "Demos",
-    referTo: "/api/fileinputbutton#demo",
+    referTo: "#demo",
   },
   {
     id: 1,
     label: "Props",
-    referTo: "/api/fileinputbutton#props",
+    referTo: "#props",
   },
 ];
 
@@ -65,12 +65,14 @@ const ImagePreviewApi = () => {
             the component demo pages:
             <ul>
               <li>
-                <AnchorToTab href="/components/filemosaic">
-                  FileMosaic
+                <AnchorToTab href="/components/imagepreview">
+                  ImagePreview
                 </AnchorToTab>
               </li>
               <li>
-                <AnchorToTab href="/components/filecard">FileCard</AnchorToTab>
+                <AnchorToTab href="/components/fullscreen">
+                  FullScreen
+                </AnchorToTab>
               </li>
             </ul>
           </Alert>

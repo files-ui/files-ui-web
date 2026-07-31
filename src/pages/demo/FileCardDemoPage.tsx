@@ -27,6 +27,8 @@ import DemoFileMosaicSmartImgFit from "../../components/demo-components/filemosa
 import CodeJSFileMosaicSmartImgFit from "../../components/demo-components/filemosaic-demo/CodeJSFileMosaicSmartImgFit";
 import DemoFileMosaicSelection from "../../components/demo-components/filemosaic-demo/DemoFileMosaicSelection";
 import CodeJSFileMosaicSelection from "../../components/demo-components/filemosaic-demo/CodeJSFileMosaicSelection";
+import DemoFileCardSizeVariants from "../../components/demo-components/filecard-demo/DemoFileCardSizeVariants";
+import CodeDemoFileCardSizeVariants from "../../components/demo-components/file-card-demo/CodeDemoFileCardSizeVariants";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";
 
@@ -374,6 +376,24 @@ const FileCardDemoPage = (props) => {
 
           <CodeJSFileMosaicSelection card />
         </section>
+        <section id="size-variants">
+          <SubTitle content="Size variants" />
+          <DescParagraph>
+            Use the <CodeHighlight>variant</CodeHighlight> prop to switch between
+            <TypeHighlight> xs</TypeHighlight>, <TypeHighlight> small</TypeHighlight>,{" "}
+            <TypeHighlight>medium</TypeHighlight>, and <TypeHighlight>large</TypeHighlight>
+            component sizes.
+            <br />
+            For a complete playground and comparison tables, check the{" "}
+            <AnchorToTab href="/demo/size-variants">size variants demo page</AnchorToTab>.
+          </DescParagraph>
+
+          <DemoContainerFileMosaic>
+            <DemoFileCardSizeVariants />
+          </DemoContainerFileMosaic>
+
+          <CodeDemoFileCardSizeVariants />
+        </section>
         <section id="api">
           <SubTitle content="API" />
           <DescParagraph>
@@ -466,6 +486,11 @@ const rightMenuItems = [
     id: 8,
     label: "Selection",
     referTo: "/components/filecard#selection",
+  },
+  {
+    id: 10,
+    label: "Size variants",
+    referTo: "/components/filecard#size-variants",
   },
   {
     id: 9,

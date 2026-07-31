@@ -170,6 +170,28 @@ export const FileMosaicAPIPropsRows = [
     description: <>If true, dark mode colors are used in the component.</>,
   },
   {
+    id: 72,
+    name: "variant",
+    type: (
+      <>
+        <TypeHighlight np>{'"xs"'}</TypeHighlight>
+        {" | "}
+        <TypeHighlight np>{'"small"'}</TypeHighlight>
+        {" | "}
+        <TypeHighlight np>{'"medium"'}</TypeHighlight>
+        {" | "}
+        <TypeHighlight np>{'"large"'}</TypeHighlight>
+      </>
+    ),
+    default: <TypeHighlight np>{'"medium"'}</TypeHighlight>,
+    description: (
+      <>
+        Controls the overall size of the component while preserving the same
+        behavior and API.
+      </>
+    ),
+  },
+  {
     name: "localization",
     type: (
       <>

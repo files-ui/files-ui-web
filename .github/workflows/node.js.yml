@@ -17,9 +17,14 @@ jobs:
     - name: Use Latest Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '24'
+        node-version: '22'
         cache: 'npm'
 
+    - name: Remove package-lock
+      run: rm -r package-lock.json
+
     - name: Install dependencies
-      run: npm install
-      build: npm run build
+      run: npm i
+      
+    - name: Build package 
+      run: npm run build
