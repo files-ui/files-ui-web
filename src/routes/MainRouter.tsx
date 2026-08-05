@@ -30,6 +30,9 @@ import NextJsGettingStartedPage from "../pages/nextjs/NextJsGettingStartedPage";
 import NextJsServerActionsPage from "../pages/nextjs/NextJsServerActionsPage";
 import NextJsAppRouterPage from "../pages/nextjs/NextJsAppRouterPage";
 import UseFilesUIDemoPage from "../pages/demo/UseFilesUIDemoPage";
+import CropPluginPage from "../pages/plugins/CropPluginPage";
+import CompressPluginPage from "../pages/plugins/CompressPluginPage";
+import HeadlessPage from "../pages/headless/HeadlessPage";
 
 const router = createBrowserRouter([
   {
@@ -167,6 +170,9 @@ const router = createBrowserRouter([
   { path: "/nextjs/getting-started", element: <NextJsGettingStartedPage /> },
   { path: "/nextjs/server-actions", element: <NextJsServerActionsPage /> },
   { path: "/nextjs/app-router", element: <NextJsAppRouterPage /> },
+  { path: "/plugins/crop", element: <CropPluginPage /> },
+  { path: "/plugins/compress", element: <CompressPluginPage /> },
+  { path: "/headless", element: <HeadlessPage /> },
 ]);
 
 const MainRouter = (props) => {

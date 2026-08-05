@@ -14,6 +14,8 @@ import RightMenuContainer from "../../components/layout-pages/RightMenuContainer
 import RightMenu from "../../components/RightMenu/RightMenu";
 import DemoGlobalConfig from "../../components/demo-components/global-demo/DemoGlobalConfig";
 import CodeDemoGlobalConfig from "../../components/demo-components/global-demo/CodeDemoGlobalConfig";
+import DemoGlobalFont from "../../components/demo-components/global-demo/DemoGlobalFont";
+import CodeDemoGlobalFont from "../../components/demo-components/global-demo/CodeDemoGlobalFont";
 import FooterPage from "../../components/layout-pages/FooterPage";
 import FileCardMosaicSwitch from "../../components/switch/FileCardMosaicSwitch";
 
@@ -70,11 +72,12 @@ const GlobalConfigPage: React.FC<GlobalConfigPageProps> = (
             <SubTitle content="Config" />
             <DescParagraph>
               In the following demo we will wrap the complete app and will set
-              the 3 allowed params:
+              the 4 allowed params:
               <ul>
                 <li>darkMode</li>
                 <li>localization</li>
                 <li>icons</li>
+                <li>fontFamily</li>
               </ul>
             </DescParagraph>
 
@@ -119,6 +122,45 @@ const GlobalConfigPage: React.FC<GlobalConfigPageProps> = (
               </ul>
             </Alert>
           </section>
+
+          <section id="font">
+            <SubTitle content="Custom Font" />
+            <DescParagraph>
+              Use the <CodeHighlight>fontFamily</CodeHighlight> config option to
+              set a global font for all Files UI components. The provider injects
+              a CSS custom property (<TypeHighlight>--files-ui-font-family</TypeHighlight>)
+              that all components consume automatically.
+              <br />
+              If the specified font is not loaded, the system font stack is used
+              as fallback.
+            </DescParagraph>
+
+            <Paper
+              variant="outlined"
+              style={{
+                padding: "25px 10px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                gap: "20px",
+              }}
+            >
+              <DemoGlobalFont />
+            </Paper>
+
+            <CodeDemoGlobalFont />
+
+            <Alert severity="info">
+              <AlertTitle>Loading fonts</AlertTitle>
+              Files UI does <strong>not</strong> load any font by default. If you
+              want to use a custom font (e.g. Inter), add a{" "}
+              <CodeHighlight>{"<link>"}</CodeHighlight> or{" "}
+              <CodeHighlight>@import</CodeHighlight> in your app&apos;s entry
+              point.
+            </Alert>
+          </section>
+
           <FooterPage
             page="Global Config"
             labelBefore="File Download"
@@ -146,5 +188,10 @@ const rightMenuItems = [
     id: 0,
     label: "FilesUiProvider",
     referTo: "/global-config#config",
+  },
+  {
+    id: 1,
+    label: "Custom Font",
+    referTo: "/global-config#font",
   },
 ];

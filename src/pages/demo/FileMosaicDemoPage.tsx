@@ -35,6 +35,8 @@ import DemoFileMosaicSelection from "../../components/demo-components/filemosaic
 import CodeJSFileMosaicSelection from "../../components/demo-components/filemosaic-demo/CodeJSFileMosaicSelection";
 import DemoFileMosaicSizeVariants from "../../components/demo-components/filemosaic-demo/DemoFileMosaicSizeVariants";
 import CodeDemoFileMosaicSizeVariants from "../../components/demo-components/filemosaic-demo/CodeDemoFileMosaicSizeVariants";
+import DemoFileMosaicEdit from "../../components/demo-components/filemosaic-demo/DemoFileMosaicEdit";
+import CodeDemoFileMosaicEdit from "../../components/demo-components/filemosaic-demo/CodeDemoFileMosaicEdit";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";
 
@@ -338,6 +340,37 @@ const FileMosaicDemoPage = (props) => {
           </Alert>
         </section>
 
+        <section id="edit-icon">
+          <SubTitle content="Edit icon (onEdit / onCrop)" />
+          <DescParagraph>
+            FileMosaic with the <CodeHighlight>onEdit</CodeHighlight> or{" "}
+            <CodeHighlight>onCrop</CodeHighlight> prop will display an edit icon
+            for image files. This icon appears when the file is valid and is an image type.
+            <br />
+            The edit icon can be used to trigger image editing or cropping functionality.
+            For advanced cropping features, see the{" "}
+            <AnchorToTab href="/plugins/crop">
+              Crop Plugin section
+            </AnchorToTab>.
+          </DescParagraph>
+
+          <DemoContainerFileMosaic>
+            <DemoFileMosaicEdit />
+          </DemoContainerFileMosaic>
+
+          <CodeDemoFileMosaicEdit />
+
+          <Alert severity="info">
+            <AlertTitle>Edit Icon Display Rules</AlertTitle>
+            The edit icon only appears when:
+            <ul>
+              <li>Either <CodeHighlight>onEdit</CodeHighlight> or <CodeHighlight>onCrop</CodeHighlight> prop is provided</li>
+              <li>The file is valid (<CodeHighlight>valid=true</CodeHighlight>)</li>
+              <li>The file type starts with "image/"</li>
+            </ul>
+          </Alert>
+        </section>
+
         <section id="video-download">
           <SubTitle content="Video download priority" />
           <DescParagraph>
@@ -507,6 +540,11 @@ const rightMenuItems = [
     id: 4,
     label: "Actions",
     referTo: "/components/filemosaic#actions",
+  },
+  {
+    id: 11,
+    label: "Edit icon",
+    referTo: "/components/filemosaic#edit-icon",
   },
   {
     id: 8,

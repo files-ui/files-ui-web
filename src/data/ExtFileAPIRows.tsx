@@ -155,4 +155,29 @@ export const ExtFileAPIRows = (darkMode = false) => [
       </>
     ),
   },
+  {
+    name: "videoUrl",
+    type: <TypeHighlight darkMode={darkMode} np>string</TypeHighlight>,
+    default: <TypeHighlight darkMode={darkMode} np></TypeHighlight>,
+    description: (
+      <>
+        A string url set as the <CodeHighlight darkMode={darkMode}>src</CodeHighlight> of a{" "}
+        <CodeHighlight darkMode={darkMode}>{"<video/>"}</CodeHighlight> tag.
+        When present alongside <CodeHighlight darkMode={darkMode}>downloadUrl</CodeHighlight>,
+        the download action uses this value with higher priority.
+      </>
+    ),
+  },
+  {
+    name: "uploadUrl",
+    type: <TypeHighlight darkMode={darkMode} np>string</TypeHighlight>,
+    default: <TypeHighlight darkMode={darkMode} np></TypeHighlight>,
+    description: (
+      <>
+        A per-file upload URL that overrides <CodeHighlight darkMode={darkMode}>UploadConfig.url</CodeHighlight>{" "}
+        and <CodeHighlight darkMode={darkMode}>UploadConfig.customUrl</CodeHighlight> for this specific file.
+        Useful for generating signed upload URLs or routing to different endpoints per file.
+      </>
+    ),
+  },
 ];

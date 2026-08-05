@@ -18,6 +18,8 @@ import logo_text_blue_dark from "../static/files-ui-logo-text-med-dark.png";
 import { UserContext } from "../globals/contexts/UserContext";
 import AnchorToTab from "../components/util-components/AnchorToTab";
 
+import npmIcon from "../static/npm-svgrepo-com.svg";
+
 const drawerWidth = 280;
 const StyledImage = styled("img")(({ theme }) => ({
   height: "100%",
@@ -160,6 +162,19 @@ function NavBarTemplate(props) {
                   <GitHubIcon /* htmlColor="white" */ />
                 </IconButton>
               </Tooltip>
+            </AnchorToTab>
+            <AnchorToTab href="https://www.npmjs.com/package/@files-ui/react">
+              <Tooltip title="Go to Files-ui NPM package">
+                <IconButton
+                  style={{ borderRadius: "8px", border: "0.5px solid #eaeef3" }}
+                  //onClick={handleGoGitRepo}
+                  color="secondary"
+                  aria-label="upload picture"
+                  component="label"
+                >
+                  <img height={"24px"} src={npmIcon} alt="npm-icon" />
+                </IconButton>
+              </Tooltip>{" "}
             </AnchorToTab>
             <DarkModeLightModeButton
               darkModeOn={darkModeOn}

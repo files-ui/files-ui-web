@@ -29,6 +29,8 @@ import DemoFileMosaicSelection from "../../components/demo-components/filemosaic
 import CodeJSFileMosaicSelection from "../../components/demo-components/filemosaic-demo/CodeJSFileMosaicSelection";
 import DemoFileCardSizeVariants from "../../components/demo-components/filecard-demo/DemoFileCardSizeVariants";
 import CodeDemoFileCardSizeVariants from "../../components/demo-components/file-card-demo/CodeDemoFileCardSizeVariants";
+import DemoFileCardEdit from "../../components/demo-components/filecard-demo/DemoFileCardEdit";
+import CodeDemoFileCardEdit from "../../components/demo-components/file-card-demo/CodeDemoFileCardEdit";
 import { scrollHandler } from "../../utils/scrollHandler";
 import FooterPage from "../../components/layout-pages/FooterPage";
 
@@ -322,6 +324,38 @@ const FileCardDemoPage = (props) => {
             </ul>
           </Alert>
         </section>
+
+        <section id="edit-icon">
+          <SubTitle content="Edit icon (onEdit / onCrop)" />
+          <DescParagraph>
+            FileCard with the <CodeHighlight>onEdit</CodeHighlight> or{" "}
+            <CodeHighlight>onCrop</CodeHighlight> prop will display an edit icon
+            for image files. This icon appears when the file is valid and is an image type.
+            <br />
+            The edit icon can be used to trigger image editing or cropping functionality.
+            For advanced cropping features, see the{" "}
+            <AnchorToTab href="/plugins/crop">
+              Crop Plugin section
+            </AnchorToTab>.
+          </DescParagraph>
+
+          <DemoContainerFileMosaic>
+            <DemoFileCardEdit />
+          </DemoContainerFileMosaic>
+
+          <CodeDemoFileCardEdit />
+
+          <Alert severity="info">
+            <AlertTitle>Edit Icon Display Rules</AlertTitle>
+            The edit icon only appears when:
+            <ul>
+              <li>Either <CodeHighlight>onEdit</CodeHighlight> or <CodeHighlight>onCrop</CodeHighlight> prop is provided</li>
+              <li>The file is valid (<CodeHighlight>valid=true</CodeHighlight>)</li>
+              <li>The file type starts with "image/"</li>
+            </ul>
+          </Alert>
+        </section>
+
         <section id="dark-mode">
           <SubTitle content="Dark mode and Elevation" />
           <DescParagraph>
@@ -473,6 +507,11 @@ const rightMenuItems = [
     referTo: "/components/filecard#actions",
   },
   {
+    id: 10,
+    label: "Edit icon",
+    referTo: "/components/filecard#edit-icon",
+  },
+  {
     id: 5,
     label: "Dark mode",
     referTo: "/components/filecard#dark-mode",
@@ -488,12 +527,12 @@ const rightMenuItems = [
     referTo: "/components/filecard#selection",
   },
   {
-    id: 10,
+    id: 9,
     label: "Size variants",
     referTo: "/components/filecard#size-variants",
   },
   {
-    id: 9,
+    id: 11,
     label: "API",
     referTo: "/components/filecard#api",
   },
