@@ -30,7 +30,8 @@ const splittedCodeJS = `<FilesUiProvider
     config={{
         localization: localization,
         darkMode: darkModeOn,
-        icons: otherIcons ,
+        icons: otherIcons,
+        fontFamily: "Inter",
     }}
 >
 {/** components here */}
@@ -68,6 +69,7 @@ const DemoGlobalConfig = () => {
         localization: localization,
         darkMode: darkModeOn,
         icons: otherIcons ? iconsConfig : undefined,
+        fontFamily: "Inter",
       }}
     >
       <div className="demo-controls-container">
@@ -234,6 +236,7 @@ const DemoGlobalConfig = () => {
         localization: localization,
         darkMode: darkModeOn,
         icons: otherIcons ? iconsConfig : undefined,
+        fontFamily: "Inter",
       }}
     >
       <div className="demo-controls-container">
@@ -407,6 +410,7 @@ const DemoGlobalConfig = () => {
             localization: localization,
             darkMode: darkModeOn,
             icons: otherIcons ? iconsConfig : undefined,
+            fontFamily: "Inter",
         }}
     >
         <div className="demo-controls-container">
@@ -564,6 +568,7 @@ const DemoGlobalConfig = () => {
             localization: localization,
             darkMode: darkModeOn,
             icons: otherIcons ? iconsConfig : undefined,
+            fontFamily: "Inter",
         }}
     >
         <div className="demo-controls-container">

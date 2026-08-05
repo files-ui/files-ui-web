@@ -343,6 +343,39 @@ export const FileMosaicAPIPropsRows = [
     ),
   },
   {
+    name: "onEdit",
+    type: <TypeHighlight np>func</TypeHighlight>,
+    default: <TypeHighlight np></TypeHighlight>,
+    description: (
+      <>
+        Callback fired when the edit icon is clicked. If set, the edit icon
+        will be shown. Takes precedence over{" "}
+        <CodeHighlight>onCrop</CodeHighlight>. Only visible when file is a
+        valid image.
+        <br />
+        <strong>Signature:</strong>
+        <br />
+        <CodeHighlight>{"(file: ExtFile) => void"}</CodeHighlight>
+      </>
+    ),
+  },
+  {
+    name: "onCrop",
+    type: <TypeHighlight np>func</TypeHighlight>,
+    default: <TypeHighlight np></TypeHighlight>,
+    description: (
+      <>
+        Callback fired when the crop/edit icon is clicked. If set, the edit
+        icon will be shown. Only used when <CodeHighlight>onEdit</CodeHighlight>{" "}
+        is not provided. Only visible when file is a valid image.
+        <br />
+        <strong>Signature:</strong>
+        <br />
+        <CodeHighlight>{"(file: ExtFile) => void"}</CodeHighlight>
+      </>
+    ),
+  },
+  {
     name: "onClick",
     type: <TypeHighlight np>func</TypeHighlight>,
     default: <TypeHighlight np></TypeHighlight>,

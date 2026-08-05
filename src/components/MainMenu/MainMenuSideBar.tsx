@@ -72,10 +72,50 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
           index: 27,
           onClick: () => navigate("/components/skeletons"),
         },
+      ],
+    },
+    {
+      label: "Headless (useFilesUI)",
+      index: 13,
+      onClick: () => navigate("/headless"),
+    },
+
+    {
+      label: "Next.js",
+      index: 11,
+      isOpen: false,
+      subMenu: [
         {
-          label: "useFilesUI Hook",
-          index: 28,
-          onClick: () => navigate("/components/usefilesui"),
+          label: "Getting started",
+          index: 111,
+          onClick: () => navigate("/nextjs/getting-started"),
+        },
+        {
+          label: "Server Actions",
+          index: 112,
+          onClick: () => navigate("/nextjs/server-actions"),
+        },
+        {
+          label: "App Router & RSC",
+          index: 113,
+          onClick: () => navigate("/nextjs/app-router"),
+        },
+      ],
+    },
+    {
+      label: "Plugins",
+      index: 12,
+      isOpen: false,
+      subMenu: [
+        {
+          label: "Crop",
+          index: 121,
+          onClick: () => navigate("/plugins/crop"),
+        },
+        {
+          label: "Compress",
+          index: 122,
+          onClick: () => navigate("/plugins/compress"),
         },
       ],
     },
@@ -133,7 +173,7 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
       index: 5,
       onClick: () => navigate("/localization"),
     },
-    
+
     /* {
       label: "Code Generator",
       index: 7,
@@ -149,7 +189,7 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
       index: 6,
       onClick: () => navigate("/server-side"),
     },
-   /*  {
+    /*  {
       label: "File readers",
       index: 8,
       onClick: () => navigate("/file-reader"),
@@ -165,28 +205,6 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
       index: 10,
       onClick: () => navigate("/global-config"),
     },
-    {
-      label: "Next.js",
-      index: 11,
-      isOpen: false,
-      subMenu: [
-        {
-          label: "Getting started",
-          index: 111,
-          onClick: () => navigate("/nextjs/getting-started"),
-        },
-        {
-          label: "Server Actions",
-          index: 112,
-          onClick: () => navigate("/nextjs/server-actions"),
-        },
-        {
-          label: "App Router & RSC",
-          index: 113,
-          onClick: () => navigate("/nextjs/app-router"),
-        },
-      ],
-    },
   ];
 
   const [quickStartItems /* setQuickStartItems */] =
@@ -195,9 +213,8 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
   const [regularItems, setRegularItemsIni] = React.useState(
     RegularItemsIni.map((x) => {
       return { ...x, isOpen: x.subMenu && x.index === selectedIndex };
-    })
+    }),
   );
-
 
   /*   const handleClick = () => {
     //setOpen(!open);
@@ -211,25 +228,25 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
   }; */
 
   //const [selectedIndex, setSelectedIndex] = React.useState(1);
-  function handler(ev:React.MouseEvent<HTMLDivElement, MouseEvent>) {
-    console.log('CTRL pressed during click:', ev.ctrlKey);
+  function handler(ev: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    console.log("CTRL pressed during click:", ev.ctrlKey);
   }
   const handleListItemClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     index: number,
     onClick: Function | undefined,
-    withSubMenu?: boolean
+    withSubMenu?: boolean,
   ) => {
     handler(event);
-    
+
     //setSelectedIndex(index);
-    console.log("newIndex",index, withSubMenu);
+    console.log("newIndex", index, withSubMenu);
     if (!withSubMenu) {
       onClick?.();
     } else {
       setRegularItemsIni((arr) =>
         arr.map((item) => {
-      /*     if (item.subMenu) {
+          /*     if (item.subMenu) {
             const newSubMenu = item.subMenu.map((x) => {
               if (x.index === index) {
                 return { ...x , };
@@ -239,13 +256,12 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
             });
             return { ...item, subMenu: newSubMenu };
           } else */
-          
-         
+
           if (item.index === index) {
             return { ...item, isOpen: !item.isOpen };
           }
           return { ...item };
-        })
+        }),
       );
     }
   };
@@ -276,7 +292,7 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
                       event,
                       index,
                       onClick,
-                      subMenu !== undefined
+                      subMenu !== undefined,
                     )
                   }
                 >
@@ -314,13 +330,13 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
                             {Icon && <ListItemIcon>{Icon}</ListItemIcon>}
                             <ListItemText primary={label || ""} />
                           </ListItemButton>
-                        )
+                        ),
                       )}
                     </List>
                   </Collapse>
                 )}
               </React.Fragment>
-            )
+            ),
           )}
       </List>
       <List
@@ -349,7 +365,7 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
                       event,
                       index,
                       onClick,
-                      subMenu !== undefined
+                      subMenu !== undefined,
                     )
                   }
                 >
@@ -390,13 +406,13 @@ export default function MainMenuSideBar(props: MainMenuSideBarProps) {
                             {Icon && <ListItemIcon>{Icon}</ListItemIcon>}
                             <ListItemText primary={label || ""} />
                           </ListItemButton>
-                        )
+                        ),
                       )}
                     </List>
                   </Collapse>
                 )}
               </React.Fragment>
-            )
+            ),
           )}
       </List>
     </React.Fragment>

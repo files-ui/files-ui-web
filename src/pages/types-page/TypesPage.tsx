@@ -63,8 +63,8 @@ const rightMenuItems = [
   },
   {
     id: 7,
-    label: "ServerResonse",
-    referTo: "/types#uploadconfig",
+    label: "ServerResponse",
+    referTo: "/types#serverresponse",
   },
   {
     id: 8,
@@ -73,11 +73,16 @@ const rightMenuItems = [
   },
   {
     id: 9,
+    label: "ValidationSeverity",
+    referTo: "/types#validationseverity",
+  },
+  {
+    id: 10,
     label: "FilesUiConfig",
     referTo: "/types#filesuiconfig",
   },
   {
-    id: 10,
+    id: 11,
     label: "IconsSet",
     referTo: "/types#iconsset",
   },
@@ -194,6 +199,27 @@ const TypesPage = (props) => {
               {UPLOADSTATUSCODE}
             </Highlighter>
           </section>
+          <section id="validationseverity">
+            <SubTitle content={"ValidationSeverity"} />{" "}
+            <DescParagraph>
+              Severity level for a validation result. Use{" "}
+              <code>"warning"</code> to allow upload despite issues, or{" "}
+              <code>"info"</code> for informational messages on valid files.
+            </DescParagraph>
+            <Highlighter
+              style={{
+                margin: "20px 0",
+                fontSize: "15px",
+                lineHeight: "",
+              }}
+              onCopyToClipboard={(code_) => {
+                console.log("code copied to clipboard: ");
+                console.log(code_);
+              }}
+            >
+              {VALIDATIONSEVERITYCODE}
+            </Highlighter>
+          </section>
           <section id="filesuiconfig">
             <SubTitle content={"FilesUIConfig"} />{" "}
             <DescParagraph>
@@ -257,15 +283,23 @@ export default TypesPage;
 const UPLOADSTATUSCODE = `export type UPLOADSTATUS = "preparing" | "aborted" | "uploading" | "success" | "error";`;
 
 const FilesUIConfigCODE = `export type FilesUIConfig = {
-  // If true, dark mode colors are used in FileMosaic and FIleCard components.
+  // If true, dark mode colors are used in FileMosaic and FileCard components.
   darkMode?: boolean;
 
-  // Set of icons to override the existing ones
+  // Set of icons to override the existing ones.
   icons?: IconsConfig;
-  
+
   // The language in which text labels are shown.
   localization?: Localization;
+
+  // Global font family for all Files UI components.
+  // Overrides the default Poppins font via a CSS custom property.
+  // System fallbacks are appended automatically.
+  // @example "Inter"
+  fontFamily?: string;
 }`;
+
+const VALIDATIONSEVERITYCODE = `export type ValidationSeverity = "error" | "warning" | "info";`;
 
 const IconsSetCode = `export type IconsSet = {
   aac?: string;

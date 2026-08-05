@@ -6,6 +6,7 @@ import { IconButton, Tooltip } from "@mui/material";
 import logo_text_blue from "../../static/files-ui-logo-text-med.png";
 import logo_text_blue_dark from "../../static/files-ui-logo-text-med-dark.png";
 import AnchorToTab from "../util-components/AnchorToTab";
+import npmIcon from "../../static/npm-svgrepo-com.svg";
 
 const MainNavBar = ({
   darkModeOn,
@@ -48,6 +49,19 @@ const MainNavBar = ({
                 component="label"
               >
                 <GitHubIcon />
+              </IconButton>
+            </Tooltip>{" "}
+          </AnchorToTab>
+          <AnchorToTab href="https://www.npmjs.com/package/@files-ui/react">
+            <Tooltip title="Go to Files-ui NPM package">
+              <IconButton
+                style={{ borderRadius: "8px", border: "0.5px solid #eaeef3" }}
+                //onClick={handleGoGitRepo}
+                color="secondary"
+                aria-label="upload picture"
+                component="label"
+              >
+                <img height={"24px"} src={npmIcon} alt="npm-icon" />
               </IconButton>
             </Tooltip>{" "}
           </AnchorToTab>
